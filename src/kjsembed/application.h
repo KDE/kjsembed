@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
@@ -31,12 +30,11 @@
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QCoreApplication. */
-    KJSO_BINDING( CoreApplicationBinding, QCoreApplication, QObjectBinding )
-    
-    /** @internal Implements the binding for QApplication. */
-    KJSO_BINDING( ApplicationBinding, QApplication, CoreApplicationBinding )
+/** @internal Implements the binding for QCoreApplication. */
+KJSO_BINDING(CoreApplicationBinding, QCoreApplication, QObjectBinding)
+
+/** @internal Implements the binding for QApplication. */
+KJSO_BINDING(ApplicationBinding, QApplication, CoreApplicationBinding)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

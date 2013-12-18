@@ -3,36 +3,34 @@
 
 namespace KJSEmbed
 {
-    bool isBasic(KJS::JSValue *value)
-    {
-        switch (value->type())
-        {
-            case KJS::NumberType:
-            case KJS::BooleanType:
-            case KJS::StringType:
-                return true;
-                break;
-            default:
-                return false;
+bool isBasic(KJS::JSValue *value)
+{
+    switch (value->type()) {
+    case KJS::NumberType:
+    case KJS::BooleanType:
+    case KJS::StringType:
+        return true;
+        break;
+    default:
+        return false;
 
-        }
     }
+}
 
+bool isVariant(KJS::JSObject *object)
+{
+    return object->inherits(&VariantBinding::info);
+}
 
-    bool isVariant(KJS::JSObject *object)
-    {
-        return object->inherits(&VariantBinding::info);
-    }
-
-    /*bool isValue(KJS::JSObject *object)
-    {
-        return object->inherits(&ValueBinding::info);
+/*bool isValue(KJS::JSObject *object)
+{
+    return object->inherits(&ValueBinding::info);
 }*/
 
-    bool isObject(KJS::JSObject *object)
-    {
-        return object->inherits(&ObjectBinding::info);
-    }
+bool isObject(KJS::JSObject *object)
+{
+    return object->inherits(&ObjectBinding::info);
+}
 
 /*
 So this might be how the val checking would go:
@@ -70,15 +68,9 @@ So this might be how the val checking would go:
         }
     }
 
-
-
-
 */
 
 }
 
-
 #endif
-
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;
 

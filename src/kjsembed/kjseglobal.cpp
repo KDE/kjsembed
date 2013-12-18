@@ -47,109 +47,106 @@ static QFile win32_stderr;
 
 static const WORD MAX_CONSOLE_LINES = 500;
 
-void RedirectIOToConsole() {
-   int hConHandle;
-   intptr_t lStdHandle;
-   CONSOLE_SCREEN_BUFFER_INFO coninfo;
-   AllocConsole();
-   GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &coninfo);
-   coninfo.dwSize.Y = MAX_CONSOLE_LINES;
-   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coninfo.dwSize);
+void RedirectIOToConsole()
+{
+    int hConHandle;
+    intptr_t lStdHandle;
+    CONSOLE_SCREEN_BUFFER_INFO coninfo;
+    AllocConsole();
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &coninfo);
+    coninfo.dwSize.Y = MAX_CONSOLE_LINES;
+    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coninfo.dwSize);
 
-   lStdHandle = (intptr_t)GetStdHandle(STD_INPUT_HANDLE);
-   hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
-   win32_stdin.open(hConHandle,QIODevice::ReadOnly);
+    lStdHandle = (intptr_t)GetStdHandle(STD_INPUT_HANDLE);
+    hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
+    win32_stdin.open(hConHandle, QIODevice::ReadOnly);
 
-   lStdHandle = (intptr_t)GetStdHandle(STD_OUTPUT_HANDLE);
-   hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
-   win32_stdout.open(hConHandle,QIODevice::WriteOnly);
+    lStdHandle = (intptr_t)GetStdHandle(STD_OUTPUT_HANDLE);
+    hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
+    win32_stdout.open(hConHandle, QIODevice::WriteOnly);
 
-   lStdHandle = (intptr_t)GetStdHandle(STD_ERROR_HANDLE);
-   hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
-   win32_stderr.open(hConHandle, QIODevice::WriteOnly);
+    lStdHandle = (intptr_t)GetStdHandle(STD_ERROR_HANDLE);
+    hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);
+    win32_stderr.open(hConHandle, QIODevice::WriteOnly);
 
-   std::ios::sync_with_stdio();
+    std::ios::sync_with_stdio();
 
 }
-
-
 
 #endif
 
-
-QTextStream &consoleOut(  )
+QTextStream &consoleOut()
 {
-   return *KJSEmbed::conout();
+    return *KJSEmbed::conout();
 }
 
-QTextStream &consoleError( )
+QTextStream &consoleError()
 {
-   return *KJSEmbed::conerr();
+    return *KJSEmbed::conerr();
 }
 
-QTextStream &consoleIn( )
+QTextStream &consoleIn()
 {
-   return *KJSEmbed::conin();
+    return *KJSEmbed::conin();
 }
 
 #ifdef QT_ONLY
-QTextStream &kdDebug( int area )
+QTextStream &kdDebug(int area)
 {
 #ifndef QT_DEBUG
-   return consoleError() << "DEBUG: (" << area << ") ";
+    return consoleError() << "DEBUG: (" << area << ") ";
 #else
-   return consoleOut();
+    return consoleOut();
 #endif
 
 }
 
-QTextStream &kdWarning( int area )
+QTextStream &kdWarning(int area)
 {
-   return consoleOut() << "WARNING: (" << area << ") ";
+    return consoleOut() << "WARNING: (" << area << ") ";
 }
 
-QString i18n( const char *string )
+QString i18n(const char *string)
 {
-	return QCoreApplication::translate( "KJSEmbed", string, "qjsembed string");
+    return QCoreApplication::translate("KJSEmbed", string, "qjsembed string");
 }
 
 #endif
 
 QTextStream *KJSEmbed::conin()
 {
-   if ( !kjsembed_in ) {
+    if (!kjsembed_in) {
 #ifdef _WIN32
-	   kjsembed_in = new QTextStream( &win32_stdin );
+        kjsembed_in = new QTextStream(&win32_stdin);
 #else
-	   kjsembed_in = new QTextStream( stdin, QIODevice::ReadOnly );
+        kjsembed_in = new QTextStream(stdin, QIODevice::ReadOnly);
 #endif
-   }
-   return kjsembed_in;
+    }
+    return kjsembed_in;
 }
 
 QTextStream *KJSEmbed::conout()
 {
-   if ( !kjsembed_out ) {
+    if (!kjsembed_out) {
 #ifdef _WIN32
-	   kjsembed_out = new QTextStream( &win32_stdout  );
+        kjsembed_out = new QTextStream(&win32_stdout);
 #else
-	   kjsembed_out = new QTextStream( stdout, QIODevice::WriteOnly );
+        kjsembed_out = new QTextStream(stdout, QIODevice::WriteOnly);
 #endif
-   }
-   return kjsembed_out;
+    }
+    return kjsembed_out;
 
 }
 
 QTextStream *KJSEmbed::conerr()
 {
-   if ( !kjsembed_err ) {
+    if (!kjsembed_err) {
 #ifdef _WIN32
-	   kjsembed_err = new QTextStream( &win32_stderr  );
+        kjsembed_err = new QTextStream(&win32_stderr);
 #else
-	   kjsembed_err = new QTextStream( stderr, QIODevice::WriteOnly );
+        kjsembed_err = new QTextStream(stderr, QIODevice::WriteOnly);
 #endif
-   }
-   return kjsembed_err;
+    }
+    return kjsembed_err;
 }
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

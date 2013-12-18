@@ -41,12 +41,15 @@ public:
     /**
     * Create a new method.
     */
-    StaticBinding(KJS::ExecState *exec, const Method *method );
+    StaticBinding(KJS::ExecState *exec, const Method *method);
     /**
     * Executes the callback for this method.
     */
-    KJS::JSValue *callAsFunction( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args );
-    bool implementsConstruct() const { return false; }
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args);
+    bool implementsConstruct() const
+    {
+        return false;
+    }
 
     /**
     * Publishes an array of Methods to an object.  You should only ever need this method
@@ -54,7 +57,7 @@ public:
     * @param object the object to add the methods to
     * @param methods an array of Method objects.
     */
-    static void publish( KJS::ExecState *exec, KJS::JSObject *object, const Method *methods );
+    static void publish(KJS::ExecState *exec, KJS::JSObject *object, const Method *methods);
 
 protected:
     const Method *m_method;
@@ -70,7 +73,7 @@ public:
     /**
     * Create a new constructor
     */
-    StaticConstructor(KJS::ExecState *exec, const Constructor *constructor );
+    StaticConstructor(KJS::ExecState *exec, const Constructor *constructor);
 
     /**
     * Add static methods to the object.
@@ -79,28 +82,31 @@ public:
     * ctor.addStaticMethods( exec, TestPointer::staticMethods() );
     * @endcode
     */
-    void addStaticMethods( KJS::ExecState *exec, const Method *methods );
+    void addStaticMethods(KJS::ExecState *exec, const Method *methods);
 
-
-    bool implementsConstruct() const { return true; }
+    bool implementsConstruct() const
+    {
+        return true;
+    }
     /**
     * Calls the callback that will in turn create a new instance of this object with
     * the arguments passed in with args.
     */
-    KJS::JSObject *construct( KJS::ExecState *exec, const KJS::List &args ) Q_DECL_OVERRIDE;
+    KJS::JSObject *construct(KJS::ExecState *exec, const KJS::List &args) Q_DECL_OVERRIDE;
     using KJS::JSObject::construct;
 
-    KJS::JSValue *callAsFunction( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args ) {
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
+    {
         return construct(exec, args);
     }
 
-    void setDefaultValue( KJS::JSValue *value );
-    KJS::JSValue *defaultValue( KJS::ExecState *exec, KJS::JSType hint ) const;
+    void setDefaultValue(KJS::JSValue *value);
+    KJS::JSValue *defaultValue(KJS::ExecState *exec, KJS::JSType hint) const;
 
     /**
     * Add the constructor to an object.  This is usually the global scope.
     */
-    static KJS::JSObject *add( KJS::ExecState *exec, KJS::JSObject *object, const Constructor *constructor );
+    static KJS::JSObject *add(KJS::ExecState *exec, KJS::JSObject *object, const Constructor *constructor);
     /**
     * This method is used to construct a KJS value from C++
     * @code
@@ -113,12 +119,12 @@ public:
     * var myType = new MyType("test");
     * @endcode
     */
-    static KJS::JSObject *construct( KJS::ExecState *exec, KJS::JSObject *parent,
-            const KJS::UString &className, const KJS::List &args = KJS::List() );
+    static KJS::JSObject *construct(KJS::ExecState *exec, KJS::JSObject *parent,
+                                    const KJS::UString &className, const KJS::List &args = KJS::List());
 
-    static KJS::JSObject* bind(KJS::ExecState* exec, const QString &className, PointerBase& objPtr);
-    static const Method *methods( const KJS::UString &className );
-    static const Constructor *constructor( const KJS::UString &className );
+    static KJS::JSObject *bind(KJS::ExecState *exec, const QString &className, PointerBase &objPtr);
+    static const Method *methods(const KJS::UString &className);
+    static const Constructor *constructor(const KJS::UString &className);
 
 protected:
     const Constructor *m_constructor;
@@ -132,4 +138,3 @@ private:
 
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

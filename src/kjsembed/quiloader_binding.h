@@ -28,9 +28,8 @@
 
 namespace KJSEmbed
 {
-    KJSO_BINDING( UiLoaderBinding, QUiLoader, QObjectBinding )
+KJSO_BINDING(UiLoaderBinding, QUiLoader, QObjectBinding)
 }
 
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

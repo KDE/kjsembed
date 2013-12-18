@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef DOM_H
 #define DOM_H
 
@@ -38,87 +37,110 @@ class QDomText;
 
 namespace KJSEmbed
 {
-    class DomNodeBinding : public ValueBinding
+class DomNodeBinding : public ValueBinding
+{
+public:
+    DomNodeBinding(KJS::ExecState *exec, const QDomNode &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomNodeBinding( KJS::ExecState *exec, const QDomNode &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomDocumentBinding : public ValueBinding
+class DomDocumentBinding : public ValueBinding
+{
+public:
+    DomDocumentBinding(KJS::ExecState *exec, const QDomDocument &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomDocumentBinding( KJS::ExecState *exec, const QDomDocument &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomElementBinding : public ValueBinding
+class DomElementBinding : public ValueBinding
+{
+public:
+    DomElementBinding(KJS::ExecState *exec, const QDomElement &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomElementBinding( KJS::ExecState *exec, const QDomElement &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomAttrBinding : public ValueBinding
+class DomAttrBinding : public ValueBinding
+{
+public:
+    DomAttrBinding(KJS::ExecState *exec, const QDomAttr &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomAttrBinding( KJS::ExecState *exec, const QDomAttr &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomDocumentTypeBinding : public ValueBinding
+class DomDocumentTypeBinding : public ValueBinding
+{
+public:
+    DomDocumentTypeBinding(KJS::ExecState *exec, const QDomDocumentType &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomDocumentTypeBinding( KJS::ExecState *exec, const QDomDocumentType &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomNodeListBinding : public ValueBinding
+class DomNodeListBinding : public ValueBinding
+{
+public:
+    DomNodeListBinding(KJS::ExecState *exec, const QDomNodeList &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomNodeListBinding( KJS::ExecState *exec, const QDomNodeList &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomNamedNodeMapBinding : public ValueBinding
+class DomNamedNodeMapBinding : public ValueBinding
+{
+public:
+    DomNamedNodeMapBinding(KJS::ExecState *exec, const QDomNamedNodeMap &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomNamedNodeMapBinding( KJS::ExecState *exec, const QDomNamedNodeMap &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    class DomTextBinding : public ValueBinding
+class DomTextBinding : public ValueBinding
+{
+public:
+    DomTextBinding(KJS::ExecState *exec, const QDomText &value);
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            DomTextBinding( KJS::ExecState *exec, const QDomText &value );
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    KJS_BINDING( DomNode )
-    KJS_BINDING( DomDocument ) // Done
-    KJS_BINDING( DomElement ) // Done
-    KJS_BINDING( DomAttr )	// Done
-    KJS_BINDING( DomDocumentType ) // Done
-    KJS_BINDING( DomNodeList ) // Done
-    KJS_BINDING( DomNamedNodeMap )
-    KJS_BINDING( DomText )
+KJS_BINDING(DomNode)
+KJS_BINDING(DomDocument)   // Done
+KJS_BINDING(DomElement)   // Done
+KJS_BINDING(DomAttr)     // Done
+KJS_BINDING(DomDocumentType)   // Done
+KJS_BINDING(DomNodeList)   // Done
+KJS_BINDING(DomNamedNodeMap)
+KJS_BINDING(DomText)
 
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

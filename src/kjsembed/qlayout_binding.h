@@ -29,8 +29,7 @@
 
 namespace KJSEmbed
 {
-    KJSO_BINDING( Layout, QLayout, QObjectBinding )
+KJSO_BINDING(Layout, QLayout, QObjectBinding)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

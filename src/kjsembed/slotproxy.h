@@ -31,36 +31,35 @@
 
 namespace KJS
 {
-    class Interpreter;
-    class Value;
-    class List;
-    class ExecState;
+class Interpreter;
+class Value;
+class List;
+class ExecState;
 }
 
 namespace KJSEmbed
 {
-    class KJSEMBED_EXPORT SlotProxy : public QObject
-    {
-        public:
-            SlotProxy(KJS::JSObject *obj, KJS::Interpreter *interpreter, QObject *parent, const QByteArray &signature);
-            ~SlotProxy();
-            //Meta object stuff
-            QMetaObject staticMetaObject;
-            const QMetaObject *metaObject() const;
-            void *qt_metacast(const char *_clname);
-            int qt_metacall(QMetaObject::Call _c, int _id, void **_a);
+class KJSEMBED_EXPORT SlotProxy : public QObject
+{
+public:
+    SlotProxy(KJS::JSObject *obj, KJS::Interpreter *interpreter, QObject *parent, const QByteArray &signature);
+    ~SlotProxy();
+    //Meta object stuff
+    QMetaObject staticMetaObject;
+    const QMetaObject *metaObject() const;
+    void *qt_metacast(const char *_clname);
+    int qt_metacall(QMetaObject::Call _c, int _id, void **_a);
 
-        private:
-            KJS::JSValue *callMethod( const QByteArray & methodName, void **_a );
-            KJS::List convertArguments(KJS::ExecState *exec, void **_a );
-            QByteArray m_signature;
-            uint m_data[16];
-            QByteArray m_stringData;
-            KJS::Interpreter *m_interpreter;
-            KJS::JSObject *m_object;
-            QVariant m_tmpResult;
-    };
+private:
+    KJS::JSValue *callMethod(const QByteArray &methodName, void **_a);
+    KJS::List convertArguments(KJS::ExecState *exec, void **_a);
+    QByteArray m_signature;
+    uint m_data[16];
+    QByteArray m_stringData;
+    KJS::Interpreter *m_interpreter;
+    KJS::JSObject *m_object;
+    QVariant m_tmpResult;
+};
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

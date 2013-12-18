@@ -29,18 +29,20 @@ class QSize;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QSize. */
-    class SizeBinding : public VariantBinding
+/** @internal Implements the binding for QSize. */
+class SizeBinding : public VariantBinding
+{
+public:
+    SizeBinding(KJS::ExecState *exec, const QSize &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            SizeBinding( KJS::ExecState *exec, const QSize &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    KJS_BINDING( Size )
+KJS_BINDING(Size)
 
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

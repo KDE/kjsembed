@@ -37,56 +37,52 @@
 
 using namespace KJSEmbed;
 
-KJS::JSValue *callExec( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callExec(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(exec);
     Q_UNUSED(self);
     Q_UNUSED(args);
-    return KJS::jsBoolean( QCoreApplication::exec() );
+    return KJS::jsBoolean(QCoreApplication::exec());
 }
 
-KJS::JSValue *callDump( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callDump(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self);
-    if( args.size() == 1)
-    {
+    if (args.size() == 1) {
         KJS::JSObject *object = args[0]->toObject(exec);
         Q_UNUSED(object);
     }
     return KJS::jsNull();
 }
 
-KJS::JSValue *callInclude( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callInclude(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self);
-    if( args.size() == 1)
-    {
+    if (args.size() == 1) {
         KJS::UString filename = args[0]->toString(exec);
         qDebug() << "include: " << toQString(filename);
 
-        KJS::Completion c = Engine::runFile( exec->dynamicInterpreter(), filename );
+        KJS::Completion c = Engine::runFile(exec->dynamicInterpreter(), filename);
 
-        if ( c.complType() == KJS::Normal )
+        if (c.complType() == KJS::Normal) {
             return KJS::jsNull();
+        }
 
-        if (c.complType() == KJS::ReturnValue)
-        {
-            if (c.isValueCompletion())
+        if (c.complType() == KJS::ReturnValue) {
+            if (c.isValueCompletion()) {
                 return c.value();
+            }
 
             return KJS::jsNull();
         }
 
-        if (c.complType() == KJS::Throw)
-        {
+        if (c.complType() == KJS::Throw) {
             QString message = toQString(c.value()->toString(exec));
             int line = c.value()->toObject(exec)->get(exec, "line")->toUInt32(exec);
             return throwError(exec, KJS::EvalError,
                               toUString(i18n("Error encountered while processing include '%1' line %2: %3", toQString(filename), line, message)));
         }
-    }
-    else
-    {
+    } else {
         return throwError(exec, KJS::URIError,
                           toUString(i18n("include only takes 1 argument, not %1.", args.size())));
     }
@@ -94,41 +90,37 @@ KJS::JSValue *callInclude( KJS::ExecState *exec, KJS::JSObject *self, const KJS:
     return KJS::jsNull();
 }
 
-KJS::JSValue *callLibrary( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callLibrary(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self);
-    if( args.size() == 1)
-    {
+    if (args.size() == 1) {
         KJS::UString filename = args[0]->toString(exec);
-        QString qualifiedFilename = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "scripts/" + toQString(filename) );
-        if ( !qualifiedFilename.isEmpty() )
-        {
-            KJS::Completion c = Engine::runFile( exec->dynamicInterpreter(), toUString(qualifiedFilename) );
-            if ( c.complType() == KJS::Normal )
+        QString qualifiedFilename = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "scripts/" + toQString(filename));
+        if (!qualifiedFilename.isEmpty()) {
+            KJS::Completion c = Engine::runFile(exec->dynamicInterpreter(), toUString(qualifiedFilename));
+            if (c.complType() == KJS::Normal) {
                 return KJS::jsNull();
+            }
 
-            if (c.complType() == KJS::ReturnValue)
-            {
-                if (c.isValueCompletion())
+            if (c.complType() == KJS::ReturnValue) {
+                if (c.isValueCompletion()) {
                     return c.value();
+                }
 
                 return KJS::jsNull();
             }
 
-            if (c.complType() == KJS::Throw)
-            {
+            if (c.complType() == KJS::Throw) {
                 QString message = toQString(c.value()->toString(exec));
                 int line = c.value()->toObject(exec)->get(exec, "line")->toUInt32(exec);
                 return throwError(exec, KJS::EvalError,
                                   toUString(i18n("Error encountered while processing include '%1' line %2: %3", toQString(filename), line, message)));
             }
+        } else {
+            QString msg = i18n("File %1 not found.", toQString(filename));
+            return throwError(exec, KJS::URIError, toUString(msg));
         }
-        else {
-            QString msg = i18n( "File %1 not found.", toQString(filename) );
-            return throwError( exec, KJS::URIError, toUString(msg) );
-        }
-    }
-    else {
+    } else {
         return throwError(exec, KJS::URIError,
                           toUString(i18n("library only takes 1 argument, not %1.", args.size())));
     }
@@ -136,11 +128,10 @@ KJS::JSValue *callLibrary( KJS::ExecState *exec, KJS::JSObject *self, const KJS:
     return KJS::jsNull();
 }
 
-KJS::JSValue *callAlert( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callAlert(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self)
-    if (args.size() == 1)
-    {
+    if (args.size() == 1) {
         (*KJSEmbed::conerr()) << "callAlert";
         QString message = toQString(args[0]->toString(exec));
         QMessageBox::warning(0, i18n("Alert"), message, QMessageBox::Ok, QMessageBox::NoButton);
@@ -148,69 +139,62 @@ KJS::JSValue *callAlert( KJS::ExecState *exec, KJS::JSObject *self, const KJS::L
     return KJS::jsNull();
 }
 
-KJS::JSValue *callConfirm( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callConfirm(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self)
-    if (args.size() == 1)
-    {
+    if (args.size() == 1) {
         QString message = toQString(args[0]->toString(exec));
-        int result = QMessageBox::question (0, i18n("Confirm"), message, QMessageBox::Yes, QMessageBox::No);
-        if (result == QMessageBox::Yes)
+        int result = QMessageBox::question(0, i18n("Confirm"), message, QMessageBox::Yes, QMessageBox::No);
+        if (result == QMessageBox::Yes) {
             return KJS::jsBoolean(true);
+        }
     }
     return KJS::jsBoolean(false);
 }
 
-KJS::JSValue *callIsVariantType( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callIsVariantType(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self)
-    if (args.size() == 1)
-    {
+    if (args.size() == 1) {
         QString thetypename = toQString(args[0]->toString(exec));
-        return KJS::jsBoolean( QMetaType::type( thetypename.toLatin1().data() ) );
+        return KJS::jsBoolean(QMetaType::type(thetypename.toLatin1().data()));
     }
     return KJS::jsBoolean(false);
 }
 
-KJS::JSValue *callIsVariant( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callIsVariant(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self)
-    if (args.size() == 1)
-    {
+    if (args.size() == 1) {
         KJS::JSObject *obj = args[0]->toObject(exec);
-        if (obj->inherits(&VariantBinding::info))
-        {
+        if (obj->inherits(&VariantBinding::info)) {
             return KJS::jsBoolean(true);
         }
     }
     return KJS::jsBoolean(false);
 }
 
-KJS::JSValue *callIsObject( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callIsObject(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(self)
-    if (args.size() == 1)
-    {
+    if (args.size() == 1) {
         KJS::JSObject *obj = args[0]->toObject(exec);
-        if (obj->inherits(&ObjectBinding::info))
-        {
+        if (obj->inherits(&ObjectBinding::info)) {
             return KJS::jsBoolean(true);
         }
     }
     return KJS::jsBoolean(false);
 }
 
-const Method BuiltinsFactory::BuiltinMethods[] =
-{
-    {"exec", 0, KJS::DontDelete|KJS::ReadOnly, &callExec},
-    {"dump", 1, KJS::DontDelete|KJS::ReadOnly, &callDump},
-    {"include", 1, KJS::DontDelete|KJS::ReadOnly, &callInclude},
-    {"library", 1, KJS::DontDelete|KJS::ReadOnly, &callLibrary},
-    {"alert", 1, KJS::DontDelete|KJS::ReadOnly, &callAlert},
-    {"confirm", 1, KJS::DontDelete|KJS::ReadOnly, &callConfirm},
-    {"isVariantType", 1, KJS::DontDelete|KJS::ReadOnly, &callIsVariantType},
-    {"isVariant", 1, KJS::DontDelete|KJS::ReadOnly, &callIsVariant},
-    {"isObject", 1, KJS::DontDelete|KJS::ReadOnly, &callIsObject},
+const Method BuiltinsFactory::BuiltinMethods[] = {
+    {"exec", 0, KJS::DontDelete | KJS::ReadOnly, &callExec},
+    {"dump", 1, KJS::DontDelete | KJS::ReadOnly, &callDump},
+    {"include", 1, KJS::DontDelete | KJS::ReadOnly, &callInclude},
+    {"library", 1, KJS::DontDelete | KJS::ReadOnly, &callLibrary},
+    {"alert", 1, KJS::DontDelete | KJS::ReadOnly, &callAlert},
+    {"confirm", 1, KJS::DontDelete | KJS::ReadOnly, &callConfirm},
+    {"isVariantType", 1, KJS::DontDelete | KJS::ReadOnly, &callIsVariantType},
+    {"isVariant", 1, KJS::DontDelete | KJS::ReadOnly, &callIsVariant},
+    {"isObject", 1, KJS::DontDelete | KJS::ReadOnly, &callIsObject},
     {0, 0, 0, 0 }
 };
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

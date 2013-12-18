@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef URL_H
 #define URL_H
 
@@ -31,19 +30,20 @@ class QUrl;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QUrl. */
-    class UrlBinding : public VariantBinding
+/** @internal Implements the binding for QUrl. */
+class UrlBinding : public VariantBinding
+{
+public:
+    UrlBinding(KJS::ExecState *exec, const QUrl &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            UrlBinding( KJS::ExecState *exec, const QUrl &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-
-    KJS_BINDING( Url )
+KJS_BINDING(Url)
 
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -30,9 +30,8 @@
 
 namespace KJSEmbed
 {
-    KJSO_BINDING( SvgRenderer, QSvgRenderer, QObjectBinding )
-    KJSO_BINDING( SvgWidget, QSvgWidget, QWidgetBinding )
+KJSO_BINDING(SvgRenderer, QSvgRenderer, QObjectBinding)
+KJSO_BINDING(SvgWidget, QSvgWidget, QWidgetBinding)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

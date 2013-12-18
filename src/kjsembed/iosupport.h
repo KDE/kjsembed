@@ -27,14 +27,16 @@
 
 namespace KJSEmbed
 {
-    struct Method;
-    class IoFactory
+struct Method;
+class IoFactory
+{
+public:
+    static const Method IoMethods[];
+    static const Method *methods()
     {
-        public:
-            static const Method IoMethods[];
-            static const Method *methods(){ return IoMethods;}
-    };
+        return IoMethods;
+    }
+};
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

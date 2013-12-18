@@ -33,41 +33,37 @@
 #include "kjseglobal.h"
 
 using namespace KJSEmbed;
-NO_METHODS( FormBuilder )
-NO_ENUMS( FormBuilder )
-NO_STATICS( FormBuilder )
+NO_METHODS(FormBuilder)
+NO_ENUMS(FormBuilder)
+NO_STATICS(FormBuilder)
 
-START_CTOR( FormBuilder, Form, 2 )
-    if( args.size() > 0 )
-    {
-        QFormBuilder *formBuilder = new QFormBuilder();
-        QWidget *parentWidget = 0;
-        KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1] );
-        if( parentImp )
-        {
-            parentWidget = parentImp->object<QWidget>();
-        }
-        QString fileName = toQString(args[0]->toString(exec));
-        QFile uiFile(fileName);
-        if( uiFile.open(QIODevice::ReadOnly | QIODevice::Text) )
-        {
-            QWidget *returnWidget = formBuilder->load(&uiFile,parentWidget);
-            uiFile.close();
-            if( returnWidget == 0 )
-            {
-                delete formBuilder;
-                return KJS::throwError(exec, KJS::GeneralError, i18n("There was an error reading the file '%1'",
-                                    fileName));
-            }
-            KJS::JSObject *form = new QWidgetBinding( exec, returnWidget );
-            delete formBuilder;
-            return form;
-        }
-        delete formBuilder;
-        return KJS::throwError(exec, KJS::GeneralError, i18n("Could not read file '%1'",
-                                fileName));
+START_CTOR(FormBuilder, Form, 2)
+if (args.size() > 0)
+{
+    QFormBuilder *formBuilder = new QFormBuilder();
+    QWidget *parentWidget = 0;
+    KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1]);
+    if (parentImp) {
+        parentWidget = parentImp->object<QWidget>();
     }
-    return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a filename."));
+    QString fileName = toQString(args[0]->toString(exec));
+    QFile uiFile(fileName);
+    if (uiFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QWidget *returnWidget = formBuilder->load(&uiFile, parentWidget);
+        uiFile.close();
+        if (returnWidget == 0) {
+            delete formBuilder;
+            return KJS::throwError(exec, KJS::GeneralError, i18n("There was an error reading the file '%1'",
+                                   fileName));
+        }
+        KJS::JSObject *form = new QWidgetBinding(exec, returnWidget);
+        delete formBuilder;
+        return form;
+    }
+    delete formBuilder;
+    return KJS::throwError(exec, KJS::GeneralError, i18n("Could not read file '%1'",
+                           fileName));
+}
+return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a filename."));
 END_CTOR
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

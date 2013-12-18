@@ -38,24 +38,22 @@ class NumberBar : public QWidget
     Q_OBJECT
 
 public:
-    NumberBar( QWidget *parent );
+    NumberBar(QWidget *parent);
     ~NumberBar();
 
-    void setCurrentLine( int lineno );
-    void setStopLine( int lineno );
-    void setBugLine( int lineno );
+    void setCurrentLine(int lineno);
+    void setStopLine(int lineno);
+    void setBugLine(int lineno);
 
     int currentLine() const;
     int stopLine() const;
     int bugLine() const;
 
-    void setTextEdit( QTextEdit *edit );
-    void paintEvent( QPaintEvent *ev );
-
-
+    void setTextEdit(QTextEdit *edit);
+    void paintEvent(QPaintEvent *ev);
 
 protected:
-    bool event( QEvent *ev );
+    bool event(QEvent *ev);
 
 private:
     QTextEdit *edit;
@@ -76,63 +74,65 @@ private:
 class NumberedTextView : public QFrame
 {
     Q_OBJECT
-    Q_PROPERTY( QString text READ text WRITE setText )
-    Q_PROPERTY( int currentLine READ currentLine WRITE setCurrentLine )
-    Q_PROPERTY( int stopLine READ stopLine WRITE setStopLine )
-    Q_PROPERTY( int bugLine READ bugLine WRITE setBugLine )
+    Q_PROPERTY(QString text READ text WRITE setText)
+    Q_PROPERTY(int currentLine READ currentLine WRITE setCurrentLine)
+    Q_PROPERTY(int stopLine READ stopLine WRITE setStopLine)
+    Q_PROPERTY(int bugLine READ bugLine WRITE setBugLine)
 public:
-    NumberedTextView( QWidget *parent = 0 );
+    NumberedTextView(QWidget *parent = 0);
     ~NumberedTextView();
 
     /** Returns the QTextEdit of the main view. */
-    QTextEdit *textEdit() const { return view; }
+    QTextEdit *textEdit() const
+    {
+        return view;
+    }
 
     /**
      * Sets the line that should have the current line indicator.
      * A value of -1 indicates no line should show the indicator.
      */
-    void setCurrentLine( int lineno );
+    void setCurrentLine(int lineno);
 
     /**
      * Sets the line that should have the stop line indicator.
      * A value of -1 indicates no line should show the indicator.
      */
-    void setStopLine( int lineno );
+    void setStopLine(int lineno);
 
     /**
      * Sets the line that should have the bug line indicator.
      * A value of -1 indicates no line should show the indicator.
      */
-    void setBugLine( int lineno );
+    void setBugLine(int lineno);
 
     int currentLine() const;
     int stopLine() const;
     int bugLine() const;
 
     /** @internal Used to get tooltip events from the view for the hover signal. */
-    bool eventFilter( QObject *obj, QEvent *event );
+    bool eventFilter(QObject *obj, QEvent *event);
 
     QString text() const;
-    void setText( const QString &text );
-
+    void setText(const QString &text);
 
 Q_SIGNALS:
     /**
      * Emitted when the mouse is hovered over the text edit component.
      * @param word The word under the mouse pointer
      */
-    void mouseHover( const QString &word );
+    void mouseHover(const QString &word);
 
     /**
      * Emitted when the mouse is hovered over the text edit component.
      * @param pos The position of the mouse pointer.
      * @param word The word under the mouse pointer
      */
-    void mouseHover( const QPoint &pos, const QString &word );
+    void mouseHover(const QPoint &pos, const QString &word);
 
 protected Q_SLOTS:
     /** @internal Used to update the highlight on the current line. */
-    void textChanged( int pos, int added, int removed );
+    void textChanged(int pos, int added, int removed);
 
 private:
     QTextEdit *view;
@@ -142,7 +142,5 @@ private:
     QTextCursor highlight;
 };
 
-
 #endif // NUMBERED_TEXT_VIEW_H
-
 

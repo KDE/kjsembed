@@ -28,19 +28,18 @@
 #include <kjs/interpreter.h>
 #include <kjs/PropertyNameArray.h>
 
-struct Node
-{
+struct Node {
     QByteArray name;
     KJS::JSObject *instance;
     Node *parent;
 };
 
-KJSObjectModel::KJSObjectModel(KJS::Interpreter *js, QObject *parent ):
+KJSObjectModel::KJSObjectModel(KJS::Interpreter *js, QObject *parent):
     QAbstractItemModel(parent), m_js(js)
 {
 }
 
-void KJSObjectModel::updateModel( KJS::JSObject *root)
+void KJSObjectModel::updateModel(KJS::JSObject *root)
 {
     m_root = root;
     reset();
@@ -52,27 +51,26 @@ KJSObjectModel::~KJSObjectModel()
 
 Qt::ItemFlags KJSObjectModel::flags(const QModelIndex &index) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return Qt::ItemIsEnabled;
+    }
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 }
 
-
-int KJSObjectModel::rowCount(const QModelIndex &parent ) const
+int KJSObjectModel::rowCount(const QModelIndex &parent) const
 {
     KJS::ExecState *exec = m_js->globalExec();
     KJS::PropertyNameArray props;
-    if (!parent.isValid())
+    if (!parent.isValid()) {
         m_root->getPropertyNames(exec, props);
-    else
-    {
-        Node *item = static_cast<Node*>(parent.internalPointer());
+    } else {
+        Node *item = static_cast<Node *>(parent.internalPointer());
         item->instance->getPropertyNames(exec, props);
     }
     return props.size();
 }
 
-int KJSObjectModel::columnCount(const QModelIndex &parent ) const
+int KJSObjectModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return 1;
@@ -80,57 +78,55 @@ int KJSObjectModel::columnCount(const QModelIndex &parent ) const
 
 QVariant KJSObjectModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    if (orientation == Qt::Horizontal && role == Qt::DisplayRole)
-    {
-        if( section == 0)
+    if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
+        if (section == 0) {
             return "Object Name";
-        else
+        } else {
             return "Value";
+        }
     }
     return QVariant();
 }
 
-QModelIndex KJSObjectModel::index(int row, int column, const QModelIndex &parent ) const
+QModelIndex KJSObjectModel::index(int row, int column, const QModelIndex &parent) const
 {
     KJS::JSObject *parentInstance = 0;
     Node *childItem = 0;
     KJS::ExecState *exec = m_js->globalExec();
 
-    if (!parent.isValid())
-    {
-        if (m_root)
+    if (!parent.isValid()) {
+        if (m_root) {
             parentInstance = m_root;
-        else
+        } else {
             return QModelIndex();
+        }
+    } else {
+        parentInstance = static_cast<Node *>(parent.internalPointer())->instance;
     }
-    else
-        parentInstance = static_cast<Node*>(parent.internalPointer())->instance;
     int idx = 0;
     KJS::PropertyNameArray props;
     parentInstance->getPropertyNames(exec, props);
-    for( KJS::PropertyNameArrayIterator ref = props.begin(); ref != props.end(); ref++)
-    {
-        if( idx == row)
-        {
-                childItem = new Node;
-                childItem->name = ref->ascii(); //### M.O.: this is wrong, can be unicode.
-                childItem->instance = parentInstance->get( exec,
-                        childItem->name.constData() )->toObject(exec);
-                childItem->parent = static_cast<Node*>(parent.internalPointer());
-                break;
+    for (KJS::PropertyNameArrayIterator ref = props.begin(); ref != props.end(); ref++) {
+        if (idx == row) {
+            childItem = new Node;
+            childItem->name = ref->ascii(); //### M.O.: this is wrong, can be unicode.
+            childItem->instance = parentInstance->get(exec,
+                                  childItem->name.constData())->toObject(exec);
+            childItem->parent = static_cast<Node *>(parent.internalPointer());
+            break;
         }
         ++idx;
     }
-    if (childItem)
+    if (childItem) {
         return createIndex(row, column, childItem);
+    }
 
     return QModelIndex();
 }
 
 QModelIndex KJSObjectModel::parent(const QModelIndex &index) const
 {
-    if (!index.isValid())
-    {
+    if (!index.isValid()) {
         Node *node = new Node;
         node->instance = m_root;
         node->name = "Objects";
@@ -138,47 +134,48 @@ QModelIndex KJSObjectModel::parent(const QModelIndex &index) const
         return createIndex(0, index.column(), node);
     }
 
-    Node *parentItem = static_cast<Node*>(index.internalPointer())->parent;
-    if ( parentItem )
-    {
+    Node *parentItem = static_cast<Node *>(index.internalPointer())->parent;
+    if (parentItem) {
         Node *node = new Node;
         node->instance = parentItem->instance;
         node->name = parentItem->name;
         node->parent = parentItem->parent;
         return createIndex(0, index.column(), node);
-    }
-    else
+    } else {
         return QModelIndex();
+    }
 }
 
 QVariant KJSObjectModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
-    Node *item = static_cast<Node*>(index.internalPointer());
+    Node *item = static_cast<Node *>(index.internalPointer());
     KJS::JSObject *instance = item->instance;
 
-    if (role == Qt::DecorationRole )
-    {
-        if( instance->implementsConstruct() )
+    if (role == Qt::DecorationRole) {
+        if (instance->implementsConstruct()) {
             return QPixmap(":/images/class.png");
-        else if( instance->implementsCall() )
+        } else if (instance->implementsCall()) {
             return QPixmap(":/images/method.png");
-        else
+        } else {
             return QPixmap(":/images/property.png");
+        }
     }
-    if( role == Qt::TextColorRole )
-    {
-        if( instance->implementsConstruct() )
+    if (role == Qt::TextColorRole) {
+        if (instance->implementsConstruct()) {
             return QColor("blue");
-        else if( instance->implementsCall() )
+        } else if (instance->implementsCall()) {
             return QColor("green");
-        else
+        } else {
             return QColor("black");
+        }
     }
-    if (role == Qt::DisplayRole)
+    if (role == Qt::DisplayRole) {
         return item->name;
+    }
     return QVariant();
 }
 

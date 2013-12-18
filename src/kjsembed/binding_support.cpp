@@ -22,229 +22,207 @@
 #include "binding_support.h"
 #include <kjs/interpreter.h>
 
-
 using namespace KJSEmbed;
 
-ProxyBinding::ProxyBinding( KJS::ExecState *exec )
+ProxyBinding::ProxyBinding(KJS::ExecState *exec)
     : KJS::JSObject(exec->lexicalInterpreter()->builtinObjectPrototype())
 {
 
 }
 
-QString KJSEmbed::extractQString( KJS::ExecState *exec, const KJS::List &args, int idx, const QString defaultValue )
+QString KJSEmbed::extractQString(KJS::ExecState *exec, const KJS::List &args, int idx, const QString defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractQString( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractQString(exec, args[idx]);
     }
     return defaultValue;
 }
 
-QString KJSEmbed::extractQString( KJS::ExecState *exec, KJS::JSValue *value, const QString defaultValue )
+QString KJSEmbed::extractQString(KJS::ExecState *exec, KJS::JSValue *value, const QString defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
+    }
     return toQString(value->toString(exec));
 }
 
-QByteArray KJSEmbed::extractQByteArray( KJS::ExecState *exec, const KJS::List &args, int idx, const QByteArray &defaultValue )
+QByteArray KJSEmbed::extractQByteArray(KJS::ExecState *exec, const KJS::List &args, int idx, const QByteArray &defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractQByteArray( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractQByteArray(exec, args[idx]);
     }
     return defaultValue;
 }
 
-QByteArray KJSEmbed::extractQByteArray( KJS::ExecState *exec, KJS::JSValue *value, const QByteArray &defaultValue  )
+QByteArray KJSEmbed::extractQByteArray(KJS::ExecState *exec, KJS::JSValue *value, const QByteArray &defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
+    }
     return toQString(value->toString(exec)).toLatin1();
 }
 
-KJS::JSValue *KJSEmbed::createQByteArray( KJS::ExecState *exec, const QByteArray &value )
+KJS::JSValue *KJSEmbed::createQByteArray(KJS::ExecState *exec, const QByteArray &value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsString( value.data() );
+    Q_UNUSED(exec);
+    return KJS::jsString(value.data());
 }
 
-int KJSEmbed::extractInt( KJS::ExecState *exec, const KJS::List &args, int idx, int defaultValue )
+int KJSEmbed::extractInt(KJS::ExecState *exec, const KJS::List &args, int idx, int defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractInt( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractInt(exec, args[idx]);
     }
     return defaultValue;
 }
 
-int KJSEmbed::extractInt( KJS::ExecState *exec, KJS::JSValue *value, int defaultValue )
+int KJSEmbed::extractInt(KJS::ExecState *exec, KJS::JSValue *value, int defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
-    return int( value->toInteger(exec) );
+    }
+    return int(value->toInteger(exec));
 }
 
-KJS::JSValue *KJSEmbed::createQString( KJS::ExecState *exec, const QString &value )
+KJS::JSValue *KJSEmbed::createQString(KJS::ExecState *exec, const QString &value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsString( toUString(value) );
+    Q_UNUSED(exec);
+    return KJS::jsString(toUString(value));
 }
 
-KJS::JSValue *KJSEmbed::createInt( KJS::ExecState *exec, int value  )
+KJS::JSValue *KJSEmbed::createInt(KJS::ExecState *exec, int value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsNumber( value );
+    Q_UNUSED(exec);
+    return KJS::jsNumber(value);
 }
 
-double KJSEmbed::extractDouble( KJS::ExecState *exec, const KJS::List &args, int idx, double defaultValue )
+double KJSEmbed::extractDouble(KJS::ExecState *exec, const KJS::List &args, int idx, double defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractDouble( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractDouble(exec, args[idx]);
     }
     return defaultValue;
 }
 
-double KJSEmbed::extractDouble( KJS::ExecState *exec, KJS::JSValue *value, double defaultValue )
+double KJSEmbed::extractDouble(KJS::ExecState *exec, KJS::JSValue *value, double defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
+    }
     return (double) value->toNumber(exec);
 }
 
-
-KJS::JSValue *KJSEmbed::createDouble( KJS::ExecState *exec, double value  )
+KJS::JSValue *KJSEmbed::createDouble(KJS::ExecState *exec, double value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsNumber( value );
+    Q_UNUSED(exec);
+    return KJS::jsNumber(value);
 }
 
-
-float KJSEmbed::extractFloat( KJS::ExecState *exec, const KJS::List &args, int idx, float defaultValue  )
+float KJSEmbed::extractFloat(KJS::ExecState *exec, const KJS::List &args, int idx, float defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractFloat( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractFloat(exec, args[idx]);
     }
     return defaultValue;
 }
 
-
-float KJSEmbed::extractFloat( KJS::ExecState *exec, KJS::JSValue *value, float defaultValue )
+float KJSEmbed::extractFloat(KJS::ExecState *exec, KJS::JSValue *value, float defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
+    }
     return (float) value->toNumber(exec);
 }
 
-
-KJS::JSValue *KJSEmbed::createFloat( KJS::ExecState *exec, float value  )
+KJS::JSValue *KJSEmbed::createFloat(KJS::ExecState *exec, float value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsNumber( value );
+    Q_UNUSED(exec);
+    return KJS::jsNumber(value);
 }
 
-
-bool KJSEmbed::extractBool( KJS::ExecState *exec, const KJS::List &args, int idx, bool defaultValue )
+bool KJSEmbed::extractBool(KJS::ExecState *exec, const KJS::List &args, int idx, bool defaultValue)
 {
-    if( args.size() > idx )
-    {
-        return extractBool( exec, args[idx] );
+    if (args.size() > idx) {
+        return extractBool(exec, args[idx]);
     }
     return defaultValue;
 }
 
-
-bool KJSEmbed::extractBool( KJS::ExecState *exec, KJS::JSValue *value, bool defaultValue )
+bool KJSEmbed::extractBool(KJS::ExecState *exec, KJS::JSValue *value, bool defaultValue)
 {
-    if( !value )
+    if (!value) {
         return defaultValue;
+    }
     return value->toBoolean(exec);
 }
 
-
-KJS::JSValue *KJSEmbed::createBool( KJS::ExecState *exec, bool value  )
+KJS::JSValue *KJSEmbed::createBool(KJS::ExecState *exec, bool value)
 {
-    Q_UNUSED( exec );
-    return KJS::jsBoolean( value );
+    Q_UNUSED(exec);
+    return KJS::jsBoolean(value);
 }
 
-
-QDateTime KJSEmbed::extractQDateTime( KJS::ExecState* /* exec */, const KJS::List& /* args */, int /* idx */, const QDateTime& /* defaultValue */  )
+QDateTime KJSEmbed::extractQDateTime(KJS::ExecState * /* exec */, const KJS::List & /* args */, int /* idx */, const QDateTime & /* defaultValue */)
 {
     return QDateTime();
 }
 
-
-QDateTime KJSEmbed::extractQDateTime( KJS::ExecState* /* exec */, KJS::JSValue* /* value */, const QDateTime& /* defaultValue */ )
+QDateTime KJSEmbed::extractQDateTime(KJS::ExecState * /* exec */, KJS::JSValue * /* value */, const QDateTime & /* defaultValue */)
 {
     return QDateTime();
 }
 
-
-KJS::JSValue *KJSEmbed::createQDateTime( KJS::ExecState* /* exec */, const QDateTime& /* value */  )
+KJS::JSValue *KJSEmbed::createQDateTime(KJS::ExecState * /* exec */, const QDateTime & /* value */)
 {
 //    return new KJS::JSValue();
     return 0;
 }
 
-
-QDate KJSEmbed::extractQDate( KJS::ExecState* /* exec */, const KJS::List& /* args */, int /* idx */, const QDate& /* defaultValue */ )
+QDate KJSEmbed::extractQDate(KJS::ExecState * /* exec */, const KJS::List & /* args */, int /* idx */, const QDate & /* defaultValue */)
 {
     return QDate();
 }
 
-
-QDate KJSEmbed::extractQDate( KJS::ExecState* /*exec*/, KJS::JSValue* /*value*/, const QDate& /*defaultValue*/ )
+QDate KJSEmbed::extractQDate(KJS::ExecState * /*exec*/, KJS::JSValue * /*value*/, const QDate & /*defaultValue*/)
 {
     return QDate();
 }
 
-
-KJS::JSValue *KJSEmbed::createQDate( KJS::ExecState* /*exec*/, const QDate& /*value*/  )
+KJS::JSValue *KJSEmbed::createQDate(KJS::ExecState * /*exec*/, const QDate & /*value*/)
 {
 //    return new KJS::JSValue();
     return 0;
 }
 
-
-QTime KJSEmbed::extractQTime( KJS::ExecState* /*exec*/, const KJS::List& /*args*/, int /*idx*/, const QTime& /*defaultValue*/  )
+QTime KJSEmbed::extractQTime(KJS::ExecState * /*exec*/, const KJS::List & /*args*/, int /*idx*/, const QTime & /*defaultValue*/)
 {
     return QTime();
 }
 
-
-QTime KJSEmbed::extractQTime( KJS::ExecState * /*exec*/, KJS::JSValue* /*value*/, const QTime &/*defaultValue*/  )
+QTime KJSEmbed::extractQTime(KJS::ExecState * /*exec*/, KJS::JSValue * /*value*/, const QTime &/*defaultValue*/)
 {
     return QTime();
 }
 
-
-KJS::JSValue *KJSEmbed::createQTime( KJS::ExecState * /*exec*/, const QTime &/*value*/  )
+KJS::JSValue *KJSEmbed::createQTime(KJS::ExecState * /*exec*/, const QTime &/*value*/)
 {
 //    return new KJS::JSValue();
     return 0;
 }
 
-
-QStringList KJSEmbed::extractQStringList( KJS::ExecState * /*exec*/, const KJS::List &/*args*/, int /*idx*/, const QStringList &/*defaultValue*/ )
+QStringList KJSEmbed::extractQStringList(KJS::ExecState * /*exec*/, const KJS::List &/*args*/, int /*idx*/, const QStringList &/*defaultValue*/)
 {
     return QStringList();
 }
 
-
-QStringList KJSEmbed::extractQStringList( KJS::ExecState * /*exec*/, KJS::JSValue* /*value*/, const QStringList &/*defaultValue*/ )
+QStringList KJSEmbed::extractQStringList(KJS::ExecState * /*exec*/, KJS::JSValue * /*value*/, const QStringList &/*defaultValue*/)
 {
     return QStringList();
 }
 
-
-KJS::JSValue *KJSEmbed::createQStringList( KJS::ExecState * /*exec*/, const QStringList &/*value*/  )
+KJS::JSValue *KJSEmbed::createQStringList(KJS::ExecState * /*exec*/, const QStringList &/*value*/)
 {
 //    return new KJS::JSValue();
     return 0;
 }
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;
-
 

@@ -26,20 +26,18 @@ using namespace KJSEmbed;
 
 const KJS::ClassInfo ValueBinding::info = { "ValueBinding", 0, 0, 0 };
 
-KJS::JSValue *callValueType( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args )
+KJS::JSValue *callValueType(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     Q_UNUSED(args);
-    KJSEmbed::ValueBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ValueBinding>(exec,  self );
-    if( imp )
-    {
-        return KJS::jsString( imp->className().ascii() );
+    KJSEmbed::ValueBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ValueBinding>(exec,  self);
+    if (imp) {
+        return KJS::jsString(imp->className().ascii());
     }
     return KJS::jsNull();
 }
 
-const Method ValueFactory::ValueMethods[] =
-{
-    {"type", 0, KJS::DontDelete|KJS::ReadOnly, &callValueType },
+const Method ValueFactory::ValueMethods[] = {
+    {"type", 0, KJS::DontDelete | KJS::ReadOnly, &callValueType },
     //{"cast", 1, KJS::DontDelete|KJS::ReadOnly, &callPointerCast },
     //{"toString", 0, KJS::DontDelete|KJS::ReadOnly, &callPointerToString },
     {0, 0, 0, 0 }
@@ -50,15 +48,15 @@ const Method *ValueFactory::methods()
     return ValueMethods;
 }
 
-ValueBinding::ValueBinding( KJS::ExecState *exec, const char *typeName)
-    : ProxyBinding( exec ),
+ValueBinding::ValueBinding(KJS::ExecState *exec, const char *typeName)
+    : ProxyBinding(exec),
       m_value(0),
       m_name(typeName)
 {
-    StaticBinding::publish( exec, this, ValueFactory::methods() );
+    StaticBinding::publish(exec, this, ValueFactory::methods());
 }
 
-ValueBinding::~ValueBinding() 
+ValueBinding::~ValueBinding()
 {
     delete m_value;
 }
@@ -69,4 +67,3 @@ KJS::UString ValueBinding::toString(KJS::ExecState *exec) const
     return m_value->type().name();
 }
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

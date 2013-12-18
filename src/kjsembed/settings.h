@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
@@ -31,9 +30,8 @@ class QSettings;
 
 namespace KJSEmbed
 {
-    KJSO_BINDING( SettingsBinding, QSettings, QObjectBinding )
+KJSO_BINDING(SettingsBinding, QSettings, QObjectBinding)
 }
 
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -39,8 +39,8 @@
 
 Ui::KJSConsole m_ui;
 
-Console::Console( QWidget *parent ) :
-    QMainWindow( parent )
+Console::Console(QWidget *parent) :
+    QMainWindow(parent)
 {
     KJS::Interpreter *js = mKernel.interpreter();
     KJS::JSObject *obj = js->globalObject();
@@ -67,14 +67,12 @@ void Console::on_mExecute_clicked()
     KJS::Completion jsres = mKernel.completion();
     m_ui.mConsole->append(m_ui.mCommand->currentText());
     KJS::JSValue *value = jsres.value();
-    if ( result != KJSEmbed::Engine::Success )
-    {
-        m_ui.mConsole->append(errorTemplate.arg( KJSEmbed::toQString(jsres.value()->toString(exec)) ));
-    }
-    else
-    {
-        if(value)
-            m_ui.mConsole->append( KJSEmbed::toQString(jsres.value()->toString(exec) ));
+    if (result != KJSEmbed::Engine::Success) {
+        m_ui.mConsole->append(errorTemplate.arg(KJSEmbed::toQString(jsres.value()->toString(exec))));
+    } else {
+        if (value) {
+            m_ui.mConsole->append(KJSEmbed::toQString(jsres.value()->toString(exec)));
+        }
     }
     KJS::JSObject *obj = js->globalObject();
     m_model->updateModel(obj);
@@ -85,19 +83,20 @@ void Console::on_actionOpenScript_activated()
 {
     QString m_lastDir;
     QString openFile = QFileDialog::getOpenFileName(this, tr("Select script to open..."),
-            m_lastDir, tr("Scripts (*.js *.kjs *.qjs)"));
+                       m_lastDir, tr("Scripts (*.js *.kjs *.qjs)"));
 
-    if( openFile.isEmpty() )
+    if (openFile.isEmpty()) {
         return;
+    }
 
     QString code;
     QFile fIn(openFile);
 
-    if (!fIn.open(QIODevice::ReadOnly | QIODevice::Text))
+    if (!fIn.open(QIODevice::ReadOnly | QIODevice::Text)) {
         return;
+    }
 
-    while (!fIn.atEnd())
-    {
+    while (!fIn.atEnd()) {
         QByteArray line = fIn.readLine();
         code += line;
     }
@@ -122,14 +121,12 @@ void Console::on_actionRun_activated()
     KJSEmbed::Engine::ExitStatus result = mKernel.execute(m_ui.mInput->text());
     KJS::Completion jsres = mKernel.completion();
     KJS::JSValue *value = jsres.value();
-    if ( result != KJSEmbed::Engine::Success )
-    {
-        m_ui.mConsole->append(errorTemplate.arg( KJSEmbed::toQString(jsres.value()->toString(exec)) ) );
-    }
-    else
-    {
-        if(value)
-            m_ui.mConsole->append( KJSEmbed::toQString(jsres.value()->toString(exec)));
+    if (result != KJSEmbed::Engine::Success) {
+        m_ui.mConsole->append(errorTemplate.arg(KJSEmbed::toQString(jsres.value()->toString(exec))));
+    } else {
+        if (value) {
+            m_ui.mConsole->append(KJSEmbed::toQString(jsres.value()->toString(exec)));
+        }
     }
     KJS::JSObject *obj = js->globalObject();
     m_model->updateModel(obj);
@@ -145,5 +142,4 @@ void Console::on_actionStep_activated()
 void Console::on_actionStop_activated()
 {
 }
-
 

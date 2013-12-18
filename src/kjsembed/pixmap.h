@@ -30,23 +30,24 @@ class QPixmap;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QPixmap. */
-    class PixmapBinding : public VariantBinding
+/** @internal Implements the binding for QPixmap. */
+class PixmapBinding : public VariantBinding
+{
+public:
+    PixmapBinding(KJS::ExecState *exec, const QPixmap &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            PixmapBinding( KJS::ExecState *exec, const QPixmap &value );
-            virtual const KJS::ClassInfo *classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    /**
-    * Constructors:
-    *
-    * Methods:
-    */
-    KJS_BINDING( Pixmap  )
-
+/**
+* Constructors:
+*
+* Methods:
+*/
+KJS_BINDING(Pixmap)
 
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

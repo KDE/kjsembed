@@ -30,22 +30,24 @@ class QImage;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the bniding for QImage. */
-    class ImageBinding : public VariantBinding
+/** @internal Implements the bniding for QImage. */
+class ImageBinding : public VariantBinding
+{
+public:
+    ImageBinding(KJS::ExecState *exec, const QImage &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            ImageBinding( KJS::ExecState *exec, const QImage &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    /**
-    * Constructors:
-    *
-    * Methods:
-    */
-    KJS_BINDING( Image )
+/**
+* Constructors:
+*
+* Methods:
+*/
+KJS_BINDING(Image)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -27,14 +27,16 @@
 
 namespace KJSEmbed
 {
-    struct Method;
+struct Method;
 
-    class FileDialog
+class FileDialog
+{
+public:
+    static const Method FileDialogMethods[];
+    static const Method *methods()
     {
-        public:
-            static const Method FileDialogMethods[];
-            static const Method *methods(){ return FileDialogMethods; }
-    };
+        return FileDialogMethods;
+    }
+};
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

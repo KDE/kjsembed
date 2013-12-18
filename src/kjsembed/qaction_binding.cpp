@@ -31,65 +31,57 @@
 
 namespace KJSEmbed
 {
-	QUiLoader *uiLoader();
+QUiLoader *uiLoader();
 }
-
 
 using namespace KJSEmbed;
 
-NO_METHODS( Action )
-NO_ENUMS( Action )
-NO_STATICS( Action )
+NO_METHODS(Action)
+NO_ENUMS(Action)
+NO_STATICS(Action)
 
-KJSO_SIMPLE_BINDING_CTOR( Action, QAction, QObjectBinding )
-KJSO_QOBJECT_BIND( Action, QAction )
+KJSO_SIMPLE_BINDING_CTOR(Action, QAction, QObjectBinding)
+KJSO_QOBJECT_BIND(Action, QAction)
 
-KJSO_START_CTOR( Action, QAction, 0 )
+KJSO_START_CTOR(Action, QAction, 0)
+QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+QString actionName = KJSEmbed::extractQString(exec, args, 1);
+
+QAction *action = uiLoader()->createAction(parent, actionName);
+if (action)
+{
+    KJS::JSObject *actionObject = new Action(exec, action);
+    return actionObject;
+} else
+{
+    return KJS::throwError(exec, KJS::GeneralError, i18n("Action takes 2 args."));
+}
+KJSO_END_CTOR
+
+NO_METHODS(ActionGroup)
+NO_ENUMS(ActionGroup)
+NO_STATICS(ActionGroup)
+
+KJSO_SIMPLE_BINDING_CTOR(ActionGroup, QActionGroup, QObjectBinding)
+KJSO_QOBJECT_BIND(ActionGroup, QActionGroup)
+
+KJSO_START_CTOR(ActionGroup, QActionGroup, 0)
+if (args.size() == 2)
+{
     QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
     QString actionName = KJSEmbed::extractQString(exec, args, 1);
 
-    QAction *action = uiLoader()->createAction(parent, actionName);
-    if( action )
-    {
-        KJS::JSObject *actionObject = new Action( exec, action );
+    QActionGroup *action = uiLoader()->createActionGroup(parent, actionName);
+    if (action) {
+        KJS::JSObject *actionObject = new ActionGroup(exec, action);
         return actionObject;
+    } else {
+        return KJS::throwError(exec, KJS::GeneralError, i18n("ActionGroup takes 2 args."));
+        // return KJSEmbed::throwError(exec, i18n("ActionGroup takes 2 args."));
     }
-    else
-    {
-        return KJS::throwError(exec, KJS::GeneralError, i18n("Action takes 2 args."));
-		}
-KJSO_END_CTOR
-
-
-
-NO_METHODS( ActionGroup )
-NO_ENUMS( ActionGroup )
-NO_STATICS( ActionGroup )
-
-KJSO_SIMPLE_BINDING_CTOR( ActionGroup, QActionGroup, QObjectBinding )
-KJSO_QOBJECT_BIND( ActionGroup, QActionGroup )
-
-KJSO_START_CTOR( ActionGroup, QActionGroup, 0 )
-    if( args.size() == 2 )
-    {
-        QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
-        QString actionName = KJSEmbed::extractQString(exec, args, 1);
-
-        QActionGroup *action = uiLoader()->createActionGroup(parent, actionName);
-        if( action )
-        {
-            KJS::JSObject *actionObject = new ActionGroup( exec, action );
-            return actionObject;
-        }
-        else
-        {
-            return KJS::throwError(exec, KJS::GeneralError, i18n("ActionGroup takes 2 args."));
-            // return KJSEmbed::throwError(exec, i18n("ActionGroup takes 2 args."));
-        }
-    }
-    // Trow error incorrect args
-    return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a valid parent."));
-    // return KJSEmbed::throwError(exec, i18n("Must supply a valid parent."));
+}
+// Trow error incorrect args
+return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a valid parent."));
+// return KJSEmbed::throwError(exec, i18n("Must supply a valid parent."));
 END_CTOR
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

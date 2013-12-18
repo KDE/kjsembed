@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef KJSEMBED_BUILTINS_H
 #define KJSEMBED_BUILTINS_H
 
@@ -29,15 +28,17 @@
 
 namespace KJSEmbed
 {
-    struct Method;
-    class BuiltinsFactory
+struct Method;
+class BuiltinsFactory
+{
+public:
+    static const Method BuiltinMethods[];
+    static const Method *methods()
     {
-        public:
-            static const Method BuiltinMethods[];
-            static const Method *methods(){ return BuiltinMethods;}
-    };
+        return BuiltinMethods;
+    }
+};
 
 //  KJS_BINDING( FormBuilder, FormBuilderMethods, FormBuilderConstructor )
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

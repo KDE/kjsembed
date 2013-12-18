@@ -29,12 +29,10 @@
 
 #include "qobject_binding.h" //krazy:exclude=includes (not a Qt header)
 
-
 namespace KJSEmbed
 {
-    KJSO_BINDING( Action, QAction, QObjectBinding )
-    KJSO_BINDING( ActionGroup, QActionGroup, QObjectBinding )
+KJSO_BINDING(Action, QAction, QObjectBinding)
+KJSO_BINDING(ActionGroup, QActionGroup, QObjectBinding)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

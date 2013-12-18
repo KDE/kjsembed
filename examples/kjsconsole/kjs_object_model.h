@@ -27,8 +27,8 @@
 
 namespace KJS
 {
-    class Interpreter;
-    class JSObject;
+class Interpreter;
+class JSObject;
 }
 
 struct Node;
@@ -47,7 +47,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     int columnCount(const QModelIndex &parent = QModelIndex()) const;
 
-    void updateModel( KJS::JSObject *m_root);
+    void updateModel(KJS::JSObject *m_root);
 
 private:
     KJS::Interpreter *m_js;

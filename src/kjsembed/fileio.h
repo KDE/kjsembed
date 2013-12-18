@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef FILEIO_H
 #define FILEIO_H
 
@@ -31,16 +30,15 @@ class QFile;
 
 namespace KJSEmbed
 {
-    /** @internal Implementation of an IO API for scripts. */
-    class FileIOBinding : public ObjectBinding
-    {
-        public:
-            FileIOBinding( KJS::ExecState *exec, QFile *value );
-    };
+/** @internal Implementation of an IO API for scripts. */
+class FileIOBinding : public ObjectBinding
+{
+public:
+    FileIOBinding(KJS::ExecState *exec, QFile *value);
+};
 
-    KJS_BINDING( FileIO )
+KJS_BINDING(FileIO)
 }
 
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -27,8 +27,7 @@
 
 namespace KJSEmbed
 {
-    KJS_BINDING( FormBuilder )
+KJS_BINDING(FormBuilder)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

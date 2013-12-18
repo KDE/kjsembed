@@ -32,59 +32,59 @@
 #include <QToolTip>
 #include <QtCore/QDebug>
 
-NumberBar::NumberBar( QWidget *parent )
-    : QWidget( parent ), edit(0), m_stopLine(-1), m_currentLine(-1), m_bugLine(-1)
+NumberBar::NumberBar(QWidget *parent)
+    : QWidget(parent), edit(0), m_stopLine(-1), m_currentLine(-1), m_bugLine(-1)
 {
-    stopMarker = QPixmap( ":/images/no.png" );
-    currentMarker = QPixmap( ":/images/next.png" );
-    bugMarker = QPixmap( ":/images/bug.png" );
-    setFixedWidth( fontMetrics().width( QStringLiteral("0000") ) + bugMarker.width() + stopMarker.width() + currentMarker.width()  );
+    stopMarker = QPixmap(":/images/no.png");
+    currentMarker = QPixmap(":/images/next.png");
+    bugMarker = QPixmap(":/images/bug.png");
+    setFixedWidth(fontMetrics().width(QStringLiteral("0000")) + bugMarker.width() + stopMarker.width() + currentMarker.width());
 }
 
 NumberBar::~NumberBar()
 {
 }
 
-void NumberBar::setCurrentLine( int lineno )
+void NumberBar::setCurrentLine(int lineno)
 {
     m_currentLine = lineno;
 }
 
-void NumberBar::setStopLine( int lineno )
+void NumberBar::setStopLine(int lineno)
 {
     m_stopLine = lineno;
 }
 
-void NumberBar::setBugLine( int lineno )
+void NumberBar::setBugLine(int lineno)
 {
     m_bugLine = lineno;
 }
 
 int NumberBar::currentLine() const
 {
-	return m_currentLine;
+    return m_currentLine;
 }
 
 int NumberBar::stopLine() const
 {
-	return m_stopLine;
+    return m_stopLine;
 }
 
 int NumberBar::bugLine() const
 {
-	return m_bugLine;
+    return m_bugLine;
 }
 
-void NumberBar::setTextEdit( QTextEdit *edit )
+void NumberBar::setTextEdit(QTextEdit *edit)
 {
     this->edit = edit;
-    connect( edit->document()->documentLayout(), SIGNAL(update(QRectF)),
-	     this, SLOT(update()) );
-    connect( edit->verticalScrollBar(), SIGNAL(valueChanged(int)),
-	     this, SLOT(update()) );
+    connect(edit->document()->documentLayout(), SIGNAL(update(QRectF)),
+            this, SLOT(update()));
+    connect(edit->verticalScrollBar(), SIGNAL(valueChanged(int)),
+            this, SLOT(update()));
 }
 
-void NumberBar::paintEvent( QPaintEvent * )
+void NumberBar::paintEvent(QPaintEvent *)
 {
     QAbstractTextDocumentLayout *layout = edit->document()->documentLayout();
     int contentsY = edit->verticalScrollBar()->value();
@@ -99,183 +99,184 @@ void NumberBar::paintEvent( QPaintEvent * )
     stopRect = QRect();
     currentRect = QRect();
 
-    for ( QTextBlock block = edit->document()->begin();
-	  block.isValid(); block = block.next(), ++lineCount ) {
+    for (QTextBlock block = edit->document()->begin();
+            block.isValid(); block = block.next(), ++lineCount) {
 
-        const QRectF boundingRect = layout->blockBoundingRect( block );
+        const QRectF boundingRect = layout->blockBoundingRect(block);
 
         QPointF position = boundingRect.topLeft();
-        if ( position.y() + boundingRect.height() < contentsY )
+        if (position.y() + boundingRect.height() < contentsY) {
             continue;
-        if ( position.y() > pageBottom )
+        }
+        if (position.y() > pageBottom) {
             break;
+        }
 
-        const QString txt = QString::number( lineCount );
-        p.drawText( width() - fm.width(txt), qRound( position.y() ) - contentsY + ascent, txt );
+        const QString txt = QString::number(lineCount);
+        p.drawText(width() - fm.width(txt), qRound(position.y()) - contentsY + ascent, txt);
 
-	// Bug marker
-	if ( m_bugLine == lineCount ) {
-	    p.drawPixmap( 1, qRound( position.y() ) - contentsY, bugMarker );
-	    bugRect = QRect( 1, qRound( position.y() ) - contentsY, bugMarker.width(), bugMarker.height() );
-	}
+        // Bug marker
+        if (m_bugLine == lineCount) {
+            p.drawPixmap(1, qRound(position.y()) - contentsY, bugMarker);
+            bugRect = QRect(1, qRound(position.y()) - contentsY, bugMarker.width(), bugMarker.height());
+        }
 
-	// Stop marker
-	if ( m_stopLine == lineCount ) {
-	    p.drawPixmap( 1, qRound( position.y() ) - contentsY, stopMarker );
-	    stopRect = QRect( 1, qRound( position.y() ) - contentsY, stopMarker.width(), stopMarker.height() );
-	}
+        // Stop marker
+        if (m_stopLine == lineCount) {
+            p.drawPixmap(1, qRound(position.y()) - contentsY, stopMarker);
+            stopRect = QRect(1, qRound(position.y()) - contentsY, stopMarker.width(), stopMarker.height());
+        }
 
-	// Current line marker
-	if ( m_currentLine == lineCount ) {
-	    p.drawPixmap( 1, qRound( position.y() ) - contentsY, currentMarker );
-	    currentRect = QRect( 1, qRound( position.y() ) - contentsY, currentMarker.width(), currentMarker.height() );
-	}
+        // Current line marker
+        if (m_currentLine == lineCount) {
+            p.drawPixmap(1, qRound(position.y()) - contentsY, currentMarker);
+            currentRect = QRect(1, qRound(position.y()) - contentsY, currentMarker.width(), currentMarker.height());
+        }
     }
 }
 
-bool NumberBar::event( QEvent *event )
+bool NumberBar::event(QEvent *event)
 {
-    if ( event->type() == QEvent::ToolTip ) {
-	QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
+    if (event->type() == QEvent::ToolTip) {
+        QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
 
-	if ( stopRect.contains( helpEvent->pos() ) ) {
-	    QToolTip::showText( helpEvent->globalPos(), "Stop Here" );
-	}
-	else if ( currentRect.contains( helpEvent->pos() ) ) {
-	    QToolTip::showText( helpEvent->globalPos(), "Current Line" );
-	}
-	else if ( bugRect.contains( helpEvent->pos() ) ) {
-	    QToolTip::showText( helpEvent->globalPos(), "Error Line" );
-	}
+        if (stopRect.contains(helpEvent->pos())) {
+            QToolTip::showText(helpEvent->globalPos(), "Stop Here");
+        } else if (currentRect.contains(helpEvent->pos())) {
+            QToolTip::showText(helpEvent->globalPos(), "Current Line");
+        } else if (bugRect.contains(helpEvent->pos())) {
+            QToolTip::showText(helpEvent->globalPos(), "Error Line");
+        }
     }
 
     return QWidget::event(event);
 }
 
-NumberedTextView::NumberedTextView( QWidget *parent )
-    : QFrame( parent )
+NumberedTextView::NumberedTextView(QWidget *parent)
+    : QFrame(parent)
 {
-    setFrameStyle( QFrame::StyledPanel | QFrame::Sunken );
-    setLineWidth( 2 );
+    setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
+    setLineWidth(2);
 
     // Setup the main view
-    view = new QTextEdit( this );
-    view->setFontFamily( "Monospace" );
-    view->setLineWrapMode( QTextEdit::NoWrap );
-    view->setFrameStyle( QFrame::NoFrame );
-    view->installEventFilter( this );
+    view = new QTextEdit(this);
+    view->setFontFamily("Monospace");
+    view->setLineWrapMode(QTextEdit::NoWrap);
+    view->setFrameStyle(QFrame::NoFrame);
+    view->installEventFilter(this);
 
-    connect( view->document(), SIGNAL(contentsChange(int,int,int)), this, SLOT(textChanged(int,int,int)) );
+    connect(view->document(), SIGNAL(contentsChange(int,int,int)), this, SLOT(textChanged(int,int,int)));
 
     // Setup the line number pane
-    numbers = new NumberBar( this );
-    numbers->setTextEdit( view );
+    numbers = new NumberBar(this);
+    numbers->setTextEdit(view);
     // Testing...
-    numbers->setStopLine( 3 );
-    numbers->setBugLine( 1 );
-    setCurrentLine( 5 );
+    numbers->setStopLine(3);
+    numbers->setBugLine(1);
+    setCurrentLine(5);
 
-    box = new QHBoxLayout( this );
-    box->setSpacing( 0 );
-    box->setMargin( 0 );
-    box->addWidget( numbers );
-    box->addWidget( view );
+    box = new QHBoxLayout(this);
+    box->setSpacing(0);
+    box->setMargin(0);
+    box->addWidget(numbers);
+    box->addWidget(view);
 }
 
 NumberedTextView::~NumberedTextView()
 {
 }
 
-void NumberedTextView::setCurrentLine( int lineno )
+void NumberedTextView::setCurrentLine(int lineno)
 {
-    numbers->setCurrentLine( lineno );
-    textChanged( 0, 0, 1 );
+    numbers->setCurrentLine(lineno);
+    textChanged(0, 0, 1);
 }
 
-void NumberedTextView::setStopLine( int lineno )
+void NumberedTextView::setStopLine(int lineno)
 {
-    numbers->setStopLine( lineno );
+    numbers->setStopLine(lineno);
 }
 
-void NumberedTextView::setBugLine( int lineno )
+void NumberedTextView::setBugLine(int lineno)
 {
-    numbers->setBugLine( lineno );
+    numbers->setBugLine(lineno);
 }
 
 int NumberedTextView::currentLine() const
 {
-	return numbers->currentLine();
+    return numbers->currentLine();
 }
 
 int NumberedTextView::stopLine() const
 {
-	return numbers->stopLine();
+    return numbers->stopLine();
 }
 
 int NumberedTextView::bugLine() const
 {
-	return numbers->bugLine();
+    return numbers->bugLine();
 }
 
 QString NumberedTextView::text() const
 {
-	return view->toPlainText ();
+    return view->toPlainText();
 }
 
-void NumberedTextView::setText( const QString &text )
+void NumberedTextView::setText(const QString &text)
 {
-	view->setPlainText(text);
+    view->setPlainText(text);
 }
 
-
-void NumberedTextView::textChanged( int pos, int removed, int added )
+void NumberedTextView::textChanged(int pos, int removed, int added)
 {
-    Q_UNUSED( pos );
+    Q_UNUSED(pos);
 
-    if ( removed == 0 && added == 0 )
-	return;
+    if (removed == 0 && added == 0) {
+        return;
+    }
 
     QTextBlock block = highlight.block();
     QTextBlockFormat fmt = block.blockFormat();
     QColor bg = view->palette().base().color();
-    fmt.setBackground( bg );
-    highlight.setBlockFormat( fmt );
+    fmt.setBackground(bg);
+    highlight.setBlockFormat(fmt);
 
     int lineCount = 1;
-    for ( QTextBlock block = view->document()->begin();
-	  block.isValid(); block = block.next(), ++lineCount ) {
+    for (QTextBlock block = view->document()->begin();
+            block.isValid(); block = block.next(), ++lineCount) {
 
-	if ( lineCount == numbers->currentLine() ) {
-	    fmt = block.blockFormat();
-	    QColor bg = view->palette().color(QPalette::Highlight).light( 175 );
-	    fmt.setBackground( bg );
+        if (lineCount == numbers->currentLine()) {
+            fmt = block.blockFormat();
+            QColor bg = view->palette().color(QPalette::Highlight).light(175);
+            fmt.setBackground(bg);
 
-	    highlight = QTextCursor( block );
-	    highlight.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
-	    highlight.setBlockFormat( fmt );
+            highlight = QTextCursor(block);
+            highlight.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
+            highlight.setBlockFormat(fmt);
 
-	    break;
-	}
+            break;
+        }
     }
 }
 
-bool NumberedTextView::eventFilter( QObject *obj, QEvent *event )
+bool NumberedTextView::eventFilter(QObject *obj, QEvent *event)
 {
-    if ( obj != view )
-	return QFrame::eventFilter(obj, event);
+    if (obj != view) {
+        return QFrame::eventFilter(obj, event);
+    }
 
-    if ( event->type() == QEvent::ToolTip ) {
-	QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
+    if (event->type() == QEvent::ToolTip) {
+        QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
 
-	QTextCursor cursor = view->cursorForPosition( helpEvent->pos() );
-	cursor.movePosition( QTextCursor::StartOfWord, QTextCursor::MoveAnchor );
-	cursor.movePosition( QTextCursor::EndOfWord, QTextCursor::KeepAnchor );
+        QTextCursor cursor = view->cursorForPosition(helpEvent->pos());
+        cursor.movePosition(QTextCursor::StartOfWord, QTextCursor::MoveAnchor);
+        cursor.movePosition(QTextCursor::EndOfWord, QTextCursor::KeepAnchor);
 
-	QString word = cursor.selectedText();
-	emit mouseHover( word );
-	emit mouseHover( helpEvent->pos(), word );
+        QString word = cursor.selectedText();
+        emit mouseHover(word);
+        emit mouseHover(helpEvent->pos(), word);
 
-	// QToolTip::showText( helpEvent->globalPos(), word ); // For testing
+        // QToolTip::showText( helpEvent->globalPos(), word ); // For testing
     }
 
     return false;

@@ -33,68 +33,64 @@
 
 namespace KJSEmbed
 {
-  QUiLoader *uiLoader();
+QUiLoader *uiLoader();
 }
-
 
 using namespace KJSEmbed;
 
 namespace LayoutNS
 {
-START_QOBJECT_METHOD( addWidget, QLayout )
-    QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
-    object->addWidget(w);
+START_QOBJECT_METHOD(addWidget, QLayout)
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+object->addWidget(w);
 END_QOBJECT_METHOD
-START_QOBJECT_METHOD( removeWidget, QLayout )
-    QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
-    object->removeWidget(w);
+START_QOBJECT_METHOD(removeWidget, QLayout)
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+object->removeWidget(w);
 END_QOBJECT_METHOD
-START_QOBJECT_METHOD( parentWidget, QLayout )
-    QWidget *w = object->parentWidget();
-    result = KJSEmbed::createQObject(exec,w);
+START_QOBJECT_METHOD(parentWidget, QLayout)
+QWidget *w = object->parentWidget();
+result = KJSEmbed::createQObject(exec, w);
 END_QOBJECT_METHOD
 
 }
 
-START_METHOD_LUT( Layout )
-    {"addWidget", 1, KJS::DontDelete|KJS::ReadOnly, &LayoutNS::addWidget},
-    {"removeWidget", 1, KJS::DontDelete|KJS::ReadOnly, &LayoutNS::removeWidget},
-    {"parentWidget", 0, KJS::DontDelete|KJS::ReadOnly, &LayoutNS::parentWidget}
+START_METHOD_LUT(Layout)
+{"addWidget", 1, KJS::DontDelete | KJS::ReadOnly, &LayoutNS::addWidget},
+{"removeWidget", 1, KJS::DontDelete | KJS::ReadOnly, &LayoutNS::removeWidget},
+{"parentWidget", 0, KJS::DontDelete | KJS::ReadOnly, &LayoutNS::parentWidget}
 END_METHOD_LUT
 
-NO_ENUMS( Layout )
-NO_STATICS( Layout )
+NO_ENUMS(Layout)
+NO_STATICS(Layout)
 
-KJSO_SIMPLE_BINDING_CTOR( Layout, QLayout, QObjectBinding )
-KJSO_QOBJECT_BIND( Layout, QLayout )
+KJSO_SIMPLE_BINDING_CTOR(Layout, QLayout, QObjectBinding)
+KJSO_QOBJECT_BIND(Layout, QLayout)
 
-KJSO_START_CTOR( Layout, QLayout, 0 )
+KJSO_START_CTOR(Layout, QLayout, 0)
 //  qDebug("Layout::CTOR(): args.size()=%d", args.size());
 
-    if( args.size() > 0 )
-    {
-        QString layoutName = toQString(args[0]->toString(exec));
-        QObject *parentObject = 0;
-        KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1] );
-        if( parentImp )
-        {
-            parentObject = parentImp->object<QObject>();
-        }
-
-        QLayout *layout = uiLoader()->createLayout(layoutName, parentObject, "QLayout");
-        if( layout )
-        {
-          KJS::JSObject *layoutObject = new Layout(exec, layout);//KJSEmbed::createQObject(exec, layout);
-            return layoutObject;
-        }
-        return KJS::throwError(exec, KJS::GeneralError, i18n("'%1' is not a valid QLayout.",
-                                                             layoutName));
-        // return KJSEmbed::throwError(exec, i18n("'%1' is not a valid QLayout.").arg(layoutName));
+if (args.size() > 0)
+{
+    QString layoutName = toQString(args[0]->toString(exec));
+    QObject *parentObject = 0;
+    KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1]);
+    if (parentImp) {
+        parentObject = parentImp->object<QObject>();
     }
 
-    // should Trow error incorrect args
-    return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a layout name."));
-    // return KJSEmbed::throwError(exec, i18n("Must supply a layout name."));
+    QLayout *layout = uiLoader()->createLayout(layoutName, parentObject, "QLayout");
+    if (layout) {
+        KJS::JSObject *layoutObject = new Layout(exec, layout);//KJSEmbed::createQObject(exec, layout);
+        return layoutObject;
+    }
+    return KJS::throwError(exec, KJS::GeneralError, i18n("'%1' is not a valid QLayout.",
+                           layoutName));
+    // return KJSEmbed::throwError(exec, i18n("'%1' is not a valid QLayout.").arg(layoutName));
+}
+
+// should Trow error incorrect args
+return KJS::throwError(exec, KJS::GeneralError, i18n("Must supply a layout name."));
+// return KJSEmbed::throwError(exec, i18n("Must supply a layout name."));
 KJSO_END_CTOR
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

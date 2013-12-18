@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef QPAINTER_BINDING_H
 #define QPAINTER_BINDING_H
 
@@ -28,8 +27,7 @@
 
 namespace KJSEmbed
 {
-    KJS_BINDING( Painter )
+KJS_BINDING(Painter)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

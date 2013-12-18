@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef PEN_H
 #define PEN_H
 
@@ -31,19 +30,21 @@ class QPen;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QPen. */
-    class PenBinding : public VariantBinding
+/** @internal Implements the binding for QPen. */
+class PenBinding : public VariantBinding
+{
+public:
+    PenBinding(KJS::ExecState *exec, const QPen &value);
+
+private:
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            PenBinding( KJS::ExecState *exec, const QPen &value );
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-        private:
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-           static const KJS::ClassInfo info;
-    };
-
-    KJS_BINDING( Pen )
+KJS_BINDING(Pen)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

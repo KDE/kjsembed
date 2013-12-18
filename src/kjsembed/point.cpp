@@ -27,83 +27,81 @@
 using namespace KJSEmbed;
 
 const KJS::ClassInfo PointBinding::info = { "QPoint", &VariantBinding::info, 0, 0 };
-PointBinding::PointBinding( KJS::ExecState *exec, const QPoint &value )
-    : VariantBinding(exec, value )
+PointBinding::PointBinding(KJS::ExecState *exec, const QPoint &value)
+    : VariantBinding(exec, value)
 {
-    StaticBinding::publish( exec, this, Point::methods() );
-    StaticBinding::publish( exec, this, VariantFactory::methods() );
+    StaticBinding::publish(exec, this, Point::methods());
+    StaticBinding::publish(exec, this, VariantFactory::methods());
 }
 
 namespace PointNS
 {
 
-START_VARIANT_METHOD( callisNull, QPoint )
-    bool cppValue = value.isNull();
-    result = KJS::jsBoolean(cppValue);
+START_VARIANT_METHOD(callisNull, QPoint)
+bool cppValue = value.isNull();
+result = KJS::jsBoolean(cppValue);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callmanhattanLength, QPoint )
-    int cppValue = value.manhattanLength();
-    result = KJS::jsNumber(cppValue);
+START_VARIANT_METHOD(callmanhattanLength, QPoint)
+int cppValue = value.manhattanLength();
+result = KJS::jsNumber(cppValue);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callrx, QPoint )
-    int cppValue = value.rx();
-    result = KJS::jsNumber(cppValue);
+START_VARIANT_METHOD(callrx, QPoint)
+int cppValue = value.rx();
+result = KJS::jsNumber(cppValue);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callry, QPoint )
-    int cppValue = value.ry();
-    result = KJS::jsNumber(cppValue);
+START_VARIANT_METHOD(callry, QPoint)
+int cppValue = value.ry();
+result = KJS::jsNumber(cppValue);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callsetX, QPoint )
-    int arg0 = KJSEmbed::extractInt(exec, args, 0);
-    value.setX(arg0);
+START_VARIANT_METHOD(callsetX, QPoint)
+int arg0 = KJSEmbed::extractInt(exec, args, 0);
+value.setX(arg0);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callsetY, QPoint )
-    int arg0 = KJSEmbed::extractInt(exec, args, 0);
-    value.setY(arg0);
+START_VARIANT_METHOD(callsetY, QPoint)
+int arg0 = KJSEmbed::extractInt(exec, args, 0);
+value.setY(arg0);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( callx, QPoint )
-    int cppValue = value.x();
-    result = KJS::jsNumber(cppValue);
+START_VARIANT_METHOD(callx, QPoint)
+int cppValue = value.x();
+result = KJS::jsNumber(cppValue);
 END_VARIANT_METHOD
 
-START_VARIANT_METHOD( cally, QPoint )
-    int cppValue = value.y();
-    result = KJS::jsNumber(cppValue);
+START_VARIANT_METHOD(cally, QPoint)
+int cppValue = value.y();
+result = KJS::jsNumber(cppValue);
 END_VARIANT_METHOD
 
 }
 
-START_METHOD_LUT( Point )
-    {"isNull", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callisNull},
-    {"manhattanLength", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callmanhattanLength},
-    {"rx", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callrx},
-    {"ry", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callry},
-    {"setX", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callsetX},
-    {"setY", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callsetY},
-    {"x", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::callx},
-    {"y", 0, KJS::DontDelete|KJS::ReadOnly, &PointNS::cally}
+START_METHOD_LUT(Point)
+{"isNull", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callisNull},
+{"manhattanLength", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callmanhattanLength},
+{"rx", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callrx},
+{"ry", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callry},
+{"setX", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callsetX},
+{"setY", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callsetY},
+{"x", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::callx},
+{"y", 0, KJS::DontDelete | KJS::ReadOnly, &PointNS::cally}
 END_METHOD_LUT
 
-NO_ENUMS( Point )
-NO_STATICS( Point )
+NO_ENUMS(Point)
+NO_STATICS(Point)
 
-START_CTOR( Point, QPoint, 0 )
-    if( args.size() == 2 )
-    {
-        return new KJSEmbed::PointBinding(exec,
-                                QPoint( KJSEmbed::extractInt( exec, args, 0 ),
-                                        KJSEmbed::extractInt( exec, args, 1 )
-                                        ) );
-    }
+START_CTOR(Point, QPoint, 0)
+if (args.size() == 2)
+{
+    return new KJSEmbed::PointBinding(exec,
+                                      QPoint(KJSEmbed::extractInt(exec, args, 0),
+                                              KJSEmbed::extractInt(exec, args, 1)
+                                            ));
+}
 
-    return new KJSEmbed::PointBinding( exec, QPoint() );
+return new KJSEmbed::PointBinding(exec, QPoint());
 END_CTOR
-
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;
 

@@ -23,15 +23,18 @@
 
 #include "kjseglobal.h"
 
-namespace KJSEmbed {
+namespace KJSEmbed
+{
 
 JSEventMapper *JSEventMapper::m_inst = 0;
 
 /** Used internally for the event handler table. */
-struct EventType
-{
-    EventType( KJS::Identifier _id, QEvent::Type _type ) :
-            id(_id), type(_type) {;}
+struct EventType {
+    EventType(KJS::Identifier _id, QEvent::Type _type) :
+        id(_id), type(_type)
+    {
+        ;
+    }
 
     const KJS::Identifier id;
     const QEvent::Type type;
@@ -143,154 +146,152 @@ Qt4 events as of Qt 4.0
         AccessibilityDescription = 130
 */
 static EventType events[] = {
-    EventType( KJS::Identifier("onTimerEvent"), QEvent::Timer ),
-    EventType( KJS::Identifier("onMouseButtonPressEvent"), QEvent::MouseButtonPress ),
-    EventType( KJS::Identifier("onMouseButtonReleaseEvent"), QEvent::MouseButtonRelease ),
-    EventType( KJS::Identifier("onMouseButtonDblClickEvent"), QEvent::MouseButtonDblClick ),
-    EventType( KJS::Identifier("onMouseMoveEvent"), QEvent::MouseMove ),
-    EventType( KJS::Identifier("onKeyPressEvent"), QEvent::KeyPress ),
-    EventType( KJS::Identifier("onKeyReleaseEvent"), QEvent::KeyRelease ),
-    EventType( KJS::Identifier("onFocusInEvent"), QEvent::FocusIn ),
-    EventType( KJS::Identifier("onFocusOutEvent"), QEvent::FocusOut ),
-    EventType( KJS::Identifier("onEnterEvent"), QEvent::Enter ),
-    EventType( KJS::Identifier("onLeaveEvent"), QEvent::Leave ),
-    EventType( KJS::Identifier("onPaintEvent"), QEvent::Paint ),
-    EventType( KJS::Identifier("onMoveEvent"), QEvent::Move ),
-    EventType( KJS::Identifier("onResizeEvent"), QEvent::Resize ),
-    EventType( KJS::Identifier("onCreateEvent"), QEvent::Create ),
-    EventType( KJS::Identifier("onDestroyEvent"), QEvent::Destroy ),
-    EventType( KJS::Identifier("onShowEvent"), QEvent::Show ),
-    EventType( KJS::Identifier("onHideEvent"), QEvent::Hide ),
-    EventType( KJS::Identifier("onCloseEvent"), QEvent::Close ),
-    EventType( KJS::Identifier("onQuitEvent"), QEvent::Quit ),
-    EventType( KJS::Identifier("onParentChangeEvent"), QEvent::ParentChange ),
-    EventType( KJS::Identifier("onParentAboutToChangeEvent"), QEvent::ParentAboutToChange ),
-    EventType( KJS::Identifier("onThreadChangeEvent"), QEvent::ThreadChange ),
-    EventType( KJS::Identifier("onWindowActivateEvent"), QEvent::WindowActivate ),
-    EventType( KJS::Identifier("onWindowDeactivateEvent"), QEvent::WindowDeactivate ),
-    EventType( KJS::Identifier("onShowToParentEvent"), QEvent::ShowToParent ),
-    EventType( KJS::Identifier("onHideToParentEvent"), QEvent::HideToParent ),
-    EventType( KJS::Identifier("onWheelEvent"), QEvent::Wheel ),
-    EventType( KJS::Identifier("onWindowTitleChangeEvent"), QEvent::WindowTitleChange ),
-    EventType( KJS::Identifier("onWindowIconChangeEvent"), QEvent::WindowIconChange ),
-    EventType( KJS::Identifier("onApplicationWindowIconChangeEvent"), QEvent::ApplicationWindowIconChange ),
-    EventType( KJS::Identifier("onApplicationFontChangeEvent"), QEvent::ApplicationFontChange ),
-    EventType( KJS::Identifier("onApplicationLayoutDirectionChangeEvent"), QEvent::ApplicationLayoutDirectionChange ),
-    EventType( KJS::Identifier("onApplicationPaletteChangeEvent"), QEvent::ApplicationPaletteChange ),
-    EventType( KJS::Identifier("onPaletteChangeEvent"), QEvent::PaletteChange ),
-    EventType( KJS::Identifier("onClipboardEvent"), QEvent::Clipboard ),
-    EventType( KJS::Identifier("onSpeechEvent"), QEvent::Speech ),
-    EventType( KJS::Identifier("onMetaCallEvent"), QEvent::MetaCall ),
-    EventType( KJS::Identifier("onSockActEvent"), QEvent::SockAct ),
-    EventType( KJS::Identifier("onWinEventActEvent"), QEvent::WinEventAct ),
-    EventType( KJS::Identifier("onDeferredDeleteEvent"), QEvent::DeferredDelete ),
-    EventType( KJS::Identifier("onDragEnterEvent"), QEvent::DragEnter ),
-    EventType( KJS::Identifier("onDragMoveEvent"), QEvent::DragMove ),
-    EventType( KJS::Identifier("onDragLeaveEvent"), QEvent::DragLeave ),
-    EventType( KJS::Identifier("onDropEvent"), QEvent::Drop ),
-    EventType( KJS::Identifier("onDragResponseEvent"), QEvent::DragResponse ),
-    EventType( KJS::Identifier("onChildAddedEvent"), QEvent::ChildAdded ),
-    EventType( KJS::Identifier("onChildPolishedEvent"), QEvent::ChildRemoved ),
-    EventType( KJS::Identifier("onShowWindowRequestEvent"), QEvent::ShowWindowRequest ),
-    EventType( KJS::Identifier("onPolishRequestEvent"), QEvent::PolishRequest ),
-    EventType( KJS::Identifier("onPolishEvent"), QEvent::Polish ),
-    EventType( KJS::Identifier("onLayoutRequestEvent"), QEvent::LayoutRequest ),
-    EventType( KJS::Identifier("onUpdateRequestEvent"), QEvent::UpdateRequest ),
-    EventType( KJS::Identifier("onEmbeddingControlEvent"), QEvent::EmbeddingControl ),
-    EventType( KJS::Identifier("onActivateControlEvent"), QEvent::ActivateControl ),
-    EventType( KJS::Identifier("onDeactivateControlEvent"), QEvent::DeactivateControl ),
-    EventType( KJS::Identifier("onContextMenuEvent"), QEvent::ContextMenu ),
-    EventType( KJS::Identifier("onInputMethodEvent"), QEvent::InputMethod ),
-    EventType( KJS::Identifier("onTabletMoveEvent"), QEvent::TabletMove ),
-    EventType( KJS::Identifier("onLocaleChangeEvent"), QEvent::LocaleChange ),
-    EventType( KJS::Identifier("onLanguageChangeEvent"), QEvent::LanguageChange ),
-    EventType( KJS::Identifier("onLayoutDirectionChangeEvent"), QEvent::LayoutDirectionChange ),
-    EventType( KJS::Identifier("onStyleEvent"), QEvent::Style ),
-    EventType( KJS::Identifier("onTabletPressEvent"), QEvent::TabletPress ),
-    EventType( KJS::Identifier("onTabletReleaseEvent"), QEvent::TabletRelease ),
-    EventType( KJS::Identifier("onOkRequestEvent"), QEvent::OkRequest ),
-    EventType( KJS::Identifier("onHelpRequestEvent"), QEvent::HelpRequest ),
-    EventType( KJS::Identifier("onIconDragEvent"), QEvent::IconDrag ),
-    EventType( KJS::Identifier("onFontChangeEvent"), QEvent::FontChange ),
-    EventType( KJS::Identifier("onEnabledChangeEvent"), QEvent::EnabledChange ),
-    EventType( KJS::Identifier("onActivationChangeEvent"), QEvent::ActivationChange ),
-    EventType( KJS::Identifier("onStyleChangeEvent"), QEvent::StyleChange ),
-    EventType( KJS::Identifier("onIconTextChangeEvent"), QEvent::IconTextChange ),
-    EventType( KJS::Identifier("onModifiedChangeEvent"), QEvent::ModifiedChange ),
-    EventType( KJS::Identifier("onMouseTrackingChangeEvent"), QEvent::MouseTrackingChange ),
-    EventType( KJS::Identifier("onWindowBlockedEvent"), QEvent::WindowBlocked ),
-    EventType( KJS::Identifier("onWindowUnblockedEvent"), QEvent::WindowUnblocked ),
-    EventType( KJS::Identifier("onWindowStateChangeEvent"), QEvent::WindowStateChange ),
-    EventType( KJS::Identifier("onToolTipEvent"), QEvent::ToolTip ),
-    EventType( KJS::Identifier("onWhatsThisEvent"), QEvent::WhatsThis ),
-    EventType( KJS::Identifier("onStatusTipEvent"), QEvent::StatusTip ),
-    EventType( KJS::Identifier("onActionChangedEvent"), QEvent::ActionChanged ),
-    EventType( KJS::Identifier("onActionAddedEvent"), QEvent::ActionAdded ),
-    EventType( KJS::Identifier("onActionRemovedEvent"), QEvent::ActionRemoved ),
-    EventType( KJS::Identifier("onFileOpenEvent"), QEvent::FileOpen ),
-    EventType( KJS::Identifier("onShortcutEvent"), QEvent::Shortcut ),
-    EventType( KJS::Identifier("onShortcutOverrideEvent"), QEvent::ShortcutOverride ),
-    EventType( KJS::Identifier("onWhatsThisClickedEvent"), QEvent::WhatsThisClicked ),
-    EventType( KJS::Identifier("onToolBarChangeEvent"), QEvent::ToolBarChange ),
-    EventType( KJS::Identifier("onApplicationActivatedEvent"), QEvent::ApplicationActivated ),
-    EventType( KJS::Identifier("onApplicationDeactivatedEvent"), QEvent::ApplicationDeactivated ),
-    EventType( KJS::Identifier("onQueryWhatsThisEvent"), QEvent::QueryWhatsThis ),
-    EventType( KJS::Identifier("onEnterWhatsThisModeEvent"), QEvent::EnterWhatsThisMode ),
-    EventType( KJS::Identifier("onLeaveWhatsThisModeEvent"), QEvent::LeaveWhatsThisMode ),
-    EventType( KJS::Identifier("onZOrderChangeEvent"), QEvent::ZOrderChange ),
-    EventType( KJS::Identifier("onHoverEnterEvent"), QEvent::HoverEnter ),
-    EventType( KJS::Identifier("onHoverLeaveEvent"), QEvent::HoverLeave ),
-    EventType( KJS::Identifier("onHoverMoveEvent"), QEvent::HoverMove ),
-    EventType(KJS::Identifier(), QEvent::None )
+    EventType(KJS::Identifier("onTimerEvent"), QEvent::Timer),
+    EventType(KJS::Identifier("onMouseButtonPressEvent"), QEvent::MouseButtonPress),
+    EventType(KJS::Identifier("onMouseButtonReleaseEvent"), QEvent::MouseButtonRelease),
+    EventType(KJS::Identifier("onMouseButtonDblClickEvent"), QEvent::MouseButtonDblClick),
+    EventType(KJS::Identifier("onMouseMoveEvent"), QEvent::MouseMove),
+    EventType(KJS::Identifier("onKeyPressEvent"), QEvent::KeyPress),
+    EventType(KJS::Identifier("onKeyReleaseEvent"), QEvent::KeyRelease),
+    EventType(KJS::Identifier("onFocusInEvent"), QEvent::FocusIn),
+    EventType(KJS::Identifier("onFocusOutEvent"), QEvent::FocusOut),
+    EventType(KJS::Identifier("onEnterEvent"), QEvent::Enter),
+    EventType(KJS::Identifier("onLeaveEvent"), QEvent::Leave),
+    EventType(KJS::Identifier("onPaintEvent"), QEvent::Paint),
+    EventType(KJS::Identifier("onMoveEvent"), QEvent::Move),
+    EventType(KJS::Identifier("onResizeEvent"), QEvent::Resize),
+    EventType(KJS::Identifier("onCreateEvent"), QEvent::Create),
+    EventType(KJS::Identifier("onDestroyEvent"), QEvent::Destroy),
+    EventType(KJS::Identifier("onShowEvent"), QEvent::Show),
+    EventType(KJS::Identifier("onHideEvent"), QEvent::Hide),
+    EventType(KJS::Identifier("onCloseEvent"), QEvent::Close),
+    EventType(KJS::Identifier("onQuitEvent"), QEvent::Quit),
+    EventType(KJS::Identifier("onParentChangeEvent"), QEvent::ParentChange),
+    EventType(KJS::Identifier("onParentAboutToChangeEvent"), QEvent::ParentAboutToChange),
+    EventType(KJS::Identifier("onThreadChangeEvent"), QEvent::ThreadChange),
+    EventType(KJS::Identifier("onWindowActivateEvent"), QEvent::WindowActivate),
+    EventType(KJS::Identifier("onWindowDeactivateEvent"), QEvent::WindowDeactivate),
+    EventType(KJS::Identifier("onShowToParentEvent"), QEvent::ShowToParent),
+    EventType(KJS::Identifier("onHideToParentEvent"), QEvent::HideToParent),
+    EventType(KJS::Identifier("onWheelEvent"), QEvent::Wheel),
+    EventType(KJS::Identifier("onWindowTitleChangeEvent"), QEvent::WindowTitleChange),
+    EventType(KJS::Identifier("onWindowIconChangeEvent"), QEvent::WindowIconChange),
+    EventType(KJS::Identifier("onApplicationWindowIconChangeEvent"), QEvent::ApplicationWindowIconChange),
+    EventType(KJS::Identifier("onApplicationFontChangeEvent"), QEvent::ApplicationFontChange),
+    EventType(KJS::Identifier("onApplicationLayoutDirectionChangeEvent"), QEvent::ApplicationLayoutDirectionChange),
+    EventType(KJS::Identifier("onApplicationPaletteChangeEvent"), QEvent::ApplicationPaletteChange),
+    EventType(KJS::Identifier("onPaletteChangeEvent"), QEvent::PaletteChange),
+    EventType(KJS::Identifier("onClipboardEvent"), QEvent::Clipboard),
+    EventType(KJS::Identifier("onSpeechEvent"), QEvent::Speech),
+    EventType(KJS::Identifier("onMetaCallEvent"), QEvent::MetaCall),
+    EventType(KJS::Identifier("onSockActEvent"), QEvent::SockAct),
+    EventType(KJS::Identifier("onWinEventActEvent"), QEvent::WinEventAct),
+    EventType(KJS::Identifier("onDeferredDeleteEvent"), QEvent::DeferredDelete),
+    EventType(KJS::Identifier("onDragEnterEvent"), QEvent::DragEnter),
+    EventType(KJS::Identifier("onDragMoveEvent"), QEvent::DragMove),
+    EventType(KJS::Identifier("onDragLeaveEvent"), QEvent::DragLeave),
+    EventType(KJS::Identifier("onDropEvent"), QEvent::Drop),
+    EventType(KJS::Identifier("onDragResponseEvent"), QEvent::DragResponse),
+    EventType(KJS::Identifier("onChildAddedEvent"), QEvent::ChildAdded),
+    EventType(KJS::Identifier("onChildPolishedEvent"), QEvent::ChildRemoved),
+    EventType(KJS::Identifier("onShowWindowRequestEvent"), QEvent::ShowWindowRequest),
+    EventType(KJS::Identifier("onPolishRequestEvent"), QEvent::PolishRequest),
+    EventType(KJS::Identifier("onPolishEvent"), QEvent::Polish),
+    EventType(KJS::Identifier("onLayoutRequestEvent"), QEvent::LayoutRequest),
+    EventType(KJS::Identifier("onUpdateRequestEvent"), QEvent::UpdateRequest),
+    EventType(KJS::Identifier("onEmbeddingControlEvent"), QEvent::EmbeddingControl),
+    EventType(KJS::Identifier("onActivateControlEvent"), QEvent::ActivateControl),
+    EventType(KJS::Identifier("onDeactivateControlEvent"), QEvent::DeactivateControl),
+    EventType(KJS::Identifier("onContextMenuEvent"), QEvent::ContextMenu),
+    EventType(KJS::Identifier("onInputMethodEvent"), QEvent::InputMethod),
+    EventType(KJS::Identifier("onTabletMoveEvent"), QEvent::TabletMove),
+    EventType(KJS::Identifier("onLocaleChangeEvent"), QEvent::LocaleChange),
+    EventType(KJS::Identifier("onLanguageChangeEvent"), QEvent::LanguageChange),
+    EventType(KJS::Identifier("onLayoutDirectionChangeEvent"), QEvent::LayoutDirectionChange),
+    EventType(KJS::Identifier("onStyleEvent"), QEvent::Style),
+    EventType(KJS::Identifier("onTabletPressEvent"), QEvent::TabletPress),
+    EventType(KJS::Identifier("onTabletReleaseEvent"), QEvent::TabletRelease),
+    EventType(KJS::Identifier("onOkRequestEvent"), QEvent::OkRequest),
+    EventType(KJS::Identifier("onHelpRequestEvent"), QEvent::HelpRequest),
+    EventType(KJS::Identifier("onIconDragEvent"), QEvent::IconDrag),
+    EventType(KJS::Identifier("onFontChangeEvent"), QEvent::FontChange),
+    EventType(KJS::Identifier("onEnabledChangeEvent"), QEvent::EnabledChange),
+    EventType(KJS::Identifier("onActivationChangeEvent"), QEvent::ActivationChange),
+    EventType(KJS::Identifier("onStyleChangeEvent"), QEvent::StyleChange),
+    EventType(KJS::Identifier("onIconTextChangeEvent"), QEvent::IconTextChange),
+    EventType(KJS::Identifier("onModifiedChangeEvent"), QEvent::ModifiedChange),
+    EventType(KJS::Identifier("onMouseTrackingChangeEvent"), QEvent::MouseTrackingChange),
+    EventType(KJS::Identifier("onWindowBlockedEvent"), QEvent::WindowBlocked),
+    EventType(KJS::Identifier("onWindowUnblockedEvent"), QEvent::WindowUnblocked),
+    EventType(KJS::Identifier("onWindowStateChangeEvent"), QEvent::WindowStateChange),
+    EventType(KJS::Identifier("onToolTipEvent"), QEvent::ToolTip),
+    EventType(KJS::Identifier("onWhatsThisEvent"), QEvent::WhatsThis),
+    EventType(KJS::Identifier("onStatusTipEvent"), QEvent::StatusTip),
+    EventType(KJS::Identifier("onActionChangedEvent"), QEvent::ActionChanged),
+    EventType(KJS::Identifier("onActionAddedEvent"), QEvent::ActionAdded),
+    EventType(KJS::Identifier("onActionRemovedEvent"), QEvent::ActionRemoved),
+    EventType(KJS::Identifier("onFileOpenEvent"), QEvent::FileOpen),
+    EventType(KJS::Identifier("onShortcutEvent"), QEvent::Shortcut),
+    EventType(KJS::Identifier("onShortcutOverrideEvent"), QEvent::ShortcutOverride),
+    EventType(KJS::Identifier("onWhatsThisClickedEvent"), QEvent::WhatsThisClicked),
+    EventType(KJS::Identifier("onToolBarChangeEvent"), QEvent::ToolBarChange),
+    EventType(KJS::Identifier("onApplicationActivatedEvent"), QEvent::ApplicationActivated),
+    EventType(KJS::Identifier("onApplicationDeactivatedEvent"), QEvent::ApplicationDeactivated),
+    EventType(KJS::Identifier("onQueryWhatsThisEvent"), QEvent::QueryWhatsThis),
+    EventType(KJS::Identifier("onEnterWhatsThisModeEvent"), QEvent::EnterWhatsThisMode),
+    EventType(KJS::Identifier("onLeaveWhatsThisModeEvent"), QEvent::LeaveWhatsThisMode),
+    EventType(KJS::Identifier("onZOrderChangeEvent"), QEvent::ZOrderChange),
+    EventType(KJS::Identifier("onHoverEnterEvent"), QEvent::HoverEnter),
+    EventType(KJS::Identifier("onHoverLeaveEvent"), QEvent::HoverLeave),
+    EventType(KJS::Identifier("onHoverMoveEvent"), QEvent::HoverMove),
+    EventType(KJS::Identifier(), QEvent::None)
 };
 
 JSEventMapper::JSEventMapper()
 {
     int i = 0;
     do {
-        addEvent( events[i].id, events[i].type );
+        addEvent(events[i].id, events[i].type);
         i++;
-    } while( events[i].type != QEvent::None );
+    } while (events[i].type != QEvent::None);
 }
 
 JSEventMapper::~JSEventMapper()
 {
 }
 
-void JSEventMapper::addEvent( const KJS::Identifier &name, QEvent::Type t )
+void JSEventMapper::addEvent(const KJS::Identifier &name, QEvent::Type t)
 {
     m_handlerToEvent[ toQString(name) ] = t;
     m_eventToHandler[ t ] = name;
 }
 
-QEvent::Type JSEventMapper::findEventType( const KJS::Identifier &name ) const
+QEvent::Type JSEventMapper::findEventType(const KJS::Identifier &name) const
 {
     return  m_handlerToEvent[ toQString(name) ];
 }
 
-bool JSEventMapper::isEventHandler( const KJS::Identifier &name ) const
+bool JSEventMapper::isEventHandler(const KJS::Identifier &name) const
 {
-    return m_handlerToEvent.contains( toQString(name) );
+    return m_handlerToEvent.contains(toQString(name));
 }
 
-KJS::Identifier JSEventMapper::findEventHandler( QEvent::Type t ) const
+KJS::Identifier JSEventMapper::findEventHandler(QEvent::Type t) const
 {
     return m_eventToHandler[t];
 }
 
 JSEventMapper *JSEventMapper::mapper()
 {
-    if ( m_inst )
+    if (m_inst) {
         return m_inst;
+    }
     m_inst = new JSEventMapper();
     return m_inst;
 }
 
-
 } // namespace KJSEmbed
 
 // Local Variables:
-// c-basic-offset: 4
 // End:
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

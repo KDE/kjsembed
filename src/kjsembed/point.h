@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef POINT_H
 #define POINT_H
 
@@ -31,18 +30,20 @@ class QPoint;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QPoint. */
-    class PointBinding : public VariantBinding
+/** @internal Implements the binding for QPoint. */
+class PointBinding : public VariantBinding
+{
+public:
+    PointBinding(KJS::ExecState *exec, const QPoint &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            PointBinding( KJS::ExecState *exec, const QPoint &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    KJS_BINDING( Point )
+KJS_BINDING(Point)
 
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

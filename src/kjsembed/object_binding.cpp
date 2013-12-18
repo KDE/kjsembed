@@ -34,8 +34,7 @@ const KJS::ClassInfo ObjectBinding::info = { "ObjectBinding", 0, 0, 0 };
 
 ObjectBinding::~ObjectBinding()
 {
-    if( m_owner == JSOwned )
-    {
+    if (m_owner == JSOwned) {
         m_value->cleanup();
     }
 
@@ -49,12 +48,12 @@ const char *ObjectBinding::typeName() const
 
 KJS::UString ObjectBinding::toString(KJS::ExecState * /*exec*/) const
 {
-    return KJS::UString( typeName() );
+    return KJS::UString(typeName());
 }
 
 KJS::UString ObjectBinding::className() const
 {
-    return KJS::UString( typeName() );
+    return KJS::UString(typeName());
 }
 
 KJS::JSType ObjectBinding::type() const
@@ -67,48 +66,43 @@ ObjectBinding::Ownership ObjectBinding::ownership() const
     return m_owner;
 }
 
-void ObjectBinding::setOwnership( ObjectBinding::Ownership owner )
+void ObjectBinding::setOwnership(ObjectBinding::Ownership owner)
 {
     m_owner = owner;
 }
 
-KJS::JSValue *callPointerName( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/ )
+KJS::JSValue *callPointerName(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/)
 {
-    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self );
-    if( imp )
-    {
-        return KJS::jsString( imp->typeName() );
+    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self);
+    if (imp) {
+        return KJS::jsString(imp->typeName());
     }
     return KJS::jsNull();
 }
 
-KJS::JSValue *callPointerCast( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/ )
+KJS::JSValue *callPointerCast(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/)
 {
-    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self );
-    if( imp )
-    {
+    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self);
+    if (imp) {
         return KJS::jsBoolean(false);
     }
     return KJS::jsNull();
 }
 
-KJS::JSValue *callPointerToString( KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/ )
+KJS::JSValue *callPointerToString(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &/*args*/)
 {
-    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self );
-    if( imp )
-    {
+    KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec,  self);
+    if (imp) {
         qDebug("Object to string");
-        return KJS::jsString( imp->typeName() );
+        return KJS::jsString(imp->typeName());
     }
     return KJS::jsNull();
 }
 
-const Method ObjectFactory::ObjectMethods[] =
-{
-    {"type", 0, KJS::DontDelete|KJS::ReadOnly, &callPointerName },
-    {"cast", 1, KJS::DontDelete|KJS::ReadOnly, &callPointerCast },
-    {"toString", 0, KJS::DontDelete|KJS::ReadOnly, &callPointerToString },
+const Method ObjectFactory::ObjectMethods[] = {
+    {"type", 0, KJS::DontDelete | KJS::ReadOnly, &callPointerName },
+    {"cast", 1, KJS::DontDelete | KJS::ReadOnly, &callPointerCast },
+    {"toString", 0, KJS::DontDelete | KJS::ReadOnly, &callPointerToString },
     {0, 0, 0, 0 }
 };
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

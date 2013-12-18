@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef RECT_H
 #define RECT_H
 
@@ -31,20 +30,19 @@ class QRect;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QRect. */
-    class RectBinding : public VariantBinding
-    {
-        public:
-            RectBinding( KJS::ExecState *exec, const QRect &value );
-    };
+/** @internal Implements the binding for QRect. */
+class RectBinding : public VariantBinding
+{
+public:
+    RectBinding(KJS::ExecState *exec, const QRect &value);
+};
 
-    /**
-    * Constructors:
-    *
-    * Methods:
-    */
-    KJS_BINDING( Rect )
+/**
+* Constructors:
+*
+* Methods:
+*/
+KJS_BINDING(Rect)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

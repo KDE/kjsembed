@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef EVENTPROXY_H
 #define EVENTPROXY_H
 #include <QtCore/QObject>
@@ -31,47 +30,46 @@
 
 namespace KJS
 {
-    class Interpreter;
+class Interpreter;
 }
 
 namespace KJSEmbed
 {
-    class QObjectBinding;
+class QObjectBinding;
+/**
+* Filters events for a QObject and forwards them to a JS handler.
+* @author Richard Moore, rich@kde.org
+*/
+class EventProxy : public QObject
+{
+public:
+    EventProxy(QObjectBinding *watch, KJS::Interpreter *interpreter);
+    ~EventProxy();
+
+    /** Returns true iff we forward the event type to JS. */
+    bool isFiltered(QEvent::Type t) const;
+
+    /** Adds an event type to those we forward to JS. */
+    void addFilter(QEvent::Type t);
+
     /**
-    * Filters events for a QObject and forwards them to a JS handler.
-    * @author Richard Moore, rich@kde.org
+    * Removes an event type from those we forward to JS. If there are no
+    * event types left to forward then we self-destruct.
     */
-    class EventProxy : public QObject
-    {
-        public:
-            EventProxy( QObjectBinding *watch, KJS::Interpreter *interpreter );
-            ~EventProxy();
+    void removeFilter(QEvent::Type t);
 
-            /** Returns true iff we forward the event type to JS. */
-            bool isFiltered( QEvent::Type t ) const;
+    /** Reimplemented to forward events to JS. */
+    bool eventFilter(QObject *watched, QEvent *e);
 
-            /** Adds an event type to those we forward to JS. */
-            void addFilter( QEvent::Type t );
+protected:
+    bool callHandler(QEvent *e);
 
-            /**
-            * Removes an event type from those we forward to JS. If there are no
-            * event types left to forward then we self-destruct.
-            */
-            void removeFilter( QEvent::Type t );
-
-            /** Reimplemented to forward events to JS. */
-            bool eventFilter ( QObject *watched, QEvent *e );
-
-        protected:
-            bool callHandler( QEvent *e );
-
-        private:
-            QObjectBinding *m_watch;
-            KJS::Interpreter *m_interpreter;
-            QBitArray m_eventMask;
-            uint m_refcount;
-    };
+private:
+    QObjectBinding *m_watch;
+    KJS::Interpreter *m_interpreter;
+    QBitArray m_eventMask;
+    uint m_refcount;
+};
 }
 
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -31,60 +31,56 @@
 
 using namespace KJSEmbed;
 
-KJS::JSValue *callPrint( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args )
+KJS::JSValue *callPrint(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
     (*KJSEmbed::conout()) << toQString(args[0]->toString(exec));
     return KJS::jsNull();
 }
 
-KJS::JSValue * callPrintLn( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args )
+KJS::JSValue *callPrintLn(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
     (*KJSEmbed::conout()) << toQString(args[0]->toString(exec)) << endl;
     return KJS::jsNull();
 }
 
-KJS::JSValue * callDebug( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args )
+KJS::JSValue *callDebug(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
     //(*KJSEmbed::conerr())  << "Debug: " << toQString(args[0]->toString(exec)) << endl;
     qDebug()  << "Debug: " << toQString(args[0]->toString(exec));
     return KJS::jsNull();
 }
 
-KJS::JSValue * callReadLine( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args )
+KJS::JSValue *callReadLine(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
     Q_UNUSED(exec);
     Q_UNUSED(args);
     QString line = conin()->readLine();
-    return KJS::jsString( line );
+    return KJS::jsString(line);
 }
 
-KJS::JSValue * callSystem( KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args )
+KJS::JSValue *callSystem(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
     QProcess systemProcess;
-    QStringList processArgs = toQString(args[0]->toString(exec)).split( ' ' );
+    QStringList processArgs = toQString(args[0]->toString(exec)).split(' ');
     QString app = processArgs[0];
     processArgs.pop_front();
 
-    systemProcess.start( app, processArgs );
-    if (!systemProcess.waitForStarted())
-    {
+    systemProcess.start(app, processArgs);
+    if (!systemProcess.waitForStarted()) {
         return KJS::throwError(exec, KJS::GeneralError, "Application could not start.");
     }
-    if (!systemProcess.waitForFinished())
-    {
+    if (!systemProcess.waitForFinished()) {
         return KJS::throwError(exec, KJS::GeneralError, "Application crashed.");
     }
-    return KJS::jsString( systemProcess.readAll().data() );
+    return KJS::jsString(systemProcess.readAll().data());
 }
 
-const Method IoFactory::IoMethods[] =
-{
-    {"debug", 1, KJS::DontDelete|KJS::ReadOnly, &callDebug },
-    {"print", 1, KJS::DontDelete|KJS::ReadOnly, &callPrint },
-    {"println", 1, KJS::DontDelete|KJS::ReadOnly, &callPrintLn },
-    {"readln", 0, KJS::DontDelete|KJS::ReadOnly, &callReadLine },
-    {"system", 1, KJS::DontDelete|KJS::ReadOnly, &callSystem },
+const Method IoFactory::IoMethods[] = {
+    {"debug", 1, KJS::DontDelete | KJS::ReadOnly, &callDebug },
+    {"print", 1, KJS::DontDelete | KJS::ReadOnly, &callPrint },
+    {"println", 1, KJS::DontDelete | KJS::ReadOnly, &callPrintLn },
+    {"readln", 0, KJS::DontDelete | KJS::ReadOnly, &callReadLine },
+    {"system", 1, KJS::DontDelete | KJS::ReadOnly, &callSystem },
     {0, 0, 0, 0 }
 };
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

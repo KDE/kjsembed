@@ -28,34 +28,33 @@
 
 #include <kjs/object.h>
 
-namespace KJSEmbed {
-
+namespace KJSEmbed
+{
 
 /**
 * Utility class that contains the methods for converting event types to JS.
 */
 namespace JSEventUtils
 {
-    KJS::JSObject *event( KJS::ExecState *exec, const QEvent *ev );
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QInputEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QMouseEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QPaintEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QKeyEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QInputMethodEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QResizeEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QCloseEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QMoveEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QWheelEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QDropEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QDragMoveEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QTimerEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QContextMenuEvent *ev);
-    KJS::JSObject *convertEvent( KJS::ExecState *exec, const QFocusEvent *ev);
+KJS::JSObject *event(KJS::ExecState *exec, const QEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QInputEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QMouseEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QPaintEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QKeyEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QInputMethodEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QResizeEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QCloseEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QMoveEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QWheelEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QDropEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QDragMoveEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QTimerEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QContextMenuEvent *ev);
+KJS::JSObject *convertEvent(KJS::ExecState *exec, const QFocusEvent *ev);
 }
 
 } // KJSEmbed
 
 #endif // KJSEMBED_JSEVENTUTILS_H
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

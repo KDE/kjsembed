@@ -30,46 +30,48 @@ class QColor;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QColor. */
-    class ColorBinding : public VariantBinding
+/** @internal Implements the binding for QColor. */
+class ColorBinding : public VariantBinding
+{
+public:
+    ColorBinding(KJS::ExecState *exec, const QColor &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            ColorBinding( KJS::ExecState *exec, const QColor &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    /**
-    * Constructors:
-    * Color( name )
-    * Color( r, g, b)
-    * Color( r, g, b, a)
-    *
-    * Methods:
-    * setAlpha()
-    * setBlue()
-    * setCyan()
-    * setGreen()
-    * setRbg(r, g, b, a=255)
-    * setCmyk(c, m, y, k, a=255)
-    * setHsv(h, s, v, a=255)
-    * setNamedColor( name )
-    * alpha()
-    * blue()
-    * cyan()
-    * green()
-    * hue()
-    * magenta()
-    * red()
-    * yello()
-    * saturation()
-    * light( factor )
-    * dark( factor )
-    * spec()
-    * convertTo(spec)
-    */
-    KJS_BINDING( Color )
+/**
+* Constructors:
+* Color( name )
+* Color( r, g, b)
+* Color( r, g, b, a)
+*
+* Methods:
+* setAlpha()
+* setBlue()
+* setCyan()
+* setGreen()
+* setRbg(r, g, b, a=255)
+* setCmyk(c, m, y, k, a=255)
+* setHsv(h, s, v, a=255)
+* setNamedColor( name )
+* alpha()
+* blue()
+* cyan()
+* green()
+* hue()
+* magenta()
+* red()
+* yello()
+* saturation()
+* light( factor )
+* dark( factor )
+* spec()
+* convertTo(spec)
+*/
+KJS_BINDING(Color)
 
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

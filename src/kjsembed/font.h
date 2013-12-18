@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef FONT_H
 #define FONT_H
 
@@ -31,22 +30,24 @@ class QFont;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QFont. */
-    class FontBinding : public VariantBinding
+/** @internal Implements the binding for QFont. */
+class FontBinding : public VariantBinding
+{
+public:
+    FontBinding(KJS::ExecState *exec, const QFont &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            FontBinding( KJS::ExecState *exec, const QFont &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-    /**
-    * Constructors:
-    *
-    * Methods:
-    */
-    KJS_BINDING( Font )
+/**
+* Constructors:
+*
+* Methods:
+*/
+KJS_BINDING(Font)
 }
 #endif
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #include <QApplication>
 #include <QtCore/QDebug>
 #include <QtCore/QStringList>
@@ -44,7 +43,7 @@ void printUsage(QString appName)
                           << endl;
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QTime time;
     time.start();
@@ -58,8 +57,7 @@ int main( int argc, char **argv )
     // Handle arguments
     QString appName = argv[0];
     QStringList args;
-    for (int i = 1; i < argc; i++ )
-    {
+    for (int i = 1; i < argc; i++) {
         args << argv[i];
     }
 
@@ -67,41 +65,31 @@ int main( int argc, char **argv )
     KJS::List scriptArgs;
     bool gui = true;
 
-    if (argc > 1)
-    {
-        while (!args.isEmpty())
-        {
+    if (argc > 1) {
+        while (!args.isEmpty()) {
             QString arg = args.takeFirst();
-            if (arg.contains('-'))
-            {
-                if ((arg == "--version") || (arg == "-v"))
-		{
-		    printf("Qt: %s\n", qVersion());
-		     return 0;
-		}
-                if ((arg == "--exec") || (arg == "-e"))
-		{
+            if (arg.contains('-')) {
+                if ((arg == "--version") || (arg == "-v")) {
+                    printf("Qt: %s\n", qVersion());
+                    return 0;
+                }
+                if ((arg == "--exec") || (arg == "-e")) {
                     gui = false;
-		}
-                else if ((arg == "--interactive") || (arg == "-i"))
+                } else if ((arg == "--interactive") || (arg == "-i")) {
                     (*KJSEmbed::conout()) << "Interactive";
-		else
-                {
+                } else {
                     printUsage(appName);
                     return 0;
                 }
-            }
-            else
-            {
-                if (!script.isEmpty())
+            } else {
+                if (!script.isEmpty()) {
                     scriptArgs.append(KJS::jsString(arg));
-                else
+                } else {
                     script = arg;
+                }
             }
         }
-    }
-    else
-    {
+    } else {
         printUsage(appName);
         return 0;
     }
@@ -109,19 +97,16 @@ int main( int argc, char **argv )
     // Setup QApplication
     QCoreApplication *app;
 
-    if (gui)
-    {
-        app = new QApplication( argc, argv );
-        QObject::connect( app, SIGNAL(lastWindowClosed()), app, SLOT(quit()) );
-    }
-    else
-    {
-	qDebug("no GUI");
+    if (gui) {
+        app = new QApplication(argc, argv);
+        QObject::connect(app, SIGNAL(lastWindowClosed()), app, SLOT(quit()));
+    } else {
+        qDebug("no GUI");
         app = new QCoreApplication(argc, argv);
     }
     qDebug(" New %s %dms", app->metaObject()->className(), time.elapsed());
 
-    app->setApplicationName( appName );
+    app->setApplicationName(appName);
 
     // Setup Interpreter
     time.restart();
@@ -134,24 +119,20 @@ int main( int argc, char **argv )
     KJS::ExecState *exec = js->globalExec();
 
     // Publish bindings
-    KJS::JSObject *appObject = kernel.addObject( app, "Application" );
-    KJS::JSObject *argObject = js->builtinArray()->construct( exec, scriptArgs );
-    appObject->put( exec, "args", argObject );
+    KJS::JSObject *appObject = kernel.addObject(app, "Application");
+    KJS::JSObject *argObject = js->builtinArray()->construct(exec, scriptArgs);
+    appObject->put(exec, "args", argObject);
     Engine::ExitStatus result = Engine::Failure;
 
-    if (!script.isEmpty())
-    {
+    if (!script.isEmpty()) {
         result = kernel.runFile(toUString(script));
-    }
-    else // exec shell
-    {
-        result = kernel.runFile( ":/console.js" );
+    } else { // exec shell
+        result = kernel.runFile(":/console.js");
     }
 
-    if ( result != Engine::Success )
-    {
+    if (result != Engine::Success) {
         KJS::Completion jsres = kernel.completion();
-       (*KJSEmbed::conerr()) << toQString(jsres.value()->toString(exec)) << endl;
+        (*KJSEmbed::conerr()) << toQString(jsres.value()->toString(exec)) << endl;
     }
     return (int)result;
 }

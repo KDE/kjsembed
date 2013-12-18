@@ -31,17 +31,18 @@ class QBrush;
 
 namespace KJSEmbed
 {
-    /** @internal Implements the binding for QBrush. */
-    class BrushBinding : public VariantBinding
+/** @internal Implements the binding for QBrush. */
+class BrushBinding : public VariantBinding
+{
+public:
+    BrushBinding(KJS::ExecState *exec, const QBrush &value);
+    virtual const KJS::ClassInfo *classInfo() const
     {
-        public:
-            BrushBinding( KJS::ExecState *exec, const QBrush &value );
-            virtual const KJS::ClassInfo* classInfo() const { return &info; }
-            static const KJS::ClassInfo info;
-    };
+        return &info;
+    }
+    static const KJS::ClassInfo info;
+};
 
-
-    KJS_BINDING( Brush )
+KJS_BINDING(Brush)
 }
 #endif
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

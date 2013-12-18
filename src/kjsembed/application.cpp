@@ -28,49 +28,50 @@ using namespace KJSEmbed;
 
 namespace CoreApplicationNS
 {
-START_STATIC_OBJECT_METHOD( callExit )
-    int exitCode = KJSEmbed::extractInt( exec, args, 0 );
-    QCoreApplication::exit(exitCode);
+START_STATIC_OBJECT_METHOD(callExit)
+int exitCode = KJSEmbed::extractInt(exec, args, 0);
+QCoreApplication::exit(exitCode);
 END_STATIC_OBJECT_METHOD
 }
 
-START_STATIC_METHOD_LUT( CoreApplicationBinding )
-    {"exit", 0, KJS::DontDelete|KJS::ReadOnly, &CoreApplicationNS::callExit}
+START_STATIC_METHOD_LUT(CoreApplicationBinding)
+{"exit", 0, KJS::DontDelete | KJS::ReadOnly, &CoreApplicationNS::callExit
+}
 END_METHOD_LUT
 
-NO_ENUMS( CoreApplicationBinding )
-NO_METHODS( CoreApplicationBinding )
+NO_ENUMS(CoreApplicationBinding)
+NO_METHODS(CoreApplicationBinding)
 
-KJSO_START_BINDING_CTOR( CoreApplicationBinding, QCoreApplication, QObjectBinding )
-    setOwnership(CPPOwned);
+KJSO_START_BINDING_CTOR(CoreApplicationBinding, QCoreApplication, QObjectBinding)
+setOwnership(CPPOwned);
 KJSO_END_BINDING_CTOR
-KJSO_QOBJECT_BIND( CoreApplicationBinding, QCoreApplication )
+KJSO_QOBJECT_BIND(CoreApplicationBinding, QCoreApplication)
 
-KJSO_START_CTOR( CoreApplicationBinding, QCoreApplication, 0)
-    return new KJSEmbed::CoreApplicationBinding( exec, QCoreApplication::instance () );
+KJSO_START_CTOR(CoreApplicationBinding, QCoreApplication, 0)
+return new KJSEmbed::CoreApplicationBinding(exec, QCoreApplication::instance());
 KJSO_END_CTOR
 
 namespace ApplicationNS
 {
-START_STATIC_OBJECT_METHOD( callBeep )
-    QApplication::beep();
+START_STATIC_OBJECT_METHOD(callBeep)
+QApplication::beep();
 END_STATIC_OBJECT_METHOD
 }
 
-START_STATIC_METHOD_LUT( ApplicationBinding )
-    {"beep", 0, KJS::DontDelete|KJS::ReadOnly, &ApplicationNS::callBeep}
+START_STATIC_METHOD_LUT(ApplicationBinding)
+{"beep", 0, KJS::DontDelete | KJS::ReadOnly, &ApplicationNS::callBeep
+}
 END_METHOD_LUT
 
-NO_ENUMS( ApplicationBinding )
-NO_METHODS( ApplicationBinding )
+NO_ENUMS(ApplicationBinding)
+NO_METHODS(ApplicationBinding)
 
-KJSO_START_BINDING_CTOR( ApplicationBinding, QApplication, CoreApplicationBinding )
-    setOwnership(CPPOwned);
+KJSO_START_BINDING_CTOR(ApplicationBinding, QApplication, CoreApplicationBinding)
+setOwnership(CPPOwned);
 KJSO_END_BINDING_CTOR
-KJSO_QOBJECT_BIND( ApplicationBinding, QApplication )
+KJSO_QOBJECT_BIND(ApplicationBinding, QApplication)
 
-KJSO_START_CTOR( ApplicationBinding, QApplication, 0)
-    return new KJSEmbed::ApplicationBinding( exec, ::qobject_cast<QApplication*>(QCoreApplication::instance() ) );
+KJSO_START_CTOR(ApplicationBinding, QApplication, 0)
+return new KJSEmbed::ApplicationBinding(exec, ::qobject_cast<QApplication *>(QCoreApplication::instance()));
 KJSO_END_CTOR
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;

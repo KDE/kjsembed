@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef JSEVENTMAPPER_H
 #define JSEVENTMAPPER_H
 
@@ -29,7 +28,8 @@
 
 #include <kjs/identifier.h>
 
-namespace KJSEmbed {
+namespace KJSEmbed
+{
 
 /**
 * Maintains a map between the types of QEvent and the names of their event
@@ -55,16 +55,16 @@ public:
     * Adds an event to the map. The event handler has the specified name, and
     * the event has the specified type.
     */
-    void addEvent( const KJS::Identifier &name, QEvent::Type t );
+    void addEvent(const KJS::Identifier &name, QEvent::Type t);
 
     /** Returns true iff the specified name is the identifier for an event handler. */
-    bool isEventHandler( const KJS::Identifier &name ) const;
+    bool isEventHandler(const KJS::Identifier &name) const;
 
     /** Returns the type of the events handled by the specified handler. */
-    QEvent::Type findEventType( const KJS::Identifier &name ) const;
+    QEvent::Type findEventType(const KJS::Identifier &name) const;
 
     /** Returns the name of the handler method for the specified event type. */
-    KJS::Identifier findEventHandler( QEvent::Type t ) const;
+    KJS::Identifier findEventHandler(QEvent::Type t) const;
 
     /**
     * Return the global event mapper.
@@ -74,12 +74,11 @@ public:
 private:
     JSEventMapper();
     static JSEventMapper *m_inst;
-    QHash<QString,QEvent::Type> m_handlerToEvent;
-    QHash<int,KJS::Identifier> m_eventToHandler;
+    QHash<QString, QEvent::Type> m_handlerToEvent;
+    QHash<int, KJS::Identifier> m_eventToHandler;
 };
 
 } // namespace KJSEmbed
 
 #endif // JSEVENTMAPPER_H
 
-//kate: indent-spaces on; indent-width 4; replace-tabs on; indent-mode cstyle;
