@@ -18,7 +18,7 @@ include(ECMSetupVersion)
 
 set(KF5_VERSION "5.0.0")
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KJSEMBED
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h"
+   #VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5JsEmbedConfigVersion.cmake")
 
 if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
@@ -59,10 +59,10 @@ install(FILES
 
 install(EXPORT KF5JsEmbedTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5JsEmbedTargets.cmake NAMESPACE KF5:: )
 
-install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h
-  DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
-)
+#install(FILES
+#${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h
+#DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+#)
 
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
   feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)

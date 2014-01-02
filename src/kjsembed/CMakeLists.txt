@@ -51,9 +51,10 @@ set_target_properties(KF5JsEmbed PROPERTIES VERSION   "${KJSEMBED_VERSION_STRING
 )
 
 install(TARGETS KF5JsEmbed EXPORT KF5JsEmbedTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES ${KJsEmbed_HEADERS}
-                ${CMAKE_CURRENT_BINARY_DIR}/kjsembed_export.h
-                DESTINATION ${INCLUDE_INSTALL_DIR}/KJsEmbed COMPONENT Devel)
+# We install no headers, so no point in installing kjsembed_export.h either
+#install(FILES ${KJsEmbed_HEADERS}
+#  ${CMAKE_CURRENT_BINARY_DIR}/kjsembed_export.h
+#  DESTINATION ${INCLUDE_INSTALL_DIR}/KJsEmbed COMPONENT Devel)
 
 
 
