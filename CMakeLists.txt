@@ -13,6 +13,7 @@ include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 
 include(FeatureSummary)
+include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 
