@@ -30,7 +30,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+namespace KJSEmbed
+{
 KJSEMBED_EXPORT void RedirectIOToConsole();
+}
 
 #endif
 

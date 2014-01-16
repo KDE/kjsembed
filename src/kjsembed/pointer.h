@@ -27,6 +27,9 @@
 #include <typeinfo>
 #include <QtCore/QVariant>
 
+namespace KJSEmbed
+{
+
 struct PointerBase {
 public:
     virtual ~PointerBase()
@@ -37,7 +40,6 @@ public:
     virtual const std::type_info &type() const = 0;
     virtual void *voidStar() = 0;
 };
-Q_DECLARE_METATYPE(PointerBase *)
 
 template<typename ValueType>
 struct Pointer : public PointerBase {
@@ -137,6 +139,10 @@ ValueType *pointer_cast(PointerBase *pointer)
     Pointer<ValueType> *upcast = static_cast< Pointer<ValueType> *>(pointer);
     return upcast->ptr;
 }
+
+}
+
+Q_DECLARE_METATYPE(KJSEmbed::PointerBase *)
 
 #endif
 
