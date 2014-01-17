@@ -67,6 +67,7 @@ install(FILES ${KJsEmbed_HEADERS}
  kjseglobal.h
  static_binding.h
  binding_support.h
+ variant_binding.h
 
  DESTINATION ${INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed COMPONENT Devel)
 
