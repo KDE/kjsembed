@@ -24,12 +24,12 @@
 </refentryinfo>
 
 <refmeta>
-<refentrytitle><command>kjscmd</command></refentrytitle>
+<refentrytitle><command>kjscmd5</command></refentrytitle>
 <manvolnum>1</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname><command>kjscmd</command></refname>
+<refname><command>kjscmd5</command></refname>
 <refpurpose>&kde; KJSEmbed interpreter</refpurpose>
 </refnamediv>
 
@@ -37,7 +37,7 @@
 <title>Synopsis</title>
 
 <cmdsynopsis>
-<command>kjscmd</command>
+<command>kjscmd5</command>
 
 <arg choice="opt">--help</arg>
 <!--
@@ -64,7 +64,7 @@
 <refsect1>
 <title>Description</title>
 
-<para><command>kjscmd</command> is a tool for launching KJSEmbed scripts from the command line.
+<para><command>kjscmd5</command> is a tool for launching KJSEmbed scripts from the command line.
 It will run the scripts contained in the named <parameter>file</parameter> using KJSEmbed.
 It does not accept - (stdin) as a <parameter>file</parameter>.
 </para>
@@ -180,19 +180,19 @@ execute script in <parameter>file</parameter> without gui support.
 <refsect1>
 <title>Usage</title>
 <para>
-The most common way to run <command>kjscmd</command> is simply as
+The most common way to run <command>kjscmd5</command> is simply as
 <literallayout>
-<userinput><command>kjscmd</command> <parameter>file</parameter>
+<userinput><command>kjscmd5</command> <parameter>file</parameter>
 </userinput>
 </literallayout>
 If no parameter <parameter>file</parameter> is used, it executes a predefined test 
-script that measures the start speed of <command>kjscmd</command>.
+script that measures the start speed of <command>kjscmd5</command>.
 </para>
 </refsect1>
 
 <refsect1>
 <title>See Also</title>
-<para><replaceable>kjs</replaceable>(1)</para>
+<para><replaceable>kjs5</replaceable>(1)</para>
 </refsect1>
 
 <refsect1>

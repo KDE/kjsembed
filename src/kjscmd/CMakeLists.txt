@@ -4,10 +4,10 @@ set(kjscmd_SRCS kjscmd.cpp )
 qt5_add_resources(kjscmd_SRCS kjscmd.qrc)
 
 # This is a developer tool, not intended for normal user installs
-add_executable(kjscmd ${kjscmd_SRCS})
-target_link_libraries(kjscmd
+add_executable(kjscmd5 ${kjscmd_SRCS})
+target_link_libraries(kjscmd5
     Qt5::Widgets # QApplication::lastWindowClosed
     KF5::JsEmbed
 )
 
-install(TARGETS kjscmd EXPORT KF5JsEmbedTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kjscmd5 EXPORT KF5JsEmbedTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
