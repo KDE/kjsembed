@@ -1,4 +1,4 @@
-#!/usr/bin/env kjscmd
+#!/usr/bin/env kjscmd5
 
 /* This file is part of the KDE libraries
     Copyright (C) 2005, 2006 KJSEmbed Authors

@@ -1,4 +1,4 @@
-#!/usr/bin/env kjscmd
+#!/usr/bin/env kjscmd5
 
 function scribble() {
 
