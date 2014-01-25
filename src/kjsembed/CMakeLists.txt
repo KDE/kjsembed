@@ -75,3 +75,7 @@ install(FILES ${KJsEmbed_HEADERS}
 
 
 
+
+include(ECMGeneratePriFile)
+ecm_generate_pri_file(BASE_NAME KJsEmbed LIB_NAME KF5JsEmbed DEPS "KI18n KJS" FILENAME_VAR PRI_FILENAME)
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
