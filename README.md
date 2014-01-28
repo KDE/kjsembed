@@ -4,7 +4,7 @@ Binding Javascript object to QObjects
 
 ## Introduction
 
-KSJEmbed Provides a method of binding JavaScript objects to QObjects,
+KSJEmbed provides a method of binding JavaScript objects to QObjects,
 so you can script your applications.
 
 
