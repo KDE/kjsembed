@@ -6,7 +6,7 @@ find_package(ECM 0.0.8 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 set(REQUIRED_QT_VERSION "5.2")
-set(KF5_VERSION "5.0")
+set(KF5_VERSION "4.96.0")
 find_package(Qt5 "${REQUIRED_QT_VERSION}" CONFIG REQUIRED UiTools Widgets Xml Svg)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
@@ -18,7 +18,7 @@ include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-set(KF5_VERSION "5.0.0")
+set(KF5_VERSION "4.96.0")
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KJSEMBED
    #VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5JsEmbedConfigVersion.cmake")
