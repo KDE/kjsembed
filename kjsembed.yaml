@@ -1,1 +1,3 @@
 tier: 3
+framework-dependencies:
+  - kdoctools
