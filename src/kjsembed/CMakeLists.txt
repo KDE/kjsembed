@@ -32,8 +32,8 @@ set(KJsEmbed_LIB_SRCS
 add_library(KF5JsEmbed ${KJsEmbed_LIB_SRCS})
 generate_export_header(KF5JsEmbed BASE_NAME KJsEmbed)
 target_include_directories(KF5JsEmbed PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..;${CMAKE_CURRENT_BINARY_DIR}/..>")
-target_include_directories(KF5JsEmbed INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KJsEmbed>"
-                                                "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed>")
+target_include_directories(KF5JsEmbed INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed>"
+                                                "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed>")
 ecm_generate_headers(KJsEmbed_CamelCase_HEADERS
   HEADER_NAMES
     KJsEmbed
@@ -58,7 +58,7 @@ set_target_properties(KF5JsEmbed PROPERTIES VERSION   "${KJSEMBED_VERSION_STRING
                                             EXPORT_NAME JsEmbed
 )
 
-install(TARGETS KF5JsEmbed EXPORT KF5JsEmbedTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5JsEmbed EXPORT KF5JsEmbedTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
  ${CMAKE_CURRENT_BINARY_DIR}/kjsembed_export.h
@@ -70,9 +70,9 @@ install(FILES
  binding_support.h
  variant_binding.h
 
- DESTINATION ${INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed COMPONENT Devel)
+ DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed COMPONENT Devel)
 
-install(FILES ${KJsEmbed_CamelCase_HEADERS} DESTINATION ${INCLUDE_INSTALL_DIR}/KJsEmbed/KJsEmbed COMPONENT Devel)
+install(FILES ${KJsEmbed_CamelCase_HEADERS} DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/KJsEmbed COMPONENT Devel)
 
 
 
