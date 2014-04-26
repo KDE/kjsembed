@@ -6,7 +6,8 @@ find_package(ECM 0.0.12 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 set(REQUIRED_QT_VERSION "5.2")
-set(KF5_VERSION "4.98.0")
+set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 find_package(Qt5 "${REQUIRED_QT_VERSION}" CONFIG REQUIRED UiTools Widgets Xml Svg)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
@@ -18,16 +19,17 @@ include(ECMPackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-set(KF5_VERSION "4.98.0")
+set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KJSEMBED
    #VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5JsEmbedConfigVersion.cmake"
                         SOVERSION 5)
 
 if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  find_package(KF5JS ${KF5_VERSION} REQUIRED)
-  find_package(KF5I18n ${KF5_VERSION} REQUIRED)
-  find_package(KF5DocTools ${KF5_VERSION} REQUIRED)
+  find_package(KF5JS ${KF5_DEP_VERSION} REQUIRED)
+  find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
+  find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
 else()
     set(_kdeBootStrapping TRUE)
     include(${CMAKE_SOURCE_DIR}/tier2/kdoctools/KF5DocToolsMacros.cmake)
