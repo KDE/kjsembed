@@ -6,7 +6,7 @@ find_package(ECM 0.0.12 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 set(REQUIRED_QT_VERSION "5.2")
-set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_VERSION "4.98.0") # handled by release scripts
 set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 find_package(Qt5 "${REQUIRED_QT_VERSION}" CONFIG REQUIRED UiTools Widgets Xml Svg)
 include(KDEInstallDirs)
@@ -19,7 +19,7 @@ include(ECMPackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_VERSION "4.98.0") # handled by release scripts
 set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KJSEMBED
    #VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kjsembed_version.h"
