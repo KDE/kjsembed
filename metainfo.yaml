@@ -8,4 +8,4 @@ portingAid: true
 deprecated: true
 release: true
 framework-dependencies:
-  - kdoctools
+  - KDocTools
