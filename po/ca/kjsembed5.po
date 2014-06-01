@@ -1,0 +1,239 @@
+# Translation of kjsembed5.po to Catalan
+# Copyright (C) 1998-2014 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006.
+# Antoni Bella Pérez <antonibella5@orange.es>, 2003, 2006, 2011, 2012, 2013.
+# Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
+# Sebastia Pla Sanz <sebastia.pla@clarcat.com>, 2006, 2007.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Robert Millan <rmh@aybabtu.com>, 2009.
+# Orestes Mas <orestes@tsc.upc.edu>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kjsembed5\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2014-03-09 02:55+0100\n"
+"Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "S'ha trobat un error en processar la inclusió «%1» línia %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "La inclusió només pren 1 argument, no %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "No s'ha trobat el fitxer %1."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "La biblioteca només pren 1 argument, no %1."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "Alerta"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "Confirmeu"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Gestor d'esdeveniments incorrecte: Objecte %1 Identificador %2 Mètode %3 "
+"Tipus: %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Excepció en cridar la funció «%1» des de %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "No s'ha pogut obrir el fitxer «%1»"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "No s'ha pogut crear un fitxer temporal."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 no és una funció i no es pot cridar."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 no és un tipus d'objecte"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "L'acció pren 2 arguments."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "El grup d'accions pren 2 arguments."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "cal subministrar un superior vàlid."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Hi ha hagut un error en llegir el fitxer «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "No s'ha pogut llegir el fitxer «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "Cal subministrar un nom de fitxer."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "El «%1» no és un QLayout vàlid."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "Cal subministrar un nom de disposició."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "Tipus d'objecte incorrecte."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "El primer argument ha de ser un QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "Nombre incorrecte d'arguments."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "L'«slot» ha sol·licitat %1 argument"
+msgstr[1] "L'«slot» ha sol·licitat %1 arguments"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "però només hi ha %1 disponible"
+msgstr[1] "però només hi ha %1 disponibles"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Ha fallat en convertir el valor %1 des del tipus %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "No existeix el mètode «%1»."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"Ha fallat la crida el mètode «%1», no s'ha pogut obtenir l'argument %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "La crida a «%1» ha fallat."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "No s'ha pogut construir el valor"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "No hi ha prou arguments."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "Ha fallat en crear l'acció."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "Ha fallat en crear el grup d'accions."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "No s'ha especificat el nom de la classe"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "Ha fallat en crear la disposició."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "No s'ha especificat el nom de la classe."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "Ha fallat en crear l'estri."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "No s'ha pogut obrir el fitxer «%1»: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "Ha fallat en carregar el fitxer «%1»"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "«%1» no és un QWidget vàlid."
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "Cal subministrar un nom d'estri."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Gestor de ranures incorrecte: Objecte %1 Identificador %2 Mètode %3 "
+"Signatura: %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Excepció en cridar la ranura «%1» des de %2:%3:%4"
