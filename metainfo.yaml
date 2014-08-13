@@ -9,3 +9,7 @@ deprecated: true
 release: true
 framework-dependencies:
   - KDocTools
+libraries:
+ - qmake: KJsEmbed
+   cmake: "KF5::JsEmbed"
+cmakename: KF5JsEmbed
