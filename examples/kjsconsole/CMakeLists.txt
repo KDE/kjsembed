@@ -10,4 +10,4 @@ qt5_add_resources(console_SRCS console.qrc )
 add_executable(kjsconsole ${console_SRCS})
 target_link_libraries(kjsconsole KF5::JsEmbed Qt5::Widgets)
 
-install(TARGETS kjsconsole DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS kjsconsole DESTINATION ${KDE_INSTALL_BINDIR} )

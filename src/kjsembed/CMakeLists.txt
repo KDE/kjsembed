@@ -32,8 +32,8 @@ set(KJsEmbed_LIB_SRCS
 add_library(KF5JsEmbed ${KJsEmbed_LIB_SRCS})
 generate_export_header(KF5JsEmbed BASE_NAME KJsEmbed)
 target_include_directories(KF5JsEmbed PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..;${CMAKE_CURRENT_BINARY_DIR}/..>")
-target_include_directories(KF5JsEmbed INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed>"
-                                                "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed>")
+target_include_directories(KF5JsEmbed INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KJsEmbed>"
+                                                "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KJsEmbed/kjsembed>")
 ecm_generate_headers(KJsEmbed_CamelCase_HEADERS
   HEADER_NAMES
     KJsEmbed
@@ -70,13 +70,13 @@ install(FILES
  binding_support.h
  variant_binding.h
 
- DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/kjsembed COMPONENT Devel)
+ DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KJsEmbed/kjsembed COMPONENT Devel)
 
-install(FILES ${KJsEmbed_CamelCase_HEADERS} DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed/KJsEmbed COMPONENT Devel)
+install(FILES ${KJsEmbed_CamelCase_HEADERS} DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KJsEmbed/KJsEmbed COMPONENT Devel)
 
 
 
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KJsEmbed LIB_NAME KF5JsEmbed DEPS "KI18n KJS" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KJsEmbed)
+ecm_generate_pri_file(BASE_NAME KJsEmbed LIB_NAME KF5JsEmbed DEPS "KI18n KJS" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KJsEmbed)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
