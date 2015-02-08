@@ -1,0 +1,239 @@
+# translation of kdelibs4.po to Telugu
+#
+#
+# Purushottam Boyanapalli <boyanapalli@gmail.com>, 2005.
+# విజయ్ కిరణ్ కముజు <infyquest@gmail.com>, 2007.
+# pavithran <pavithran.s@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2008, 2009.
+# sreekalyanbapatla <sreekalyan3@gmail.com>, 2013.
+# GVS.Giri <gvs.giri@swecha.net>, 2013.
+# Bhuvan Krishna <bhuvan@swecha.org>,2013.
+# Naveen Kandimalla <naveen@swecha.net>,2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2013-11-04 23:55+0630\n"
+"Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
+"Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
+"4;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "లోపం ఏర్పడింది, అయితే సంవిధానం కలిసి, '%1' లైను %2:%3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "1 వాదనను మాత్రమే కలిసి తీసుకుంటుంది, కాదు%1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "%1 దస్త్రం కనపడలేదు"
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "గ్రంధాలయం మాత్రమే 1 వాదనను తీసుకుంటుంది, కాదు%1."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "హెచ్చరిక"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "నిర్ధారించు"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "చెడు ఘటన నిర్వహణ: తాత్పర్య %1 గుర్తించేది %2 విధానం %3 పద్ధతి: %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "'%1' ప్రమేయంను %2:%3:%4 నుండి కాల్‌ చేయుటలో ఎక్సెప్షన్"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "'%1' దస్త్రాన్ని తెరువలేకపోయాను"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "తాత్కాలిక దస్త్రాన్ని సృష్టించలేను."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 పరిక్రియ కాదు మరియ పిలవలేము."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 ఆబ్జక్టు రకము కాదు"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "చర్య 2 వాదనల తీసుకుంటుంది."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "చర్య గుంపు 2 వాదనల తీసుకుంటుంది."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "ఒక వర్తించు మూల తప్పక సరఫరాచేయలి"
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "'%1' దస్త్రం చదువుటలొ దొషం వచ్చింది"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "'%1' దస్త్రాన్ని చదువలేను."
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "తప్పక ఫైలుపేరును అందివ్వాలి."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' సరైన Qకూర్పు కాదు."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "తప్పక కూర్పు పేరును అందివ్వాలి."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "సరికాని ఆబ్జక్టు రకము."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "మొదటి ఆర్గుమెంటు తప్పక Qఆబ్జక్టు అయివుండాలి."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "సరికాని అర్గుమెంట్ల సంఖ్య."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "%1 క్రమానుగత సంకేతం నుండి స్లాట్ అగాండి"
+msgstr[1] "%1 క్రమానుగత సంకేతలు నుండి స్లాట్ అగాండి"
+msgstr[2] "%1 క్రమానుగత సంకేతలు నుండి స్లాట్ అగాండి"
+msgstr[3] "%1 క్రమానుగత సంకేతలు నుండి స్లాట్ అగాండి"
+msgstr[4] "%1 క్రమానుగత సంకేతలు నుండి స్లాట్ అగాండి"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "కాని %1 మాత్రమే అంధుబాటులో ఉంది"
+msgstr[1] "కాని %1 మాత్రమే అంధుబాటులో ఉణాయో"
+msgstr[2] "కాని %1 మాత్రమే అంధుబాటులో ఉణాయో"
+msgstr[3] "కాని %1 మాత్రమే అంధుబాటులో ఉణాయో"
+msgstr[4] "కాని %1 మాత్రమే అంధుబాటులో ఉణాయో"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1,%2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "%2 (%3)విలువ రకం నుండి %1లొ  వెల విఫలమైంది"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "ఇటువంటి పద్ధతి లేదు '%1'"
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "వాదన సాద్యం కాదు   %3:%2 పద్దతి పిలవడంలొ '%1' విఫలమైంది,"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "'%1' కొరకు కాల్ విఫలము."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "విలువ ను తయరు చెయలెకపొయాను."
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "చాలినంత వాదనలు లేదు."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "చర్యను సృష్టించుటకు విఫలమైంది."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "చర్యాసమూహంను సృష్టించుటకు విఫలమైంది."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "ఏ క్లాస్‌పేరు తెలుపబడిలేదు"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "కూర్పు సృష్టించుటకు విఫలమైంది."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "ఏ క్లాస్‌పేరు తెలుపబడిలేదు."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "విడ్జట్ సృష్టించుటకు విఫలమైంది."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "'%1' దస్త్రాన్ని ని తెరువలేకపోయాను: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "%1' దస్త్రాన్ని ఎక్కించలేకపొయాను"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "%1 ఇది చేల్లుబాటు కన్ని Q విడ్జెట్ "
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "ఒక విడ్జెట్ పేరు తప్పకుండ సరఫరాచేయు  "
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "తాత్పర్య %1 గుర్తింపుచిహ్నం %2 పద్దతి %3 సంతకం: %4 చెడు స్లాట్ నిర్వహణ:"
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "%1 స్లాట్ నుండి %2:%3%4 పిలువుటలొ మినహాయింపు "
