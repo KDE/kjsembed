@@ -248,11 +248,11 @@ public:
     ProxyBinding(KJS::ExecState *exec);
     virtual ~ProxyBinding() {}
 
-    bool implementsCall() const
+    bool implementsCall() const Q_DECL_OVERRIDE
     {
         return true;
     }
-    bool implementsConstruct() const
+    bool implementsConstruct() const Q_DECL_OVERRIDE
     {
         return true;
     }

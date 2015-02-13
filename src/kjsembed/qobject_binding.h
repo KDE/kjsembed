@@ -137,7 +137,7 @@ public:
     /**
     * \return true if the property \p propertyName can be changed else false is returned.
     */
-    bool canPut(KJS::ExecState *exec, const KJS::Identifier &propertyName) const;
+    bool canPut(KJS::ExecState *exec, const KJS::Identifier &propertyName) const Q_DECL_OVERRIDE;
 
     /**
     * Called to ask if we have a callback for the named property.
@@ -156,13 +156,13 @@ public:
     * \return a string-representation of the QObject. For example for a QWidget-instance that
     * has the QObject::objectName "mywidget" the string "mywidget (QWidget)" is returned.
     */
-    KJS::UString toString(KJS::ExecState *exec) const;
+    KJS::UString toString(KJS::ExecState *exec) const Q_DECL_OVERRIDE;
 
     /**
     * \return the QObject's classname. For example for a QWidget-instance the string "QWidget"
     * is returned.
     */
-    KJS::UString className() const;
+    KJS::UString className() const Q_DECL_OVERRIDE;
 
     /**
     * Add the QObject \p object to the internal QObjectCleanupHandler to watch the
@@ -197,12 +197,12 @@ class KJSEMBED_EXPORT SlotBinding : public KJS::InternalFunctionImp
 {
 public:
     SlotBinding(KJS::ExecState *exec, const QMetaMethod &memberName);
-    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args);
-    bool implementsCall() const
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args) Q_DECL_OVERRIDE;
+    bool implementsCall() const Q_DECL_OVERRIDE
     {
         return true;
     }
-    bool implementsConstruct() const
+    bool implementsConstruct() const Q_DECL_OVERRIDE
     {
         return false;
     }

@@ -37,7 +37,7 @@ public:
     PenBinding(KJS::ExecState *exec, const QPen &value);
 
 private:
-    virtual const KJS::ClassInfo *classInfo() const
+    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
     {
         return &info;
     }

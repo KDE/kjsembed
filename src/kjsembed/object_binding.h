@@ -141,9 +141,9 @@ public:
         m_value = new Pointer<T>(ptr);
     }
 
-    KJS::UString toString(KJS::ExecState *exec) const;
-    KJS::UString className() const;
-    KJS::JSType type() const;
+    KJS::UString toString(KJS::ExecState *exec) const Q_DECL_OVERRIDE;
+    KJS::UString className() const Q_DECL_OVERRIDE;
+    KJS::JSType type() const Q_DECL_OVERRIDE;
 
     Ownership ownership() const;
     void setOwnership(Ownership owner);

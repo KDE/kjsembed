@@ -94,8 +94,8 @@ public:
 
     void *pointer();
 
-    KJS::UString toString(KJS::ExecState *) const;
-    KJS::UString className() const;
+    KJS::UString toString(KJS::ExecState *) const Q_DECL_OVERRIDE;
+    KJS::UString className() const Q_DECL_OVERRIDE;
 
     /**
     * Return the wrapped QVariant
@@ -124,7 +124,7 @@ public:
     static const KJS::ClassInfo info;
 
 private:
-    virtual const KJS::ClassInfo *classInfo() const
+    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
     {
         return &info;
     }

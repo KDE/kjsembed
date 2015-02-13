@@ -45,8 +45,8 @@ public:
     /**
     * Executes the callback for this method.
     */
-    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args);
-    bool implementsConstruct() const
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args) Q_DECL_OVERRIDE;
+    bool implementsConstruct() const Q_DECL_OVERRIDE
     {
         return false;
     }
@@ -84,7 +84,7 @@ public:
     */
     void addStaticMethods(KJS::ExecState *exec, const Method *methods);
 
-    bool implementsConstruct() const
+    bool implementsConstruct() const Q_DECL_OVERRIDE
     {
         return true;
     }
@@ -95,13 +95,13 @@ public:
     KJS::JSObject *construct(KJS::ExecState *exec, const KJS::List &args) Q_DECL_OVERRIDE;
     using KJS::JSObject::construct;
 
-    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args) Q_DECL_OVERRIDE
     {
         return construct(exec, args);
     }
 
     void setDefaultValue(KJS::JSValue *value);
-    KJS::JSValue *defaultValue(KJS::ExecState *exec, KJS::JSType hint) const;
+    KJS::JSValue *defaultValue(KJS::ExecState *exec, KJS::JSType hint) const Q_DECL_OVERRIDE;
 
     /**
     * Add the constructor to an object.  This is usually the global scope.

@@ -35,7 +35,7 @@ class ImageBinding : public VariantBinding
 {
 public:
     ImageBinding(KJS::ExecState *exec, const QImage &value);
-    virtual const KJS::ClassInfo *classInfo() const
+    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
     {
         return &info;
     }

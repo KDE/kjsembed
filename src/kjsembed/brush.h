@@ -36,7 +36,7 @@ class BrushBinding : public VariantBinding
 {
 public:
     BrushBinding(KJS::ExecState *exec, const QBrush &value);
-    virtual const KJS::ClassInfo *classInfo() const
+    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
     {
         return &info;
     }
