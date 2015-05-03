@@ -1,0 +1,225 @@
+# Uyghur translation for kdelibs4.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "'%1' نىڭ %2 قۇرىنى بىر تەرەپ قىلىشتا خاتالىق كۆرۈلدى: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include نىڭ پارامېتىرى پەقەت 1 لا. %1 ئەمەس."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "ھۆججەت %1 تېپىلمىدى."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "ئامبارنىڭ پارامېتىرى پەقەت 1 لا. %1 ئەمەس."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "ئاگاھلاندۇرۇش"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "جەزملە"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "ھادىسە تۇتقۇچ خاتا: Object %1 Identifier %2 فۇنكسىيە %3 تىپ: %4"
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "%2:%3:%4 دىكى فۇنكسىيە '%1' نى چاقىرغاندا مۇستەسنا يۈز بەردى."
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "ھۆججەت «%1» نى ئاچالمايدۇ"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "ۋاقىتلىق ھۆججەت قۇرالمىدى."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "«%1» فۇنكسىيە ئەمەس، شۇڭا چاقىرغىلى بولمىدى."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "'%1' نەڭ تىپى ئەمەس"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "ھەرىكەت ئىككى پارامېتىردا ئىشلەيدۇ."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "ھەرىكەت گۇرۇپپىسى ئىككى پارامېتىردا ئىشلەيدۇ."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "ئىناۋەتلىك ئاتا كۆرسىتىلىشى كېرەك."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "ھۆججەت '%1' نى ئوقۇشتا خاتالىق كۆرۈلدى."
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "ھۆججەت '%1' ئوقۇغىلى بولمىدى"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "ھۆججەت ئاتى بېرىلىشى كېرەك."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "«%1» ئىناۋەتلىك QLayout ئەمەس."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "جايلاشتۇرۇش ئاتى بېرىلىشى كېرەك."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "خاتا نەڭ تىپى."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "تۇنجى پارامېتىر چوقۇم <icode>QObject</icode> بولمىسا بولمايدۇ."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "پارامېتىرنىڭ سانى توغرا ئەمەس."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "slot %1 دانە پارامېتىر تەلەپ قىلىۋاتىدۇ"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "بىراق %1 دانە پارامېتىر بار"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1، %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "%2 (%3) تىپنى %1 قىممەتكە ئايلاندۇرۇش مەغلۇپ بولدى"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "بۇنداق '%1' ئۇسۇل يوق"
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"'%1' ئۇسۇل چاقىرىش مەغلۇپ بولدى. پارامېتىر %2 نىڭغا ئېرىشكىلى بولمىدى: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "'%1' چاقىرىش مەغلۇپ بولدى."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "قىممەت شەكىللەندۈرەلمىدى"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "پارامېتىر يېتىشمىدى."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "مەشغۇلات ھاسىل قىلىش مەغلۇپ بولدى."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "ActionGroup ھاسىل قىلىش مەغلۇپ بولدى."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "تىپ ئاتى بېكىتىلمىگەن"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "جايلاشتۇرۇش ھاسىل قىلىش مەغلۇپ بولدى."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "تىپ ئاتى بېكىتىلمىگەن."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "Widget ھاسىل قىلىش مەغلۇپ بولدى."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "ھۆججەت «%1» نى ئاچقىلى بولمىدى: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "ھۆججەت '%1' نى ئوقۇش مەغلۇپ بولدى."
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' ئىناۋەتلىك  QWidget ئەمەس."
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "widget ئاتى بېرىلىشى كېرەك."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "ئوقۇر تۇتقۇچ خاتا: نەڭ %1 بەلگە %2  ئۇسۇل %3 ئىمزا: %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "%2 دىن '%1' ئوقۇرنى چاقىرغاندا مۇستەسنا كۆرۈلدى: %3:%4"
