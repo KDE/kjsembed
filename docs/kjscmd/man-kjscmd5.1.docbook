@@ -6,7 +6,7 @@
 <refentry>
 
 <refentryinfo>
-<title>&kde; User's Manual</title>
+<title>kjscmd5 User's Manual</title>
 
 <!-- with help from http://linuxcommand.org/man_pages/kjscmd1.html -->
 
@@ -18,8 +18,9 @@
 </affiliation>
 </author>
 
-<date>2008-10-16</date>
-<releaseinfo>0.01.01</releaseinfo>
+<date>2015-07-31</date>
+<releaseinfo>Frameworks 5.13</releaseinfo>
+<productname>KDE Frameworks</productname>
 
 </refentryinfo>
 
@@ -30,7 +31,7 @@
 
 <refnamediv>
 <refname><command>kjscmd5</command></refname>
-<refpurpose>&kde; KJSEmbed interpreter</refpurpose>
+<refpurpose>Frameworks KJSEmbed interpreter</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -40,11 +41,7 @@
 <command>kjscmd5</command>
 
 <arg choice="opt">--help</arg>
-<!--
-<arg choice="opt">Generic-options</arg>
-<arg choice="opt">Qt-options</arg>
-<arg choice="opt">KDE-options</arg>
--->
+
 <group>
 <arg choice="opt">-e</arg>
 <arg choice="opt">--exec</arg>
@@ -52,10 +49,6 @@
 <group>
 <arg choice="opt">-i</arg>
 <arg choice="opt">-interactive</arg>
-</group>
-<group>
-<arg choice="opt">-n</arg>
-<arg choice="opt">-no-kde</arg>
 </group>
 <arg choice="opt">file</arg>
 </cmdsynopsis>
@@ -69,81 +62,6 @@ It will run the scripts contained in the named <parameter>file</parameter> using
 It does not accept - (stdin) as a <parameter>file</parameter>.
 </para>
 </refsect1>
-<!--
-<refsect1>
-<title>Generic Options</title>
-<para>
-<variablelist>
-
-<varlistentry>
-<term><option>- -author</option></term>
-<listitem>
-<para>
-Show author information.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>- -help</option></term>
-<listitem>
-<para>
-Show help about options.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>- -help-all</option></term>
-<listitem>
-<para>
-Show all options.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>- -help-kde</option></term>
-<listitem>
-<para>
-Show KDE specific options.
-</para>
-
-
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>- -help-qt</option></term>
-<listitem>
-<para>
-Show Qt specific options.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>- -license</option></term>
-<listitem>
-<para>
-Show license information.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>-v</option><option>- -version</option></term>
-<listitem>
-<para>
-Show version information
-</para>
-</listitem>
-</varlistentry>
-
-</variablelist>
-</para>
-</refsect1>
--->
 
 <refsect1>
 <title>Application Options</title>
@@ -164,14 +82,6 @@ execute script in <parameter>file</parameter> without gui support.
 <para>start interactive <command>kjs</command> interpreter.</para>
 </listitem>
 </varlistentry>
-
-<varlistentry>
-<term><option>-n</option>,<option>--no-kde</option></term>
-<listitem>
-<para>start without &kde; KApplication support.</para>
-</listitem>
-</varlistentry>
-
 
 </variablelist>
 
