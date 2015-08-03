@@ -3,7 +3,7 @@
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
 
-<refentry>
+<refentry lang="&language;">
 
 <refentryinfo>
 <title>kjscmd5 User's Manual</title>
@@ -107,7 +107,7 @@ script that measures the start speed of <command>kjscmd5</command>.
 
 <refsect1>
 <title>Bugs</title>
-<para>There are probably tons of bugs. Use <ulink url="http://bugs.kde.org">bugs.kde.org</ulink> to report them.</para>
+<para>Please use <ulink url="http://bugs.kde.org">KDE's bugtracker</ulink> to report bugs.</para>
 </refsect1>
 
 </refentry>
