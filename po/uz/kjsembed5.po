@@ -1,0 +1,240 @@
+# translation of kdelibs4.po to Uzbek
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006, 2008.
+# translation of kdelibs4.po to
+# Copyright (C) 2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2008-05-30 17:29+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr ""
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr ""
+
+#: kjsembed/builtins.cpp:120
+#, fuzzy, kde-format
+msgid "File %1 not found."
+msgstr "Uslub %1 topilmadi.\n"
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr ""
+
+#: kjsembed/builtins.cpp:137
+#, fuzzy
+#| msgid "Alt"
+msgid "Alert"
+msgstr "Alt"
+
+#: kjsembed/builtins.cpp:147
+#, fuzzy
+#| msgid "Configure"
+msgid "Confirm"
+msgstr "Moslash"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr ""
+
+#: kjsembed/fileio.cpp:69
+#, fuzzy, kde-format
+msgid "Could not open file '%1'"
+msgstr ""
+"Kutubxonani (%1) ochib boʻlmadi.\n"
+"%2"
+
+#: kjsembed/fileio.cpp:106
+#, fuzzy
+msgid "Could not create temporary file."
+msgstr "Yangi faylni yaratib boʻlmadi."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr ""
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, fuzzy, kde-format
+msgid "%1 is not an Object type"
+msgstr "Asos obʼekt emas"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr ""
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr ""
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr ""
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, fuzzy, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Modulni yuklashda xato roʻy berdi."
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, fuzzy, kde-format
+msgid "Could not read file '%1'"
+msgstr "Xizmat (%1) topilmadi."
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr ""
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr ""
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, fuzzy, kde-format
+#| msgid "There is no matching item available.\n"
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "Mos keladigan element mavjud emas.\n"
+
+#: kjsembed/qobject_binding.cpp:412
+#, fuzzy, kde-format
+#| msgctxt "concatenation of dates and time"
+#| msgid "%1 %2"
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1 %2"
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:661
+#, fuzzy, kde-format
+msgid "No such method '%1'."
+msgstr "Menyuning bandi (%1) mavjud emas."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:727
+#, fuzzy, kde-format
+msgid "Call to '%1' failed."
+msgstr "Oʻrnatish muvaffaqiyatsiz tugadi."
+
+#: kjsembed/qobject_binding.cpp:793
+#, fuzzy
+msgid "Could not construct value"
+msgstr "Faylni yuklab boʻlmadi."
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr ""
+
+#: kjsembed/quiloader_binding.cpp:68
+#, fuzzy
+msgid "Failed to create Action."
+msgstr "Yangilash koʻrsatmalaridan iborat fayl"
+
+#: kjsembed/quiloader_binding.cpp:82
+#, fuzzy
+msgid "Failed to create ActionGroup."
+msgstr "Yangilash koʻrsatmalaridan iborat fayl"
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr ""
+
+#: kjsembed/quiloader_binding.cpp:98
+#, fuzzy
+msgid "Failed to create Layout."
+msgstr "Yozib qoʻyish uchun faylni yaratib boʻlmadi."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr ""
+
+#: kjsembed/quiloader_binding.cpp:115
+#, fuzzy
+msgid "Failed to create Widget."
+msgstr "Yozib qoʻyish uchun faylni yaratib boʻlmadi."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, fuzzy, kde-format
+msgid "Could not open file '%1': %2"
+msgstr ""
+"Kutubxonani (%1) ochib boʻlmadi.\n"
+"%2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, fuzzy, kde-format
+msgid "Failed to load file '%1'"
+msgstr "Manbani (%1) yuklab boʻlmadi."
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr ""
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr ""
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr ""
