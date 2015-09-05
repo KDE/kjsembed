@@ -1,0 +1,226 @@
+# translation of kdelibs4.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2012-06-27 10:04+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-KH\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "បាន​ឃើញ​កំហុស​ ខណៈ​ដែល​ដំណើរការ​រួមបញ្ចូល '%1' បន្ទាត់ %2 ៖ %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "រួមបញ្ចូល​​យក​តែ​អាគុយម៉ង់ ១ មិនមែន %1 ទេ ។"
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "រក​មិន​ឃើញ %1"
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "បណ្ណាល័យ​យកតែ​អាគុយម៉ង់ ១ មិនមែន %1 ទេ ។"
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "ផ្លាស់ប្ដូរ"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "អះអាង"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"កម្មវិធី​ដោះស្រាយ​ព្រឹត្តិការណ៍​មិន​ត្រឹមត្រូវ ៖ វត្ថុ %1 កម្មវិធី​កំណត់​អត្តសញ្ញាណ %2 វិធីសាស្ត្រ  %3 "
+"ប្រភេទ ៖ %4 ។"
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "លើកលែងតែ​កា​ហៅ​មុខងារ '%1' ពី %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "មិន​អាច​បើក​ឯកសារ '%1' បាន​ឡើយ"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "មិនអាច​បង្កើត​ឯកសារ​បណ្ដោះអាសន្ន​បានទេ ។"
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 គឺ​មិនមែន​ជា​អនុគមន៍​ទេ ហើយ​មិនអាច​ហៅ​បានឡើយ ។"
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 មិនមែន​ជា​ប្រភេទ​វត្ថុ​ទេ"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "អំពើ​យក​អាគុយម៉ង់ ២ ។"
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "ក្រុម​អំពើ​យក​អាគុយម៉ង់ ២ ។"
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "ត្រូវតែ​ផ្ដល់​មេ​ត្រឹមត្រូវ ។"
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "មាន​កំហុស​ក្នុងការ​អាន​ឯកសារ '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "មិនអាច​អាន​ឯកសារ '%1' បានឡើយ"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "ត្រូវតែ​ផ្ដល់​ឈ្មោះ​ឯកសារ ។"
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' គឺ​មិនមែន​ជា QLayout ត្រឹមត្រូវ​ទេ ។"
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "ត្រូវ​តែ​ផ្ដល់​ឈ្មោះ​ប្លង់ ។"
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "ប្រភេទ​វត្ថុ​មិនត្រឹមត្រូវ ។"
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "អាគុយម៉ង់​ទីមួយ​ត្រូវតែ​ជា QObject ។"
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "លេខ​មិន​ត្រឹមត្រូវ​របស់​អាគុយម៉ង់ ។"
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "រន្ធដែលបាន​ស្នើ​សម្រាប់​អាគុយម៉ង់ %1"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "ប៉ុន្តែ​មាន​តែ​ %1 អាច​ប្រើ​បាន"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "បរាជ័យ​ក្នុងការ​ផ្សព្វផ្សាយ​ទៅ​តម្លៃ %1 ពី​ប្រភេទ %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "គ្មាន​វិធីសាស្ដ្រ '%1' ដូចនោះ​ទេ ។"
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "បរាជ័យ​ក្នុងការ​ហៅ​ទៅ​វិធីសាស្ដ្រ '%1' ដូច្នេះ​មិនអាច​យក​អាគុយម៉ង់ %2 ៖ %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "បរាជ័យ​ក្នុង​ការ​ហៅ​ទៅ '%1' ។"
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "មិនអាច​បង្កើត​តម្លៃ​បានទេ"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "មាន​អាគុយម៉ង​មិនត្រឹមត្រូវ ។"
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "បរាជ័យ​ក្នុងការ​បង្កើត​អំពើ ។"
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "បរាជ័យ​ក្នុង​ការ​បង្កើតក្រុម​អំពើ ។"
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "គ្មាន​ឈ្មោះ​ថ្នាក់​ដែល​បាន​បញ្ជាក់​ទេ"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "បរាជ័យ​ក្នុង​ការ​បង្កើត​ប្លង់ ។"
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "គ្មាន​ឈ្មោះ​ថ្នាក់​ដែលបាន​បញ្ជាក់​ទេ ។"
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "បរាជ័យ​ក្នុង​ការ​បង្កើត​ធាតុក្រាហ្វិក ។"
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "មិនអាច​បើក​ឯកសារ '%1' បានឡើយ ៖ %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "បរាជ័យ​ក្នុងការ​ផ្ទុក​​ឯកសារ '%1'"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' មិនមែន​ជា QWidget ត្រឹមត្រូវ​ឡើយ ។"
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "ត្រូវតែ​ផ្ដល់​ឈ្មោះ​ធាតុក្រាហ្វិក ។"
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"កម្មវិធី​ដោះស្រាយ​រន្ធ​មិនត្រឹមត្រូវ ៖ វត្ថុ %1 កម្មវិធី​​កំណត់​អត្តសញ្ញាណ %2 វិធីសាស្ដ្រ %3 ហត្ថលេខា ៖ "
+"%4 ។"
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "លើកលែងតែ​ការ​ហៅ​រន្ធ '%1' ពី %2:%3:%4"
