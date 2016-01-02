@@ -1,0 +1,251 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# enolp <enolp@softastur.org>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4-1\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2015-11-16 19:52+0100\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <kde-i18n-doc@kde.org>\n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: asturian\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, fuzzy, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "Asocedió un fallu mientres se procesaba include «%1» llinia %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, fuzzy, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include namái tien 1 argumentu, no %1"
+
+#: kjsembed/builtins.cpp:120
+#, fuzzy, kde-format
+msgid "File %1 not found."
+msgstr "Nun s'atopó'l ficheru %1."
+
+#: kjsembed/builtins.cpp:125
+#, fuzzy, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "la biblioteca namái tien 1 argumentu, non %1."
+
+#: kjsembed/builtins.cpp:137
+#, fuzzy
+msgid "Alert"
+msgstr "Alertar"
+
+#: kjsembed/builtins.cpp:147
+#, fuzzy
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: kjsembed/eventproxy.cpp:110
+#, fuzzy, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Remanador d'eventos non válidu: Oxetu %1 Identificador %2 Métodu %3 Triba: "
+"%4."
+
+#: kjsembed/eventproxy.cpp:133
+#, fuzzy, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Esceición al llamar a la función «%1» dende %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, fuzzy, kde-format
+msgid "Could not open file '%1'"
+msgstr "Nun foi dable abrir el ficheru «%1»"
+
+#: kjsembed/fileio.cpp:106
+#, fuzzy
+msgid "Could not create temporary file."
+msgstr "Nun foi dable crear el ficheru temporal."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, fuzzy, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 nun ye una función y nun se-y puede llamar."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, fuzzy, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 nun ye de triba oxetu"
+
+#: kjsembed/qaction_binding.cpp:57
+#, fuzzy
+msgid "Action takes 2 args."
+msgstr "Action requier 2 argumentos."
+
+#: kjsembed/qaction_binding.cpp:79
+#, fuzzy
+msgid "ActionGroup takes 2 args."
+msgstr "ActionGroup requier 2 argumentos."
+
+#: kjsembed/qaction_binding.cpp:84
+#, fuzzy
+msgid "Must supply a valid parent."
+msgstr "Tien d'apurrir un oxetu padre válidu."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, fuzzy, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Hebo un fallu al lleer el ficheru «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, fuzzy, kde-format
+msgid "Could not read file '%1'"
+msgstr "Nun foi dable lleer el ficheru «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, fuzzy
+msgid "Must supply a filename."
+msgstr "Tien d'apurrir un nome de ficheru."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, fuzzy, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "«%1» nun ye una QLayout válida."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, fuzzy
+msgid "Must supply a layout name."
+msgstr "Tien d'apurrir un nome de disposición."
+
+#: kjsembed/qobject_binding.cpp:141
+#, fuzzy
+msgid "Wrong object type."
+msgstr "Triba d'oxetu incorreutu."
+
+#: kjsembed/qobject_binding.cpp:148
+#, fuzzy
+msgid "First argument must be a QObject."
+msgstr "El primer argumentu tien de ser un QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+#, fuzzy
+msgid "Incorrect number of arguments."
+msgstr "Númberu incorreutu d'argumentos."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, fuzzy, kde-format
+#| msgid "There is no matching item available.\n"
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "Nun hai coincidencies disponibles.\n"
+msgstr[1] "Nun hai coincidencies disponibles.\n"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, fuzzy, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Nun foi dable convertir a %1 un valor de triba %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, fuzzy, kde-format
+msgid "No such method '%1'."
+msgstr "Nun esiste esi métodu «%1»."
+
+#: kjsembed/qobject_binding.cpp:690
+#, fuzzy, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "La llamada al métodu «%1» falló, nun puede obtenese l'argumentu %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, fuzzy, kde-format
+msgid "Call to '%1' failed."
+msgstr "La llamada a «%1» falló."
+
+#: kjsembed/qobject_binding.cpp:793
+#, fuzzy
+msgid "Could not construct value"
+msgstr "Nun foi dable construyir el valor"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, fuzzy
+msgid "Not enough arguments."
+msgstr "Nun hai abondos argumentos."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, fuzzy
+msgid "Failed to create Action."
+msgstr "La creación de la «Action» falló."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, fuzzy
+msgid "Failed to create ActionGroup."
+msgstr "La creación de la «ActionGroup» falló."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, fuzzy
+msgid "No classname specified"
+msgstr "Nun s'indicó dengún nome de clas"
+
+#: kjsembed/quiloader_binding.cpp:98
+#, fuzzy
+msgid "Failed to create Layout."
+msgstr "La creación del «Layout» falló."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, fuzzy
+msgid "No classname specified."
+msgstr "Nun s'indicó dengún nome de clas."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, fuzzy
+msgid "Failed to create Widget."
+msgstr "La creación del elementu gráficu falló."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, fuzzy, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "Nun foi dable abrir el ficheru «%1»: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, fuzzy, kde-format
+msgid "Failed to load file '%1'"
+msgstr "La carga del ficheru «%1» falló"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, fuzzy, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "«%1» nun ye un QWidget válidu."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, fuzzy
+msgid "Must supply a widget name."
+msgstr "Tien d'apurrir un nome d'elementu gráficu."
+
+#: kjsembed/slotproxy.cpp:117
+#, fuzzy, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Remanador de «slots» non válidu: Oxetu %1 Identificador %2 Métodu %3 Robla: "
+"%4"
+
+#: kjsembed/slotproxy.cpp:140
+#, fuzzy, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Esceición al llamar al slot «%1» dende %2:%3:%4"
