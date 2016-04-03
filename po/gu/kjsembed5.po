@@ -1,0 +1,229 @@
+# translation of kdelibs4.po to Gujarati
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kartik Mistry <kartik.mistry@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2009-11-22 00:01+0530\n"
+"Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
+"Language-Team: Gujarati <team@utkarsh.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "સમાવેશ '%1' કરતી વખતે લીટી %2: %3 પર ક્ષતિ જોવામાં આવી"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include ફક્ત ૧ જ વિકલ્પ લે છે, નહી કે %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "ફાઇલ %1 મળી નહી."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "લાઇબ્રેરી ફક્ત ૧ વિકલ્પ લે છે, નહી કે %1."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "ચેતવણી"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "ખાતરી"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "ખરાબ વસ્તુ સંભાળનાર: વસ્તુ %1 ઓળખનાર %2 પધ્ધતિ %3 પ્રકાર: %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "અપવાદ %2:%3:%4 માંથી '%1' વિધેયને બોલાવે છે"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "ફાઇલ '%1' ખોલી શકાતી નથી"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "ટેમ્પરરી ફાઇલ બનાવી શકાતી નથી."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 એ વિધેય નથી અને બોલાવી શકાતું નથી."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 વસ્તુ પ્રકાર નથી"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "ક્રિયા ૨ વિકલ્પો લે છે."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "ActionGroup ૨ વિકલ્પો લે છે."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "યોગ્ય ઉપરી આપવો જ પડશે."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "ફાઈલ '%1' ને વાંચતી વખતે ક્ષતિ આવી"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "ફાઈલ '%1' વાંચી શકાતી નથી"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "ફાઇલનામ આપવું જ પડશે."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' યોગ્ય QLayout નથી."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "દેખાવ નામ આપવું જ પડશે."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "ખોટો વસ્તુ પ્રકાર."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "પ્રથમ વિકલ્પ QObject જ હોવો જોઇએ."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "ખોટી સંખ્યાનાં વિકલ્પો."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, fuzzy, kde-format
+#| msgid "There is no matching item available.\n"
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "કોઈ મળતી વસ્તુ ઉપલબ્ધ નથી.\n"
+msgstr[1] "કોઈ મળતી વસ્તુ ઉપલબ્ધ નથી.\n"
+
+#: kjsembed/qobject_binding.cpp:412
+#, fuzzy, kde-format
+#| msgctxt "concatenation of dates and time"
+#| msgid "%1 %2"
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1 %2"
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "પ્રકાર %2 (%3) માંથી %1 કિંમત ફેરવવામાં નિષ્ફળતા"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "આવી કોઇ રીત '%1' નથી."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "રીત '%1' બોલાવવામાં નિષ્ફળ, વિકલ્પ %2: %3 મેળવવામાં અસક્ષમ"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "'%1' ને બોલાવવામાં નિષ્ફળ."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "કિંમત બનાવી શકાઇ નહી"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "પૂરતાં વિકલ્પો નથી."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "ક્રિયા બનાવવામાં નિષ્ફળ."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "ક્રિયાસમૂહ બનાવવામાં નિષ્ફળ."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "કોઇ વર્ગનામ સ્પષ્ટ કરેલ નથી"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "દેખાવ બનાવવામાં નિષ્ફળ."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "કોઇ વર્ગનામ સ્પષ્ટ કરેલ નથી."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "વિજેટ બનાવવામાં નિષ્ફળ."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "ફાઇલ '%1' ખોલી શકાતી નથી: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "ફાઈલ '%1' લાવવામાં નિષ્ફળતા"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' એ યોગ્ય QWidget નથી."
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "વિજેટ નામ આપવું જ પડશે."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "ખરાબ જગ્યા સંભાળનાર: વસ્તુ %1 ઓળખનાર %2 પધ્ધતિ %3 સહી: %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "અપવાદ %2:%3:%4 માંથી '%1' જગ્યાને બોલાવે છે"
