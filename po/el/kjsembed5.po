@@ -1,0 +1,242 @@
+# translation of kdelibs4.po to Greek
+# translation of kdelibs4.po to
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Last MAJOR revision (whole file) (29-03-2003 - Stergios Dramis).
+#
+# Dimitris Kamenopoulos <d.kamenopoulos@mail.ntua.gr>, 2000-2002.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2004.
+# Κώστας Μπουκουβάλας <quantis@hellug.gr>, 2005.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2006, 2007, 2008, 2009.
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Σπύρος Γεωργαράς <sngeorgaras@otenet.gr>, 2008.
+# Petros <pvidalis@gmail.com>, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010, 2011.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2010, 2011, 2012, 2013, 2014.
+# nikos, 2011.
+# Stelios <sstavra@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2014-01-04 09:52+0100\n"
+"Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "Βρέθηκε σφάλμα κατά την επεξεργασία της ενσωμάτωσης '%1' γραμμή %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "Η ενσωμάτωση δέχεται 1 όρισμα, όχι %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "Το αρχείο %1 δε βρέθηκε."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "Η βιβλιοθήκη δέχεται 1 όρισμα, όχι %1."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "Συναγερμός"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Λάθος χειριστής γεγονότος: αντικείμενο %1 αναγνωριστικό %2 μέθοδος %3 τύπος: "
+"%4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Εξαίρεση κατά την κλήση της συνάρτησης '%1' από %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου '%1'"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "Δεν ήταν δυνατή η δημιουργία προσωρινού αρχείου."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "Το %1 δεν αποτελεί μια συνάρτηση και δεν μπορεί να κληθεί."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "Το %1 δεν είναι τύπος αντικειμένου"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "Η ενέργεια δέχεται 2 παραμέτρους."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "Η ομάδα ενεργειών δέχεται 2 παραμέτρους."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "Πρέπει να δοθεί ένας έγκυρος γονέας."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Υπήρξε ένα σφάλμα κατά την ανάγνωση του αρχείου '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "Αδυναμία ανάγνωσης του αρχείου '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "Πρέπει να δοθεί ένα όνομα αρχείου."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "το '%1' δεν είναι ένα έγκυρο QLayout."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "Πρέπει να δίνεται ένα όνομα διάταξης."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "Λάθος τύπος αντικειμένου."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "Το πρώτο όρισμα πρέπει να είναι ένα QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "Λανθασμένος αριθμός ορισμάτων."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "Η υποδοχή που ζητήθηκε για %1 όρισμα"
+msgstr[1] "Η υποδοχή που ζητήθηκε για %1 ορίσματα"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "αλλά υπάρχει μόνο %1 διαθέσιμη"
+msgstr[1] "αλλά υπάρχουν μόνο %1 διαθέσιμη"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Αποτυχία θέσης στην τιμή %1 από τύπο %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "Δεν υπάρχει μέθοδος '%1'."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "Αποτυχία κλήσης της μεθόδου '%1', αδυναμία λήψης του ορίσματος %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "Αποτυχία κλήση '%1'."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "Αδυναμία κατασκευής τιμής"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "Μη επαρκείς ορίσματα."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "Αποτυχία δημιουργίας ενέργειας."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "Αποτυχία δημιουργίας ομάδας ενεργειών."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "Δεν καθορίστηκε όνομα κλάσης"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "Αποτυχία δημιουργίας διάταξης."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "Δεν καθορίστηκε όνομα κλάσης."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "Αποτυχία δημιουργίας γραφικού συστατικού."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου '%1': %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "Αποτυχία φόρτωσης του αρχείου '%1'"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "Το '%1' δεν είναι ένα έγκυρο QWidget."
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "Πρέπει να δοθεί ένα όνομα γραφικού συστατικού."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Λάθος χειριστής υποδοχής: αντικείμενο %1 αναγνωριστικό %2 μέθοδος %3 "
+"υπογραφή: %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Εξαίρεση κατά την κλήση της υποδοχής '%1' από %2:%3:%4"
