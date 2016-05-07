@@ -1,0 +1,234 @@
+# translation of kdelibs4.po to Oriya
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2009-01-02 17:37+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
+"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "ଅନ୍ତର୍ଭୁକ୍ତ '%1' ଲାଇନ %2: %3 କାର୍ଯ୍ୟକାରୀ କରିବା ସମୟରେ ତ୍ରୁଟି ଘଟିଲା"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "ଅନ୍ତର୍ଭୁକ୍ତ କେବଳ ନିଏ ୧ ସ୍ୱତନ୍ତ୍ରଚର, %1 ନୁହଁ।"
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "ଫାଇଲ %1 ମିଳୁନାହିଁ।"
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "ଲାଇବ୍ରେରୀ କେବଳ ନିଏ ୧ ସ୍ୱତନ୍ତ୍ରଚର, %1 ନୁହଁ।"
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "ଚେତାବନୀ"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "ନିଶ୍ଚିତ କରନ୍ତୁ"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "ଖରାପ ଅବଧି ନିୟନ୍ତ୍ରକ: ବସ୍ତୁ %1 ପରିଚୟକ %2 ପ୍ରଣାଳୀ %3 ପ୍ରକାର: %4।"
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "%2:%3:%4 ମଧ୍ଯରୁ '%1' ଫଳନକୁ ଡାକିବାରେ ବ୍ୟତିକ୍ରମ"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "ଫାଇଲ '%1' ଖୋଲି ହେଲାନାହିଁ"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "ଅସ୍ଥାୟୀ ଫାଇଲ ନିର୍ମାଣ କରିହେଲା ନାହିଁ।"
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 ଟି ଗୋଟିଏ ଫଳନ ନୁହଁ ଏବଂ ଏହାକୁ ଡକାଯାଇପାରିବନାହିଁ।"
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 ଟି ଗୋଟିଏ ବସ୍ତୁ ପ୍ରକାର ନୁହଁ"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "କାର୍ଯ୍ୟଟି ୨ଟି ସ୍ୱତନ୍ତ୍ରଚର ଗ୍ରହଣକରେ।"
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "କାର୍ଯ୍ୟସମୁହଟି ୨ଟି ସ୍ୱତନ୍ତ୍ରଚର ଗ୍ରହଣକରେ।"
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "ଗୋଟିଏ ବୈଧ ଉତ୍ପାଦକ ଯୋଗାଇବା ଆବଶ୍ୟକ।"
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "ଫାଇଲ '%1'କୁ ପଢିବା ସମୟରେ ତ୍ରୁଟି"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "ଫାଇଲ '%1'କୁ ପଢିପାରୁନାହିଁ"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "ଗୋଟିଏ ଫାଇଲନାମ ନିଶ୍ଚିତ ରୂପେ ପ୍ରଦାନ କରିବା ଉଚିତ।"
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' ଟି ଗୋଟିଏ ବୈଧ Qବିନ୍ଯାସ ନୁହଁ।"
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "ଗୋଟିଏ ବିନ୍ୟାସନାମ ନିଶ୍ଚିତ ରୂପେ ପ୍ରଦାନ କରିବା ଉଚିତ।"
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "ଭୁଲ ବସ୍ତୁ ପ୍ରକାର।"
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "ପ୍ରଥମ ସ୍ୱତନ୍ତ୍ରଚରଟି ନିଶ୍ଚିତ ରୂପେ ଗୋଟିଏ Qବସ୍ତୁ।"
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "ଭୁଲ ସଂଖ୍ୟକ ସ୍ୱତନ୍ତ୍ରଚର।"
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, fuzzy, kde-format
+#| msgid "There is no matching item available.\n"
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "ସେଠାରେ କୌଣସି ମେଳଖାଉଥିବା ବସ୍ତୁ ଉପଲବ୍ଧ ନାହିଁ।\n"
+msgstr[1] "ସେଠାରେ କୌଣସି ମେଳଖାଉଥିବା ବସ୍ତୁ ଉପଲବ୍ଧ ନାହିଁ।\n"
+
+#: kjsembed/qobject_binding.cpp:412
+#, fuzzy, kde-format
+#| msgctxt "concatenation of dates and time"
+#| msgid "%1 %2"
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1 %2"
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "ପ୍ରକାର %2 (%3) ରୁ %1ର ମୂଲ୍ୟ ନିର୍ଣ୍ଣୟ କରିବାରେ ବିଫଳ"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "'%1' ପରି କୌଣସି ପଦ୍ଧତି ନାହିଁ।"
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "ପ୍ରଣାଳୀ '%1' କୁ ଡାକିବାରେ ବିଫଳ, ସ୍ୱତନ୍ତ୍ରଚର %2: %3 କୁ ପାଇବାରେ ଅସମର୍ଥ"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "'%1' କୁ ଡାକିବାରେ ବିଫଳ।"
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "ମୂଲ୍ୟନିର୍ଦ୍ଧାରଣ କରିହେଲା ନାହିଁ"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "ଯଥେଷ୍ଟ ସ୍ୱତନ୍ତ୍ରଚର ନାହିଁ।"
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "କାର୍ଯ୍ୟ ନିର୍ମାଣ କରିବାରେ ବିଫଳ ହେଲା।"
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "କାର୍ଯ୍ୟସମୁହ ୟାସ ନିର୍ମାଣ କରିବାରେ ବିଫଳ ହେଲା।"
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "କୌଣସି ଶ୍ରେଣୀନାମ ଉଲ୍ଲେଖିତ ନାହିଁ।"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "ବିନ୍ୟାସ ନିର୍ମାଣ କରିବାରେ ବିଫଳ ହେଲା।"
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "କୌଣସି ଶ୍ରେଣୀନାମ ଉଲ୍ଲେଖିତ ନାହିଁ।"
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "Widget ନିର୍ମାଣ କରିବାରେ ବିଫଳ ହେଲା।"
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "ଫାଇଲ '%1': %2 ଖୋଲି ହେଲାନାହିଁ"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "ଫାଇଲ '%1'କୁ ଆରହୋଣ କରିବାରେ ବିଫଳ ହେଲା"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' ଗୋଟିଏ ବୈଧ QWidget ନୁହଁ।"
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "ଗୋଟିଏ widget ନାମ ନିଶ୍ଚିତ ରୂପେ ପ୍ରଦାନ କରିବା ଉଚିତ।"
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "ଖରାପ ଅବଧି ନିୟନ୍ତ୍ରକ: ବସ୍ତୁ %1 ପରିଚୟକ %2 ପ୍ରଣାଳୀ %3 ପରିଚାୟକ: %4।"
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "%2:%3:%4 ଅବଧି ମଧ୍ଯରୁ '%1' କୁ ଡାକିବାରେ ବ୍ୟତିକ୍ରମ"
