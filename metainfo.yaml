@@ -13,3 +13,7 @@ libraries:
  - qmake: KJsEmbed
    cmake: "KF5::JsEmbed"
 cmakename: KF5JsEmbed
+
+public_lib: true
+group: Frameworks
+subgroup: Porting Aids
