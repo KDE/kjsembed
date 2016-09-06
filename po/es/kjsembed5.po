@@ -1,0 +1,240 @@
+# translation of kdelibs4.po to Spanish
+# Translation of kdelibs4 to Spanish
+# Copyright (C) 2000-2007
+#
+# Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
+# Pablo de Vicente <vicnte@oan.es>, 2003.
+# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# Jaime Robles <jaime@kde.org>, 2007.
+# Javier Viñal <fjvinal@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:58+0000\n"
+"PO-Revision-Date: 2013-10-19 20:45+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr ""
+"Se ha producido un error mientras se procesaba include «%1» línea %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include solo tiene 1 argumento, no %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "No se encontró el archivo %1."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "la biblioteca solamente tiene 1 argumento, no %1."
+
+#: kjsembed/builtins.cpp:137
+msgid "Alert"
+msgstr "Alertar"
+
+#: kjsembed/builtins.cpp:147
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Manejador de eventos no válido: Objeto %1 Identificador %2 Método %3 Tipo: "
+"%4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Excepción al llamar a la función «%1» desde %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "No fue posible abrir el archivo «%1»"
+
+#: kjsembed/fileio.cpp:106
+msgid "Could not create temporary file."
+msgstr "No fue posible crear el archivo temporal."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 no es una función y no se la puede llamar."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 no es de tipo objeto"
+
+#: kjsembed/qaction_binding.cpp:57
+msgid "Action takes 2 args."
+msgstr "Action requiere 2 argumentos."
+
+#: kjsembed/qaction_binding.cpp:79
+msgid "ActionGroup takes 2 args."
+msgstr "ActionGroup requiere 2 argumentos."
+
+#: kjsembed/qaction_binding.cpp:84
+msgid "Must supply a valid parent."
+msgstr "Debe proporcionar un objeto padre válido."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Se produjo un error al leer el archivo «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "No fue posible leer el archivo «%1»"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+msgid "Must supply a filename."
+msgstr "Debe proporcionar un nombre de archivo."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "«%1» no es una QLayout válida."
+
+#: kjsembed/qlayout_binding.cpp:93
+msgid "Must supply a layout name."
+msgstr "Debe proporcionar un nombre de disposición."
+
+#: kjsembed/qobject_binding.cpp:141
+msgid "Wrong object type."
+msgstr "Tipo de objeto incorrecto."
+
+#: kjsembed/qobject_binding.cpp:148
+msgid "First argument must be a QObject."
+msgstr "El primer argumento debe ser un QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+msgid "Incorrect number of arguments."
+msgstr "Número incorrecto de argumentos."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "El slot pidió %1 argumento"
+msgstr[1] "El slot pidió %1 argumentos"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "pero solo hay %1 disponible"
+msgstr[1] "pero solo hay %1 disponibles"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "No fue posible convertir a %1 un valor de tipo %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "No existe ese método «%1»."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"La llamada al método «%1» ha fallado, no se puede obtener el argumento %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "La llamada a «%1» falló."
+
+#: kjsembed/qobject_binding.cpp:793
+msgid "Could not construct value"
+msgstr "No fue posible construir el valor"
+
+#: kjsembed/quiloader_binding.cpp:49
+msgid "Not enough arguments."
+msgstr "No hay suficientes argumentos."
+
+#: kjsembed/quiloader_binding.cpp:68
+msgid "Failed to create Action."
+msgstr "La creación de la «Action» ha fallado."
+
+#: kjsembed/quiloader_binding.cpp:82
+msgid "Failed to create ActionGroup."
+msgstr "La creación de la «ActionGroup» ha fallado."
+
+#: kjsembed/quiloader_binding.cpp:90
+msgid "No classname specified"
+msgstr "No se ha indicado ningún nombre de clase"
+
+#: kjsembed/quiloader_binding.cpp:98
+msgid "Failed to create Layout."
+msgstr "La creación del «Layout» ha fallado."
+
+#: kjsembed/quiloader_binding.cpp:107
+msgid "No classname specified."
+msgstr "No se ha indicado ningún nombre de clase."
+
+#: kjsembed/quiloader_binding.cpp:115
+msgid "Failed to create Widget."
+msgstr "La creación del elemento gráfico ha fallado."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "No fue posible abrir el archivo «%1»: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "La carga del archivo «%1» ha fallado"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "«%1» no es un QWidget válido."
+
+#: kjsembed/qwidget_binding.cpp:170
+msgid "Must supply a widget name."
+msgstr "Debe proporcionar un nombre de elemento gráfico."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Manejador de «slots» no válido: Objeto %1 Identificador %2 Método %3 Firma: "
+"%4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Excepción al llamar al slot «%1» desde %2:%3:%4"
