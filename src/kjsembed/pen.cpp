@@ -28,7 +28,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo PenBinding::info = { "QPen", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo PenBinding::info = { "QPen", &VariantBinding::info, nullptr, nullptr };
 PenBinding::PenBinding(KJS::ExecState *exec, const QPen &value)
     : VariantBinding(exec, value)
 {

@@ -181,7 +181,7 @@ public:
         if (object) {
             return qobject_cast<T *>(object);
         } else {
-            return 0;
+            return nullptr;
         }
     }
 

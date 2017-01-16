@@ -36,9 +36,9 @@
 # include <QTextStream>
 #endif
 
-static QTextStream *kjsembed_err = 0L;
-static QTextStream *kjsembed_in = 0L;
-static QTextStream *kjsembed_out = 0L;
+static QTextStream *kjsembed_err = nullptr;
+static QTextStream *kjsembed_in = nullptr;
+static QTextStream *kjsembed_out = nullptr;
 
 #if defined(_WIN32) || defined(_WIN64)
 static QFile win32_stdin;

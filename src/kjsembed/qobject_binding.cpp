@@ -148,11 +148,11 @@ KJS::JSValue *callConnect(KJS::ExecState *exec, KJS::JSObject *self, const KJS::
             return KJS::throwError(exec, KJS::GeneralError, i18n("First argument must be a QObject."));
             //return KJSEmbed::throwError(exec, i18n("First argument must be a QObject"));
         }
-        QObject *receiver = 0;
+        QObject *receiver = nullptr;
         QObject *sender = senderImp->object<QObject>();
         QByteArray signal = createSignal(args[1]->toString(exec).ascii());
         QByteArray slot;
-        KJSEmbed::QObjectBinding *receiverImp = 0;
+        KJSEmbed::QObjectBinding *receiverImp = nullptr;
         if (args.size() >= 4) {
             slot = createSlot(args[3]->toString(exec).ascii());
             receiverImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[2]);
@@ -239,10 +239,10 @@ void QObjectBinding::publishQObject(KJS::ExecState *exec, KJS::JSObject *target,
 
 QObjectBinding::QObjectBinding(KJS::ExecState *exec, QObject *object)
     : ObjectBinding(exec, object->metaObject()->className(), object)
-    , m_evproxy(0)
+    , m_evproxy(nullptr)
     , m_access(AllSlots | AllSignals | AllProperties | AllObjects)
 {
-    if (object->parent() != 0) {
+    if (object->parent() != nullptr) {
         setOwnership(ObjectBinding::QObjOwned);
     } else {
         setOwnership(ObjectBinding::JSOwned);
@@ -262,7 +262,7 @@ QObjectBinding::~QObjectBinding()
 {
     if (m_cleanupHandler->isEmpty()) {
         setOwnership(ObjectBinding::QObjOwned);
-    } else if (object<QObject>()->parent() != 0) {
+    } else if (object<QObject>()->parent() != nullptr) {
         setOwnership(ObjectBinding::QObjOwned);
         m_cleanupHandler->remove(object<QObject>());
     } else if (ownership() != ObjectBinding::JSOwned) {
@@ -308,7 +308,7 @@ KJS::JSValue *QObjectBinding::propertyGetter(KJS::ExecState *exec, KJS::JSObject
         return convertToValue(exec, val);
     }
     qDebug() << QString("propertyGetter called but no property, name was '%1'").arg(propertyName.ascii());
-    return 0; // ERROR
+    return nullptr; // ERROR
 }
 
 QObjectBinding::AccessFlags QObjectBinding::access() const
@@ -411,7 +411,7 @@ PointerBase *getArg(KJS::ExecState *exec, const QList<QByteArray> &types, const 
         const QString secondPart = i18np("but there is only %1 available", "but there are only %1 available", types.size());
         errorText = i18nc("%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar available'", "%1, %2.");
 
-        return 0;
+        return nullptr;
     }
 
     QVariant::Type varianttype = QVariant::nameToType(types[idx].constData());
@@ -629,13 +629,13 @@ PointerBase *getArg(KJS::ExecState *exec, const QList<QByteArray> &types, const 
     errorText = i18n("Failure to cast to %1 value from Type %2 (%3)",
                      types[idx].constData(), jsType, toQString(args[idx]->toString(exec)));
 
-    return 0;
+    return nullptr;
 }
 
 KJS::JSValue *SlotBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
     QObjectBinding *imp = extractBindingImp<QObjectBinding>(exec, self);
-    if (imp == 0) {
+    if (imp == nullptr) {
         return KJS::jsNull();
     }
 
@@ -666,7 +666,7 @@ KJS::JSValue *SlotBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject *s
 
     QVariant::Type returnTypeId = QVariant::nameToType(metaMember.typeName());
     int tp = QMetaType::type(metaMember.typeName());
-    PointerBase *qtRet = new Value<void *>(0);
+    PointerBase *qtRet = new Value<void *>(nullptr);
 
     bool returnIsMetaType = (
                                 returnTypeId == QVariant::UserType ||
@@ -675,7 +675,7 @@ KJS::JSValue *SlotBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject *s
                                 returnTypeId == QVariant::Rect     || returnTypeId == QVariant::RectF  ||
                                 returnTypeId == QVariant::Color
                             );
-    QVariant returnValue = returnIsMetaType ? QVariant(tp, (void *)0) : QVariant(returnTypeId);
+    QVariant returnValue = returnIsMetaType ? QVariant(tp, (void *)nullptr) : QVariant(returnTypeId);
     QGenericReturnArgument returnArgument(metaMember.typeName(), &returnValue);
     param[0] = returnIsMetaType ? qtRet->voidStar() : returnArgument.data();
 
@@ -694,7 +694,7 @@ KJS::JSValue *SlotBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject *s
 
     success = object->qt_metacall(QMetaObject::InvokeMetaMethod, offset, param) < 0;
 
-    KJS::JSValue *jsReturnValue = 0;
+    KJS::JSValue *jsReturnValue = nullptr;
     if (success) {
         switch (returnTypeId) {
         case QVariant::Invalid: // fall through
@@ -741,7 +741,7 @@ SlotBinding::SlotBinding(KJS::ExecState *exec, const QMetaMethod &member)
 
 KJS::JSObject *KJSEmbed::createQObject(KJS::ExecState *exec, QObject *value, KJSEmbed::ObjectBinding::Ownership owner)
 {
-    if (0 == value) {
+    if (nullptr == value) {
         return new KJS::JSObject();
     }
 
@@ -834,7 +834,7 @@ END_QOBJECT_METHOD
 START_QOBJECT_METHOD(callSetParent, QObject)
 if (imp->access() & QObjectBinding::SetParentObject)
 {
-    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
     object->setParent(parent);
 }
 END_QOBJECT_METHOD

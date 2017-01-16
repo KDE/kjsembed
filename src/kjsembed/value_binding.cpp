@@ -24,7 +24,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo ValueBinding::info = { "ValueBinding", 0, 0, 0 };
+const KJS::ClassInfo ValueBinding::info = { "ValueBinding", nullptr, nullptr, nullptr };
 
 KJS::JSValue *callValueType(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
@@ -40,7 +40,7 @@ const Method ValueFactory::ValueMethods[] = {
     {"type", 0, KJS::DontDelete | KJS::ReadOnly, &callValueType },
     //{"cast", 1, KJS::DontDelete|KJS::ReadOnly, &callPointerCast },
     //{"toString", 0, KJS::DontDelete|KJS::ReadOnly, &callPointerToString },
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };
 
 const Method *ValueFactory::methods()
@@ -50,7 +50,7 @@ const Method *ValueFactory::methods()
 
 ValueBinding::ValueBinding(KJS::ExecState *exec, const char *typeName)
     : ProxyBinding(exec),
-      m_value(0),
+      m_value(nullptr),
       m_name(typeName)
 {
     StaticBinding::publish(exec, this, ValueFactory::methods());

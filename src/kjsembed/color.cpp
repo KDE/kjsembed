@@ -26,7 +26,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo ColorBinding::info = { "QColor", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo ColorBinding::info = { "QColor", &VariantBinding::info, nullptr, nullptr };
 ColorBinding::ColorBinding(KJS::ExecState *exec, const QColor &value)
     : VariantBinding(exec, value)
 {

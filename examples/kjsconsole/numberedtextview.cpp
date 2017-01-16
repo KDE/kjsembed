@@ -33,7 +33,7 @@
 #include <QtCore/QDebug>
 
 NumberBar::NumberBar(QWidget *parent)
-    : QWidget(parent), edit(0), m_stopLine(-1), m_currentLine(-1), m_bugLine(-1)
+    : QWidget(parent), edit(nullptr), m_stopLine(-1), m_currentLine(-1), m_bugLine(-1)
 {
     stopMarker = QPixmap(":/images/no.png");
     currentMarker = QPixmap(":/images/next.png");

@@ -31,7 +31,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo PixmapBinding::info = { "QPixmap", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo PixmapBinding::info = { "QPixmap", &VariantBinding::info, nullptr, nullptr };
 PixmapBinding::PixmapBinding(KJS::ExecState *exec, const QPixmap &value)
     : VariantBinding(exec, value)
 {

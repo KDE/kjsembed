@@ -41,11 +41,11 @@ using namespace KJSEmbed;
 namespace LayoutNS
 {
 START_QOBJECT_METHOD(addWidget, QLayout)
-QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, nullptr);
 object->addWidget(w);
 END_QOBJECT_METHOD
 START_QOBJECT_METHOD(removeWidget, QLayout)
-QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, nullptr);
 object->removeWidget(w);
 END_QOBJECT_METHOD
 START_QOBJECT_METHOD(parentWidget, QLayout)
@@ -73,7 +73,7 @@ KJSO_START_CTOR(Layout, QLayout, 0)
 if (args.size() > 0)
 {
     QString layoutName = toQString(args[0]->toString(exec));
-    QObject *parentObject = 0;
+    QObject *parentObject = nullptr;
     KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1]);
     if (parentImp) {
         parentObject = parentImp->object<QObject>();

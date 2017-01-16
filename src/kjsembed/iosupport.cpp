@@ -81,6 +81,6 @@ const Method IoFactory::IoMethods[] = {
     {"println", 1, KJS::DontDelete | KJS::ReadOnly, &callPrintLn },
     {"readln", 0, KJS::DontDelete | KJS::ReadOnly, &callReadLine },
     {"system", 1, KJS::DontDelete | KJS::ReadOnly, &callSystem },
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };
 

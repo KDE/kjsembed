@@ -26,7 +26,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo DomNodeBinding::info = { "QDomNode", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomNodeBinding::info = { "QDomNode", &ValueBinding::info, nullptr, nullptr };
 DomNodeBinding::DomNodeBinding(KJS::ExecState *exec, const QDomNode &value)
     : ValueBinding(exec, "QDomNode", value)
 {
@@ -341,7 +341,7 @@ START_CTOR(DomNode, QDomNode, 0)
 return new KJSEmbed::DomNodeBinding(exec, QDomNode());
 END_CTOR
 
-const KJS::ClassInfo DomDocumentBinding::info = { "QDomDocument", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomDocumentBinding::info = { "QDomDocument", &ValueBinding::info, nullptr, nullptr };
 DomDocumentBinding::DomDocumentBinding(KJS::ExecState *exec, const QDomDocument &value)
     : ValueBinding(exec, "QDomDocument", value)
 {
@@ -479,7 +479,7 @@ QString name = KJSEmbed::extractQString(exec, args, 0);
 return new KJSEmbed::DomDocumentBinding(exec, QDomDocument(name));
 END_CTOR
 
-const KJS::ClassInfo DomElementBinding::info = { "QDomElement", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomElementBinding::info = { "QDomElement", &ValueBinding::info, nullptr, nullptr };
 DomElementBinding::DomElementBinding(KJS::ExecState *exec, const QDomElement &value)
     : ValueBinding(exec, "QDomElement", value)
 {
@@ -624,7 +624,7 @@ START_CTOR(DomElement, QDomElement, 0)
 return new KJSEmbed::DomElementBinding(exec, QDomElement());
 END_CTOR
 
-const KJS::ClassInfo DomAttrBinding::info = { "QDomAttr", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomAttrBinding::info = { "QDomAttr", &ValueBinding::info, nullptr, nullptr };
 DomAttrBinding::DomAttrBinding(KJS::ExecState *exec, const QDomAttr &value)
     : ValueBinding(exec, "QDomAttr", value)
 {
@@ -673,7 +673,7 @@ START_CTOR(DomAttr, QDomAttr, 0)
 return new KJSEmbed::DomAttrBinding(exec, QDomAttr());
 END_CTOR
 
-const KJS::ClassInfo DomNodeListBinding::info = { "QDomNodeList", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomNodeListBinding::info = { "QDomNodeList", &ValueBinding::info, nullptr, nullptr };
 DomNodeListBinding::DomNodeListBinding(KJS::ExecState *exec, const QDomNodeList &value)
     : ValueBinding(exec, "QDomNodeList", value)
 {
@@ -711,7 +711,7 @@ START_CTOR(DomNodeList, QDomNodeList, 0)
 return new KJSEmbed::DomNodeListBinding(exec, QDomNodeList());
 END_CTOR
 
-const KJS::ClassInfo DomDocumentTypeBinding::info = { "QDomDocumentType", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomDocumentTypeBinding::info = { "QDomDocumentType", &ValueBinding::info, nullptr, nullptr };
 DomDocumentTypeBinding::DomDocumentTypeBinding(KJS::ExecState *exec, const QDomDocumentType &value)
     : ValueBinding(exec, "QDomDocumentType", value)
 {
@@ -762,7 +762,7 @@ START_CTOR(DomDocumentType, QDomDocumentType, 0)
 return new KJSEmbed::DomDocumentTypeBinding(exec, QDomDocumentType());
 END_CTOR
 
-const KJS::ClassInfo DomNamedNodeMapBinding::info = { "QDomNamedNodeMap", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomNamedNodeMapBinding::info = { "QDomNamedNodeMap", &ValueBinding::info, nullptr, nullptr };
 DomNamedNodeMapBinding::DomNamedNodeMapBinding(KJS::ExecState *exec, const QDomNamedNodeMap &value)
     : ValueBinding(exec, "QDomNamedNodeMap", value)
 {
@@ -850,7 +850,7 @@ START_CTOR(DomNamedNodeMap, QDomNamedNodeMap, 0)
 return new KJSEmbed::DomNamedNodeMapBinding(exec, QDomNamedNodeMap());
 END_CTOR
 
-const KJS::ClassInfo DomTextBinding::info = { "QDomText", &ValueBinding::info, 0, 0 };
+const KJS::ClassInfo DomTextBinding::info = { "QDomText", &ValueBinding::info, nullptr, nullptr };
 DomTextBinding::DomTextBinding(KJS::ExecState *exec, const QDomText &value)
     : ValueBinding(exec, "QDomText", value)
 {

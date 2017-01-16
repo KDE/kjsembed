@@ -56,7 +56,7 @@ public:
     {
 //         qDebug("delete pointer %s %0x", typeid(ValueType).name(), ptr );
         delete ptr;
-        ptr = 0L;
+        ptr = nullptr;
     }
     const std::type_info &type() const Q_DECL_OVERRIDE
     {
@@ -102,7 +102,7 @@ public:
 };
 
 struct NullPtr : public PointerBase {
-    NullPtr() : ptr(0)
+    NullPtr() : ptr(nullptr)
     {
         ;
     }
@@ -134,7 +134,7 @@ ValueType *pointer_cast(PointerBase *pointer)
 {
 //    qDebug("pointers %s %s", typeid(ValueType).name(), pointer->type().name() );
     if (typeid(ValueType) != pointer->type()) {
-        return 0L;
+        return nullptr;
     }
     Pointer<ValueType> *upcast = static_cast< Pointer<ValueType> *>(pointer);
     return upcast->ptr;

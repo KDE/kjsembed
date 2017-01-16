@@ -30,7 +30,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo ImageBinding::info = { "QImage", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo ImageBinding::info = { "QImage", &VariantBinding::info, nullptr, nullptr };
 ImageBinding::ImageBinding(KJS::ExecState *exec, const QImage &value)
     : VariantBinding(exec, value)
 {

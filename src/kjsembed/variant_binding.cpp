@@ -42,7 +42,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo VariantBinding::info = { "VariantBinding", 0, 0, 0 };
+const KJS::ClassInfo VariantBinding::info = { "VariantBinding", nullptr, nullptr, nullptr };
 
 VariantBinding::VariantBinding(KJS::ExecState *exec, const QVariant &value)
     : ProxyBinding(exec), m_value(value)
@@ -122,7 +122,7 @@ KJS::JSValue *callToString(KJS::ExecState *exec, KJS::JSObject *self, const KJS:
 const Method VariantFactory::VariantMethods[] = {
     {"cast", 1, KJS::DontDelete | KJS::ReadOnly | KJS::DontEnum, &callCast },
     {"toString", 0, KJS::DontDelete | KJS::ReadOnly | KJS::DontEnum, &callToString },
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };
 
 enum JavaScriptArrayType { None, List, Map };

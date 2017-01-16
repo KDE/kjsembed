@@ -65,15 +65,15 @@ KJSO_SIMPLE_BINDING_CTOR(SvgRenderer, QSvgRenderer, QObjectBinding)
 KJSO_QOBJECT_BIND(SvgRenderer, QSvgRenderer)
 
 KJSO_START_CTOR(SvgRenderer, QSvgRenderer, 0)
-QSvgRenderer *renderer = 0;
+QSvgRenderer *renderer = nullptr;
 if (args.size() == 1)
 {
-    QObject *arg0 = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+    QObject *arg0 = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
     renderer = new QSvgRenderer(arg0);
 } else if (args.size() == 2)
 {
     QString arg0 = KJSEmbed::extractVariant<QString>(exec, args, 0);
-    QObject *arg1 = KJSEmbed::extractObject<QObject>(exec, args, 1, 0);
+    QObject *arg1 = KJSEmbed::extractObject<QObject>(exec, args, 1, nullptr);
     renderer = new QSvgRenderer(arg0, arg1);
 } else
 {
@@ -103,15 +103,15 @@ KJSO_SIMPLE_BINDING_CTOR(SvgWidget, QSvgWidget, QWidgetBinding)
 KJSO_QOBJECT_BIND(SvgWidget, QSvgWidget)
 
 KJSO_START_CTOR(SvgWidget, QSvgWidget, 0)
-QSvgWidget *widget = 0;
+QSvgWidget *widget = nullptr;
 if (args.size() == 1)
 {
-    QWidget *arg0 = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+    QWidget *arg0 = KJSEmbed::extractObject<QWidget>(exec, args, 0, nullptr);
     widget = new QSvgWidget(arg0);
 } else if (args.size() == 2)
 {
     QString arg0 = KJSEmbed::extractVariant<QString>(exec, args, 0);
-    QWidget *arg1 = KJSEmbed::extractObject<QWidget>(exec, args, 1, 0);
+    QWidget *arg1 = KJSEmbed::extractObject<QWidget>(exec, args, 1, nullptr);
     widget = new QSvgWidget(arg0, arg1);
 } else
 {

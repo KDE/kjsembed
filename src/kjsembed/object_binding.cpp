@@ -30,7 +30,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo ObjectBinding::info = { "ObjectBinding", 0, 0, 0 };
+const KJS::ClassInfo ObjectBinding::info = { "ObjectBinding", nullptr, nullptr, nullptr };
 
 ObjectBinding::~ObjectBinding()
 {
@@ -103,6 +103,6 @@ const Method ObjectFactory::ObjectMethods[] = {
     {"type", 0, KJS::DontDelete | KJS::ReadOnly, &callPointerName },
     {"cast", 1, KJS::DontDelete | KJS::ReadOnly, &callPointerCast },
     {"toString", 0, KJS::DontDelete | KJS::ReadOnly, &callPointerToString },
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };
 

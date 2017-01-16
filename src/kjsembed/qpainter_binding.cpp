@@ -43,7 +43,7 @@ using namespace KJSEmbed;
 
 QPaintDevice *extractPaintDevice(KJS::ExecState *exec, KJS::JSValue *arg)
 {
-    QPaintDevice *device = 0;
+    QPaintDevice *device = nullptr;
 
     ObjectBinding *imp = extractBindingImp<ObjectBinding>(exec, arg);
     if (imp) {
@@ -346,7 +346,7 @@ if (args.size() == 2)
     QRect arg0 = KJSEmbed::extractVariant<QRect>(exec, args, 0);
     int arg1 = KJSEmbed::extractInt(exec, args, 1);
     QString arg2 = KJSEmbed::extractQString(exec, args, 2);
-    QRect *arg3 = 0;
+    QRect *arg3 = nullptr;
     object->drawText(arg0, arg1, arg2, arg3);
 } else if (args.size() == 6)
 {
@@ -356,7 +356,7 @@ if (args.size() == 2)
     int arg3 = KJSEmbed::extractInt(exec, args, 3);
     int arg4 = KJSEmbed::extractInt(exec, args, 4);
     QString arg5 = KJSEmbed::extractQString(exec, args, 5);
-    QRect *arg6 = 0;
+    QRect *arg6 = nullptr;
     object->drawText(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 END_OBJECT_METHOD
@@ -479,7 +479,7 @@ if (args.size() == 1)
         object = new KJSEmbed::ObjectBinding(exec, "Painter", new QPainter(device));
     } else {
         KJS::throwError(exec, KJS::EvalError, QString("Cannot paint to object %1").arg(toQString(args[0]->toString(exec))));
-        return 0L;
+        return nullptr;
     }
 } else
 {

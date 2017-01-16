@@ -19,11 +19,11 @@ class QGradientBinding
 public: static const KJS::ClassInfo info;
 };
 
-const KJS::ClassInfo QColorBinding::info = { "QColor", &VariantBinding::info, 0, 0 };
-const KJS::ClassInfo QPixmapBinding::info = { "QPixmap", &VariantBinding::info, 0, 0 };
-const KJS::ClassInfo QGradientBinding::info = { "QGradient", &ObjectBinding::info, 0, 0 };
+const KJS::ClassInfo QColorBinding::info = { "QColor", &VariantBinding::info, nullptr, nullptr };
+const KJS::ClassInfo QPixmapBinding::info = { "QPixmap", &VariantBinding::info, nullptr, nullptr };
+const KJS::ClassInfo QGradientBinding::info = { "QGradient", &ObjectBinding::info, nullptr, nullptr };
 
-const KJS::ClassInfo QBrushBinding::info = { "QBrush", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo QBrushBinding::info = { "QBrush", &VariantBinding::info, nullptr, nullptr };
 QBrushBinding::QBrushBinding(KJS::ExecState *exec, const QBrush &value)
     : VariantBinding(exec, value)
 {
@@ -221,11 +221,11 @@ KJS::JSValue *isOpaque(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Lis
 
 }
 
-const Enumerator KJSEmbed::QBrushData::p_enums[] = {{0, 0 }};
+const Enumerator KJSEmbed::QBrushData::p_enums[] = {{nullptr, 0 }};
 
 NO_STATICS(KJSEmbed::QBrushData)
 const Constructor KJSEmbed::QBrushData::p_constructor =
-{"QBrush", 0, KJS::DontDelete | KJS::ReadOnly, 0, &QBrushData::ctorMethod, p_statics, p_enums, KJSEmbed::QBrushData::p_methods };
+{"QBrush", 0, KJS::DontDelete | KJS::ReadOnly, nullptr, &QBrushData::ctorMethod, p_statics, p_enums, KJSEmbed::QBrushData::p_methods };
 KJS::JSObject *KJSEmbed::QBrushData::ctorMethod(KJS::ExecState *exec, const KJS::List &args)
 {
     if (args.size() == 0) {
@@ -289,6 +289,6 @@ const Method KJSEmbed::QBrushData::p_methods[] = {
     { "setColor", 1, KJS::DontDelete | KJS::ReadOnly, &QBrushNS::setColor },
     { "gradient", 0, KJS::DontDelete | KJS::ReadOnly, &QBrushNS::gradient },
     { "isOpaque", 0, KJS::DontDelete | KJS::ReadOnly, &QBrushNS::isOpaque },
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };
 

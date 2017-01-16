@@ -36,11 +36,11 @@
 
 namespace KJSEmbed
 {
-static QUiLoader *gUiLoader = 0L;
+static QUiLoader *gUiLoader = nullptr;
 
 QUiLoader *uiLoader()
 {
-    if (gUiLoader == 0) {
+    if (gUiLoader == nullptr) {
         gUiLoader = new QUiLoader();
     }
     return gUiLoader;
@@ -70,7 +70,7 @@ END_QOBJECT_METHOD
 START_QOBJECT_METHOD(childAt, QWidget)
 QPoint pt = KJSEmbed::extractVariant<QPoint>(exec, args, 0);
 int x, y;
-QWidget *child = 0;
+QWidget *child = nullptr;
 if (pt.isNull())
 {
     x = KJSEmbed::extractVariant<int>(exec, args, 0);
@@ -91,7 +91,7 @@ int width = KJSEmbed::extractInt(exec, args, 0);
 result = KJS::jsNumber(object->heightForWidth(width));
 END_QOBJECT_METHOD
 START_QOBJECT_METHOD(mapFrom, QWidget)
-QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, nullptr);
 QPoint pt = KJSEmbed::extractVariant<QPoint>(exec, args, 1);
 result = KJSEmbed::createVariant(exec, "QPoint", object->mapFrom(w, pt));
 END_QOBJECT_METHOD
@@ -104,7 +104,7 @@ QPoint pt = KJSEmbed::extractVariant<QPoint>(exec, args, 0);
 result = KJSEmbed::createVariant(exec, "QPoint", object->mapFromParent(pt));
 END_QOBJECT_METHOD
 START_QOBJECT_METHOD(mapTo, QWidget)
-QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, 0);
+QWidget *w = KJSEmbed::extractObject<QWidget>(exec, args, 0, nullptr);
 QPoint pt = KJSEmbed::extractVariant<QPoint>(exec, args, 1);
 result = KJSEmbed::createVariant(exec, "QPoint", object->mapTo(w, pt));
 END_QOBJECT_METHOD
@@ -147,7 +147,7 @@ KJSO_START_CTOR(QWidgetBinding, QWidget, 0)
 if (args.size() > 0)
 {
     QString widgetName = toQString(args[0]->toString(exec));
-    QWidget *parentWidget = 0;
+    QWidget *parentWidget = nullptr;
     KJSEmbed::QObjectBinding *parentImp = KJSEmbed::extractBindingImp<KJSEmbed::QObjectBinding>(exec, args[1]);
     if (parentImp) {
         parentWidget = parentImp->object<QWidget>();

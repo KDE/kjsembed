@@ -32,7 +32,7 @@
 
 using namespace KJSEmbed;
 
-const KJS::ClassInfo BrushBinding::info = { "QBrush", &VariantBinding::info, 0, 0 };
+const KJS::ClassInfo BrushBinding::info = { "QBrush", &VariantBinding::info, nullptr, nullptr };
 BrushBinding::BrushBinding(KJS::ExecState *exec, const QBrush &value)
     : VariantBinding(exec, value)
 {

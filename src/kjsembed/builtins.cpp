@@ -134,7 +134,7 @@ KJS::JSValue *callAlert(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Li
     if (args.size() == 1) {
         (*KJSEmbed::conerr()) << "callAlert";
         QString message = toQString(args[0]->toString(exec));
-        QMessageBox::warning(0, i18n("Alert"), message, QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::warning(nullptr, i18n("Alert"), message, QMessageBox::Ok, QMessageBox::NoButton);
     }
     return KJS::jsNull();
 }
@@ -144,7 +144,7 @@ KJS::JSValue *callConfirm(KJS::ExecState *exec, KJS::JSObject *self, const KJS::
     Q_UNUSED(self)
     if (args.size() == 1) {
         QString message = toQString(args[0]->toString(exec));
-        int result = QMessageBox::question(0, i18n("Confirm"), message, QMessageBox::Yes, QMessageBox::No);
+        int result = QMessageBox::question(nullptr, i18n("Confirm"), message, QMessageBox::Yes, QMessageBox::No);
         if (result == QMessageBox::Yes) {
             return KJS::jsBoolean(true);
         }
@@ -196,5 +196,5 @@ const Method BuiltinsFactory::BuiltinMethods[] = {
     {"isVariantType", 1, KJS::DontDelete | KJS::ReadOnly, &callIsVariantType},
     {"isVariant", 1, KJS::DontDelete | KJS::ReadOnly, &callIsVariant},
     {"isObject", 1, KJS::DontDelete | KJS::ReadOnly, &callIsObject},
-    {0, 0, 0, 0 }
+    {nullptr, 0, 0, nullptr }
 };

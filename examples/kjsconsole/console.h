@@ -32,7 +32,7 @@ class Console : public QMainWindow
 {
     Q_OBJECT
 public:
-    Console(QWidget *parent = 0);
+    Console(QWidget *parent = nullptr);
     ~Console();
 
 public Q_SLOTS:

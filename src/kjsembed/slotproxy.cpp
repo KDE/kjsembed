@@ -67,7 +67,7 @@ SlotProxy::SlotProxy(KJS::JSObject *obj, KJS::Interpreter *interpreter, QObject 
     staticMetaObject.d.superdata = &QObject::staticMetaObject;
     staticMetaObject.d.stringdata = m_stringData.data_ptr();
     staticMetaObject.d.data = m_data;
-    staticMetaObject.d.extradata = 0;
+    staticMetaObject.d.extradata = nullptr;
 #ifdef DEBUG_SLOTPROXY
     qDebug() << "SlotProxy() obj=" << this <<  " m_signature=" << m_signature;
 #endif
@@ -88,7 +88,7 @@ const QMetaObject *SlotProxy::metaObject() const
 void *SlotProxy::qt_metacast(const char *_clname)
 {
     if (!_clname) {
-        return 0;
+        return nullptr;
     }
     if (!strcmp(_clname, m_stringData.constData())) {
         return static_cast<void *>(const_cast<SlotProxy *>(this));
@@ -205,7 +205,7 @@ KJS::List SlotProxy::convertArguments(KJS::ExecState *exec, void **_a)
             if (parent->hasProperty(exec, KJS::Identifier(toUString(typeName)))) {
                 QObject *qObj;
                 if (isPtr &&
-                        ((qObj = *reinterpret_cast<QObject **>(_a[idx])) != 0)) {
+                        ((qObj = *reinterpret_cast<QObject **>(_a[idx])) != nullptr)) {
 #ifdef DEBUG_SLOTPROXY
                     qDebug() << "qObj=" << qObj;
 #endif
@@ -226,7 +226,7 @@ KJS::List SlotProxy::convertArguments(KJS::ExecState *exec, void **_a)
 #endif
                                 objImp->setOwnership(KJSEmbed::ObjectBinding::JSOwned);
                                 objImp->setObject(qObj);
-                                if (qObj->parent() != 0) {
+                                if (qObj->parent() != nullptr) {
                                     objImp->setOwnership(KJSEmbed::ObjectBinding::QObjOwned);
                                 } else {
                                     objImp->setOwnership(KJSEmbed::ObjectBinding::CPPOwned);
@@ -241,7 +241,7 @@ KJS::List SlotProxy::convertArguments(KJS::ExecState *exec, void **_a)
 #ifdef DEBUG_SLOTPROXY
                 qDebug("\t\tNo binding registered");
 #endif
-                KJS::JSObject *returnValue = 0;
+                KJS::JSObject *returnValue = nullptr;
                 const int metaTypeId = QMetaType::type(param.constData());
                 if (QMetaType::typeFlags(metaTypeId) & QMetaType::PointerToQObject) {
                     QObject *obj = (*reinterpret_cast< QObject*(*)>(_a[idx]));

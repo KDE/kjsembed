@@ -44,7 +44,7 @@ KJSO_SIMPLE_BINDING_CTOR(Action, QAction, QObjectBinding)
 KJSO_QOBJECT_BIND(Action, QAction)
 
 KJSO_START_CTOR(Action, QAction, 0)
-QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
 QString actionName = KJSEmbed::extractQString(exec, args, 1);
 
 QAction *action = uiLoader()->createAction(parent, actionName);
@@ -68,7 +68,7 @@ KJSO_QOBJECT_BIND(ActionGroup, QActionGroup)
 KJSO_START_CTOR(ActionGroup, QActionGroup, 0)
 if (args.size() == 2)
 {
-    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
     QString actionName = KJSEmbed::extractQString(exec, args, 1);
 
     QActionGroup *action = uiLoader()->createActionGroup(parent, actionName);

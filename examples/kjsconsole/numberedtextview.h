@@ -79,7 +79,7 @@ class NumberedTextView : public QFrame
     Q_PROPERTY(int stopLine READ stopLine WRITE setStopLine)
     Q_PROPERTY(int bugLine READ bugLine WRITE setBugLine)
 public:
-    NumberedTextView(QWidget *parent = 0);
+    NumberedTextView(QWidget *parent = nullptr);
     ~NumberedTextView();
 
     /** Returns the QTextEdit of the main view. */

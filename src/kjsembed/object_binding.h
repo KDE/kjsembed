@@ -121,7 +121,7 @@ public:
         if (m_value) {
             return pointer_cast<T>(m_value);
         } else {
-            return 0;
+            return nullptr;
         }
     }
 
@@ -160,7 +160,7 @@ T *extractObject(KJS::ExecState *exec, KJS::JSValue *arg, T *defaultValue)
     if (!arg) {
         return defaultValue;
     } else {
-        T *returnValue = 0;
+        T *returnValue = nullptr;
         KJSEmbed::ObjectBinding *imp = KJSEmbed::extractBindingImp<KJSEmbed::ObjectBinding>(exec, arg);
         if (imp) {
             // GCC 3.3 has problems calling template functions in another class from a template class.
@@ -181,7 +181,7 @@ T *extractObject(KJS::ExecState *exec, KJS::JSValue *arg, T *defaultValue)
 * is returned.
 */
 template< typename T>
-T *extractObject(KJS::ExecState *exec, const KJS::List &args, int idx, T *defaultValue = 0L)
+T *extractObject(KJS::ExecState *exec, const KJS::List &args, int idx, T *defaultValue = nullptr)
 {
     if (args.size() > idx) {
         return extractObject<T>(exec, args[idx], defaultValue);
@@ -197,7 +197,7 @@ T *extractObject(KJS::ExecState *exec, const KJS::List &args, int idx, T *defaul
 template< typename T>
 KJS::JSValue *createObject(KJS::ExecState *exec, const KJS::UString &className, const T *value, KJSEmbed::ObjectBinding::Ownership owner = KJSEmbed::ObjectBinding::JSOwned)
 {
-    if (0 == value) {
+    if (nullptr == value) {
         return KJS::jsNull();
     }
 

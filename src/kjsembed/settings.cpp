@@ -94,7 +94,7 @@ KJSO_SIMPLE_BINDING_CTOR(SettingsBinding, QSettings, QObjectBinding)
 KJSO_QOBJECT_BIND(SettingsBinding, QSettings)
 
 KJSO_START_CTOR(SettingsBinding, QSettings, 1)
-QSettings *settings = 0;
+QSettings *settings = nullptr;
 if (args.size() == 1)
 {
     QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0);

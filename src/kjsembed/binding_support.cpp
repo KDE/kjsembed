@@ -175,7 +175,7 @@ QDateTime KJSEmbed::extractQDateTime(KJS::ExecState * /* exec */, KJS::JSValue *
 KJS::JSValue *KJSEmbed::createQDateTime(KJS::ExecState * /* exec */, const QDateTime & /* value */)
 {
 //    return new KJS::JSValue();
-    return 0;
+    return nullptr;
 }
 
 QDate KJSEmbed::extractQDate(KJS::ExecState * /* exec */, const KJS::List & /* args */, int /* idx */, const QDate & /* defaultValue */)
@@ -191,7 +191,7 @@ QDate KJSEmbed::extractQDate(KJS::ExecState * /*exec*/, KJS::JSValue * /*value*/
 KJS::JSValue *KJSEmbed::createQDate(KJS::ExecState * /*exec*/, const QDate & /*value*/)
 {
 //    return new KJS::JSValue();
-    return 0;
+    return nullptr;
 }
 
 QTime KJSEmbed::extractQTime(KJS::ExecState * /*exec*/, const KJS::List & /*args*/, int /*idx*/, const QTime & /*defaultValue*/)
@@ -207,7 +207,7 @@ QTime KJSEmbed::extractQTime(KJS::ExecState * /*exec*/, KJS::JSValue * /*value*/
 KJS::JSValue *KJSEmbed::createQTime(KJS::ExecState * /*exec*/, const QTime &/*value*/)
 {
 //    return new KJS::JSValue();
-    return 0;
+    return nullptr;
 }
 
 QStringList KJSEmbed::extractQStringList(KJS::ExecState * /*exec*/, const KJS::List &/*args*/, int /*idx*/, const QStringList &/*defaultValue*/)
@@ -223,6 +223,6 @@ QStringList KJSEmbed::extractQStringList(KJS::ExecState * /*exec*/, KJS::JSValue
 KJS::JSValue *KJSEmbed::createQStringList(KJS::ExecState * /*exec*/, const QStringList &/*value*/)
 {
 //    return new KJS::JSValue();
-    return 0;
+    return nullptr;
 }
 

@@ -26,7 +26,7 @@
 namespace KJSEmbed
 {
 
-JSEventMapper *JSEventMapper::m_inst = 0;
+JSEventMapper *JSEventMapper::m_inst = nullptr;
 
 /** Used internally for the event handler table. */
 struct EventType {

@@ -41,7 +41,7 @@ StaticBinding::StaticBinding(KJS::ExecState *exec, const Method *method)
 
 KJS::JSValue *StaticBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args)
 {
-    if (m_method->call == 0) {
+    if (m_method->call == nullptr) {
         //throwError(exec, "Bad method id");      // NOTE: fix
         KJS::throwError(exec, KJS::GeneralError, "Bad method id");
         return KJS::jsNull();
@@ -59,7 +59,7 @@ KJS::JSValue *StaticBinding::callAsFunction(KJS::ExecState *exec, KJS::JSObject 
 void StaticBinding::publish(KJS::ExecState *exec, KJS::JSObject *object, const Method *methods)
 {
     int idx = 0;
-    while (methods[idx].name != 0) {
+    while (methods[idx].name != nullptr) {
         object->put(exec, methods[idx].name, new StaticBinding(exec,  &methods[idx]), methods[idx].flags);
         idx++;
     }
@@ -101,7 +101,7 @@ KJS::JSObject *StaticConstructor::add(KJS::ExecState *exec, KJS::JSObject *objec
     /* crashes for some reason */
     if (constructor->enumerators) {
         int idx = 0;
-        while (constructor->enumerators[idx].name != 0) {
+        while (constructor->enumerators[idx].name != nullptr) {
             obj->put(exec, constructor->enumerators[idx].name,
                      KJS::jsNumber(constructor->enumerators[idx].value), KJS::DontDelete | KJS::ReadOnly);
             idx++;
@@ -130,7 +130,7 @@ KJS::JSObject *StaticConstructor::bind(KJS::ExecState *exec, const QString &clas
         return (*mybind)(exec, objPtr);
     }
 
-    return 0;
+    return nullptr;
 }
 
 KJS::JSObject *StaticConstructor::construct(KJS::ExecState *exec, KJS::JSObject *parent, const KJS::UString &className, const KJS::List &args)

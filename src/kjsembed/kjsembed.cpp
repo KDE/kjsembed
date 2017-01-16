@@ -227,7 +227,7 @@ KJS::Completion Engine::runFile(KJS::Interpreter *interpreter, const KJS::UStrin
 
 //    qDebug() << "Loaded code: " << toQString(code);
 
-    return interpreter->evaluate(fileName, 0, code, 0);
+    return interpreter->evaluate(fileName, 0, code, nullptr);
 }
 
 Engine::ExitStatus Engine::runFile(const KJS::UString &fileName)
@@ -245,7 +245,7 @@ Engine::ExitStatus Engine::runFile(const KJS::UString &fileName)
 
 Engine::ExitStatus Engine::execute(const KJS::UString &code)
 {
-    dptr->m_currentResult = dptr->m_interpreter->evaluate(KJS::UString(""), 0, code, 0);
+    dptr->m_currentResult = dptr->m_interpreter->evaluate(KJS::UString(""), 0, code, nullptr);
     if (dptr->m_currentResult.complType() == KJS::Normal) {
         return Engine::Success;
     } else if (dptr->m_currentResult.complType() == KJS::ReturnValue) {

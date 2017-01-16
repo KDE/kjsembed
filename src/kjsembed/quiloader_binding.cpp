@@ -39,11 +39,11 @@ KJSO_QOBJECT_BIND(UiLoaderBinding, QUiLoader)
 
 KJSO_START_CTOR(UiLoaderBinding, QUiLoader, 1)
 {
-    QUiLoader *uiLoader = 0;
+    QUiLoader *uiLoader = nullptr;
     if (args.size() == 0) {
         uiLoader = new QUiLoader();
     } else if (args.size() == 1) {
-        QObject *arg0 = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+        QObject *arg0 = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
         uiLoader = new QUiLoader(arg0);
     } else {
         return KJS::throwError(exec, KJS::GeneralError, i18n("Not enough arguments."));
@@ -59,7 +59,7 @@ namespace UiLoaderNS
 {
 START_QOBJECT_METHOD(createAction, QUiLoader)
 {
-    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
     QString actionName = KJSEmbed::extractQString(exec, args, 1);
     QAction *action = object->createAction(parent, actionName);
     if (action) {
@@ -71,7 +71,7 @@ START_QOBJECT_METHOD(createAction, QUiLoader)
 END_QOBJECT_METHOD
 
 START_QOBJECT_METHOD(createActionGroup, QUiLoader)
-QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, 0);
+QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 0, nullptr);
 QString actionName = KJSEmbed::extractQString(exec, args, 1);
 QActionGroup *actionGroup = object->createActionGroup(parent, actionName);
 if (actionGroup)
@@ -89,7 +89,7 @@ START_QOBJECT_METHOD(createLayout, QUiLoader)
     if (className.isEmpty()) {
         return KJS::throwError(exec, KJS::SyntaxError, i18n("No classname specified"));
     }
-    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 1, 0);
+    QObject *parent = KJSEmbed::extractObject<QObject>(exec, args, 1, nullptr);
     QString name = KJSEmbed::extractQString(exec, args, 2);
     QLayout *layout = object->createLayout(className, parent, name);
     if (layout) {
@@ -106,7 +106,7 @@ START_QOBJECT_METHOD(createWidget, QUiLoader)
     if (className.isEmpty()) {
         return KJS::throwError(exec, KJS::SyntaxError, i18n("No classname specified."));
     }
-    QWidget *parent = KJSEmbed::extractObject<QWidget>(exec, args, 1, 0);
+    QWidget *parent = KJSEmbed::extractObject<QWidget>(exec, args, 1, nullptr);
     QString name = KJSEmbed::extractQString(exec, args, 2);
     QWidget *widget = object->createWidget(className, parent, name);
     if (widget) {
@@ -129,7 +129,7 @@ START_QOBJECT_METHOD(load, QUiLoader)
         return KJS::throwError(exec, KJS::GeneralError, i18n("Could not open file '%1': %2", fileName, uiFile.errorString()));
     }
 
-    QWidget *parent = KJSEmbed::extractObject<QWidget>(exec, args, 1, 0);
+    QWidget *parent = KJSEmbed::extractObject<QWidget>(exec, args, 1, nullptr);
 
     QWidget *widget = object->load(&uiFile, parent);
     uiFile.close();

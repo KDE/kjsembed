@@ -90,8 +90,8 @@ QVariant KJSObjectModel::headerData(int section, Qt::Orientation orientation, in
 
 QModelIndex KJSObjectModel::index(int row, int column, const QModelIndex &parent) const
 {
-    KJS::JSObject *parentInstance = 0;
-    Node *childItem = 0;
+    KJS::JSObject *parentInstance = nullptr;
+    Node *childItem = nullptr;
     KJS::ExecState *exec = m_js->globalExec();
 
     if (!parent.isValid()) {
@@ -130,7 +130,7 @@ QModelIndex KJSObjectModel::parent(const QModelIndex &index) const
         Node *node = new Node;
         node->instance = m_root;
         node->name = "Objects";
-        node->parent = 0;
+        node->parent = nullptr;
         return createIndex(0, index.column(), node);
     }
 
