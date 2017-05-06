@@ -1,0 +1,246 @@
+# Indonesian translations for kdelibs4 package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs4 package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:12+0100\n"
+"PO-Revision-Date: 2014-02-04 20:08+0700\n"
+"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
+"Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "Galat terjadi ketika memproses penyertaan '%1' baris %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "penyertaan hanya mengambil 1 argumen, bukan %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "Berkas %1 tak ditemukan."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "pustaka hanya mengambil 1 argumen, bukan %1."
+
+#: kjsembed/builtins.cpp:137
+#, kde-format
+msgid "Alert"
+msgstr "Peringatan"
+
+#: kjsembed/builtins.cpp:147
+#, kde-format
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Penanganan even buruk: Objek %1 Pengidentifikasi %2 Metode %3 Tipe: %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Panggilan pengecualian fungsi '%1' dari %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "Tak dapat membuka berkas '%1'"
+
+#: kjsembed/fileio.cpp:106
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "Tak dapat membuat berkas temporer."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 bukan fungsi dan tak dapat dipanggil."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 bukan tipe Object"
+
+#: kjsembed/qaction_binding.cpp:57
+#, kde-format
+msgid "Action takes 2 args."
+msgstr "Aksi mengambil 2 argumen."
+
+#: kjsembed/qaction_binding.cpp:79
+#, kde-format
+msgid "ActionGroup takes 2 args."
+msgstr "GrupAksi mengambil 2 argumen."
+
+#: kjsembed/qaction_binding.cpp:84
+#, kde-format
+msgid "Must supply a valid parent."
+msgstr "Harus memberikan induk yang valid."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Terjadi galat ketika membaca berkas '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "Tak dapat membaca berkas '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, kde-format
+msgid "Must supply a filename."
+msgstr "Harus memberikan nama berkas."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' bukan QLayout yang valid."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, kde-format
+msgid "Must supply a layout name."
+msgstr "Harus memberikan nama tata letak."
+
+#: kjsembed/qobject_binding.cpp:141
+#, kde-format
+msgid "Wrong object type."
+msgstr "Tipe objek salah."
+
+#: kjsembed/qobject_binding.cpp:148
+#, kde-format
+msgid "First argument must be a QObject."
+msgstr "Argumen pertama harus sebuah QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+#, kde-format
+msgid "Incorrect number of arguments."
+msgstr "Nomor atau argumen tidak benar."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] "Slot yang diminta untuk argumen %1"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "tapi hanya ada %1 yang tersedia"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Gagal menjelaskan ke %1 nilai dari Tipe %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "Tak ada metode seperti '%1'."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "Memanggil ke metode '%1' gagal, tak bisa mendapatkan argumen %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "Panggilan terhadap '%1' gagal."
+
+#: kjsembed/qobject_binding.cpp:793
+#, kde-format
+msgid "Could not construct value"
+msgstr "Tak dapat membangun nilai"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, kde-format
+msgid "Not enough arguments."
+msgstr "Tidak cukup argumen."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, kde-format
+msgid "Failed to create Action."
+msgstr "Gagal membuat Aksi."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, kde-format
+msgid "Failed to create ActionGroup."
+msgstr "Gagal membuat GrupAksi."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, kde-format
+msgid "No classname specified"
+msgstr "Tak ada nama kelas yang ditentukan."
+
+#: kjsembed/quiloader_binding.cpp:98
+#, kde-format
+msgid "Failed to create Layout."
+msgstr "Gagal membuat Tata Letak."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, kde-format
+msgid "No classname specified."
+msgstr "Tak ada nama kelas yang ditentukan."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, kde-format
+msgid "Failed to create Widget."
+msgstr "Gagal membuat Widget."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "Tak dapat membuka berkas '%1': %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "Gagal memuat berkas '%1'"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' bukan QWidget yang valid."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, kde-format
+msgid "Must supply a widget name."
+msgstr "Harus memberikan nama widget."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Penanganan rongga buruk: Objek %1 Pengidentifikasi %2 Metode %3 Tandan "
+"Tangan: %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Panggilan pengecualian slot '%1' dari %2:%3:%4"
