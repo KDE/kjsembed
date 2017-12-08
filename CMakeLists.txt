@@ -27,15 +27,9 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KJSEMBED
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5JsEmbedConfigVersion.cmake"
                         SOVERSION 5)
 
-if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  find_package(KF5JS ${KF5_DEP_VERSION} REQUIRED)
-  find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
-  find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
-else()
-    set(_kdeBootStrapping TRUE)
-    include(${CMAKE_SOURCE_DIR}/tier2/kdoctools/KF5DocToolsMacros.cmake)
-    set(KDOCTOOLS_CUSTOMIZATION_DIR "${KDocTools_BINARY_DIR}/src/customization/")
-endif()
+find_package(KF5JS ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
@@ -75,6 +69,4 @@ install(EXPORT KF5JsEmbedTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE K
 #DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 #)
 
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
