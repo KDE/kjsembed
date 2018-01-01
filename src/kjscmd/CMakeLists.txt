@@ -10,4 +10,4 @@ target_link_libraries(kjscmd5
     KF5::JsEmbed
 )
 
-install(TARGETS kjscmd5 EXPORT KF5JsEmbedTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kjscmd5 ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
