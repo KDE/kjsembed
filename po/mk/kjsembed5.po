@@ -1,0 +1,260 @@
+# translation of kdelibs4.po to Macedonian
+#
+# Copyright (C) 2000,2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+# Dimitar Indovski <dime@gord.com.mk>
+# Damjan Janevski <miopa@freemail.org.mk>
+# Dragan Sekulovski <d_sekulovski@yahoo.com>
+#
+# Maratonec , 2002.
+# Dragan Bocevski <d_bocevski@hotmail.com>, 2002.
+# Danko Ilik <danko@mindless.com>, 2002,2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
+# Danko Ilik <danko@on.net.mk>, 2003.
+# Darko Nikolovski <darkon@macedonia.homelinux.org>, 2003.
+# Ivan Dimitrov <ivan34mk@yahoo.com>, 2003.
+# Magdica Shambevska <magdica@yahoo.com>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:12+0100\n"
+"PO-Revision-Date: 2010-01-27 10:39+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "Имаше грешка при обработката на include „'%1“, на ред %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "За include е потребен само еден аргумент, не %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "Датотеката %1 не е пронајдена."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "на библиотеката ѝ треба само еден аргумент, а не %1."
+
+#: kjsembed/builtins.cpp:137
+#, kde-format
+msgid "Alert"
+msgstr "Внимание"
+
+#: kjsembed/builtins.cpp:147
+#, kde-format
+msgid "Confirm"
+msgstr "Потврда"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "Ракувач со лоши настани: објект %1 идентификатор %2 метода %3 тип: %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Исклучок при повикување на функцијата „%1“ од %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "Не можев да ја отворам датотеката „%1“"
+
+#: kjsembed/fileio.cpp:106
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "Не можев да креирам привремена датотека."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 не е функција и не може да биде повикана."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 не е од тип објект"
+
+#: kjsembed/qaction_binding.cpp:57
+#, kde-format
+msgid "Action takes 2 args."
+msgstr "За дејството се потребни два аргументи."
+
+#: kjsembed/qaction_binding.cpp:79
+#, kde-format
+msgid "ActionGroup takes 2 args."
+msgstr "За „ГрупазаДејство“ се потребни 2 аргументи."
+
+#: kjsembed/qaction_binding.cpp:84
+#, kde-format
+msgid "Must supply a valid parent."
+msgstr "Мора да се наведе валиден родител."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Имаше грешка при читањето на датотеката „%1“"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "Не можам да ја прочитам датотеката „%1“"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, kde-format
+msgid "Must supply a filename."
+msgstr "Мора да се зададе име на датотека."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "„%1“ не е валиден QLayout."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, kde-format
+msgid "Must supply a layout name."
+msgstr "Мора да се наведе име на распоред."
+
+#: kjsembed/qobject_binding.cpp:141
+#, kde-format
+msgid "Wrong object type."
+msgstr "Погрешен тип на објект."
+
+#: kjsembed/qobject_binding.cpp:148
+#, kde-format
+msgid "First argument must be a QObject."
+msgstr "Првиот аргумент мора да биде QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+#, kde-format
+msgid "Incorrect number of arguments."
+msgstr "Неправилен број на аргументи."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Не можев да претворам во вредност %1 од типот %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "Нема таков метод „%1“."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"Повикот до методот „%1“ не успеа, не можам да го земам аргументот %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "Повикот до „%1“ не успеа."
+
+#: kjsembed/qobject_binding.cpp:793
+#, kde-format
+msgid "Could not construct value"
+msgstr "Не можам да конструирам вредност"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, kde-format
+msgid "Not enough arguments."
+msgstr "Нема доволно аргументи."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, kde-format
+msgid "Failed to create Action."
+msgstr "Не успеав да креирам Дејство."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, kde-format
+msgid "Failed to create ActionGroup."
+msgstr "Не успеав да креирам „ГрупазаДејства“."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, kde-format
+msgid "No classname specified"
+msgstr "Не е наведено име на класа"
+
+#: kjsembed/quiloader_binding.cpp:98
+#, kde-format
+msgid "Failed to create Layout."
+msgstr "Не успеав да креирам „Распоред“."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, kde-format
+msgid "No classname specified."
+msgstr "Не е наведено име на класа."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, kde-format
+msgid "Failed to create Widget."
+msgstr "Не успеав да креирам „ГрафичкаКонтрола“."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "Не можев да ја отворам датотеката „%1“: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "Не успеав да ја вчитам датотеката „%1“"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "„%1“ не е валиден QWidget."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, kde-format
+msgid "Must supply a widget name."
+msgstr "Мора да се наведе име на графичка контрола."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Исклучок при повикување на слотот „%1“ од %2:%3:%4"
