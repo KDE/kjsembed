@@ -46,9 +46,9 @@ public:
     ~SlotProxy();
     //Meta object stuff
     QMetaObject staticMetaObject;
-    const QMetaObject *metaObject() const Q_DECL_OVERRIDE;
-    void *qt_metacast(const char *_clname) Q_DECL_OVERRIDE;
-    int qt_metacall(QMetaObject::Call _c, int _id, void **_a) Q_DECL_OVERRIDE;
+    const QMetaObject *metaObject() const override;
+    void *qt_metacast(const char *_clname) override;
+    int qt_metacall(QMetaObject::Call _c, int _id, void **_a) override;
 
 private:
     KJS::JSValue *callMethod(const QByteArray &methodName, void **_a);

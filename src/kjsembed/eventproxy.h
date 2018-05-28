@@ -59,7 +59,7 @@ public:
     void removeFilter(QEvent::Type t);
 
     /** Reimplemented to forward events to JS. */
-    bool eventFilter(QObject *watched, QEvent *e) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *e) override;
 
 protected:
     bool callHandler(QEvent *e);

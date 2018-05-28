@@ -34,7 +34,7 @@ class SizeBinding : public VariantBinding
 {
 public:
     SizeBinding(KJS::ExecState *exec, const QSize &value);
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

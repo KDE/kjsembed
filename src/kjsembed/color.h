@@ -35,7 +35,7 @@ class ColorBinding : public VariantBinding
 {
 public:
     ColorBinding(KJS::ExecState *exec, const QColor &value);
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

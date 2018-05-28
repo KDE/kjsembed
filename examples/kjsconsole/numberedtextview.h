@@ -50,10 +50,10 @@ public:
     int bugLine() const;
 
     void setTextEdit(QTextEdit *edit);
-    void paintEvent(QPaintEvent *ev) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *ev) override;
 
 protected:
-    bool event(QEvent *ev) Q_DECL_OVERRIDE;
+    bool event(QEvent *ev) override;
 
 private:
     QTextEdit *edit;
@@ -111,7 +111,7 @@ public:
     int bugLine() const;
 
     /** @internal Used to get tooltip events from the view for the hover signal. */
-    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
     QString text() const;
     void setText(const QString &text);

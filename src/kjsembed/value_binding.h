@@ -112,8 +112,8 @@ public:
     ValueBinding(KJS::ExecState *exec, const char *typeName);
     virtual ~ValueBinding();
 
-    KJS::UString toString(KJS::ExecState *exec) const Q_DECL_OVERRIDE;
-    KJS::UString className() const Q_DECL_OVERRIDE
+    KJS::UString toString(KJS::ExecState *exec) const override;
+    KJS::UString className() const override
     {
         return m_name;
     }
@@ -155,7 +155,7 @@ public:
     static const KJS::ClassInfo info;
 
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

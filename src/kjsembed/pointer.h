@@ -52,18 +52,18 @@ public:
     {
 
     }
-    void cleanup() Q_DECL_OVERRIDE
+    void cleanup() override
     {
 //         qDebug("delete pointer %s %0x", typeid(ValueType).name(), ptr );
         delete ptr;
         ptr = nullptr;
     }
-    const std::type_info &type() const Q_DECL_OVERRIDE
+    const std::type_info &type() const override
     {
         return typeid(ValueType);
     }
 
-    void *voidStar() Q_DECL_OVERRIDE
+    void *voidStar() override
     {
         return (void *)ptr;
     }
@@ -83,17 +83,17 @@ public:
         //qDebug("delete value");
     }
 
-    void cleanup() Q_DECL_OVERRIDE
+    void cleanup() override
     {
 
     }
 
-    const std::type_info &type() const Q_DECL_OVERRIDE
+    const std::type_info &type() const override
     {
         return typeid(ValueType);
     }
 
-    void *voidStar() Q_DECL_OVERRIDE
+    void *voidStar() override
     {
         return (void *)&value;
     }
@@ -110,17 +110,17 @@ struct NullPtr : public PointerBase {
     {
         ;
     }
-    void cleanup() Q_DECL_OVERRIDE
+    void cleanup() override
     {
         ;
     }
 
-    const std::type_info &type() const Q_DECL_OVERRIDE
+    const std::type_info &type() const override
     {
         return typeid(NullPtr);
     }
 
-    void *voidStar() Q_DECL_OVERRIDE
+    void *voidStar() override
     {
         return &ptr;
     }

@@ -35,7 +35,7 @@ class PixmapBinding : public VariantBinding
 {
 public:
     PixmapBinding(KJS::ExecState *exec, const QPixmap &value);
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

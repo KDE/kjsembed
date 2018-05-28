@@ -35,7 +35,7 @@ class UrlBinding : public VariantBinding
 {
 public:
     UrlBinding(KJS::ExecState *exec, const QUrl &value);
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

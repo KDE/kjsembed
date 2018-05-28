@@ -35,7 +35,7 @@ class PointBinding : public VariantBinding
 {
 public:
     PointBinding(KJS::ExecState *exec, const QPoint &value);
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

@@ -42,7 +42,7 @@ class DomNodeBinding : public ValueBinding
 public:
     DomNodeBinding(KJS::ExecState *exec, const QDomNode &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -54,7 +54,7 @@ class DomDocumentBinding : public ValueBinding
 public:
     DomDocumentBinding(KJS::ExecState *exec, const QDomDocument &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -66,7 +66,7 @@ class DomElementBinding : public ValueBinding
 public:
     DomElementBinding(KJS::ExecState *exec, const QDomElement &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -78,7 +78,7 @@ class DomAttrBinding : public ValueBinding
 public:
     DomAttrBinding(KJS::ExecState *exec, const QDomAttr &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -90,7 +90,7 @@ class DomDocumentTypeBinding : public ValueBinding
 public:
     DomDocumentTypeBinding(KJS::ExecState *exec, const QDomDocumentType &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -102,7 +102,7 @@ class DomNodeListBinding : public ValueBinding
 public:
     DomNodeListBinding(KJS::ExecState *exec, const QDomNodeList &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -114,7 +114,7 @@ class DomNamedNodeMapBinding : public ValueBinding
 public:
     DomNamedNodeMapBinding(KJS::ExecState *exec, const QDomNamedNodeMap &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }
@@ -126,7 +126,7 @@ class DomTextBinding : public ValueBinding
 public:
     DomTextBinding(KJS::ExecState *exec, const QDomText &value);
 private:
-    const KJS::ClassInfo *classInfo() const Q_DECL_OVERRIDE
+    const KJS::ClassInfo *classInfo() const override
     {
         return &info;
     }

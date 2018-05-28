@@ -131,20 +131,20 @@ public:
     * Set the value \p value of the property \p propertyName .
     */
     void put(KJS::ExecState *exec, const KJS::Identifier &propertyName, KJS::JSValue *value,
-             int attr = KJS::None) Q_DECL_OVERRIDE;
+             int attr = KJS::None) override;
     using JSObject::put;
 
     /**
     * \return true if the property \p propertyName can be changed else false is returned.
     */
-    bool canPut(KJS::ExecState *exec, const KJS::Identifier &propertyName) const Q_DECL_OVERRIDE;
+    bool canPut(KJS::ExecState *exec, const KJS::Identifier &propertyName) const override;
 
     /**
     * Called to ask if we have a callback for the named property.
     * We return the callback in the property slot.
     */
     bool getOwnPropertySlot(KJS::ExecState *exec, const KJS::Identifier &propertyName,
-                            KJS::PropertySlot &slot) Q_DECL_OVERRIDE;
+                            KJS::PropertySlot &slot) override;
     using JSObject::getOwnPropertySlot;
 
     /**
@@ -156,13 +156,13 @@ public:
     * \return a string-representation of the QObject. For example for a QWidget-instance that
     * has the QObject::objectName "mywidget" the string "mywidget (QWidget)" is returned.
     */
-    KJS::UString toString(KJS::ExecState *exec) const Q_DECL_OVERRIDE;
+    KJS::UString toString(KJS::ExecState *exec) const override;
 
     /**
     * \return the QObject's classname. For example for a QWidget-instance the string "QWidget"
     * is returned.
     */
-    KJS::UString className() const Q_DECL_OVERRIDE;
+    KJS::UString className() const override;
 
     /**
     * Add the QObject \p object to the internal QObjectCleanupHandler to watch the
@@ -197,12 +197,12 @@ class KJSEMBED_EXPORT SlotBinding : public KJS::InternalFunctionImp
 {
 public:
     SlotBinding(KJS::ExecState *exec, const QMetaMethod &memberName);
-    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args) Q_DECL_OVERRIDE;
-    bool implementsCall() const Q_DECL_OVERRIDE
+    KJS::JSValue *callAsFunction(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &args) override;
+    bool implementsCall() const override
     {
         return true;
     }
-    bool implementsConstruct() const Q_DECL_OVERRIDE
+    bool implementsConstruct() const override
     {
         return false;
     }
