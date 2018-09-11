@@ -24,8 +24,8 @@
 #ifndef QOBJECT_BINDING_H
 #define QOBJECT_BINDING_H
 
-#include <QtCore/QObjectCleanupHandler>
-#include <QtCore/QDebug>
+#include <QObjectCleanupHandler>
+#include <QDebug>
 
 #include <kjs/function.h>
 

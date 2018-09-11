@@ -22,14 +22,14 @@
 */
 #include "qobject_binding.h"
 
-#include <QtCore/QObject>
-#include <QtCore/QArgument>
-#include <QtCore/QMetaEnum>
-#include <QtCore/QMetaType>
-#include <QtCore/QVariant>
-#include <QtCore/QVector>
-#include <QtCore/QUrl>
-#include <QtCore/QDebug>
+#include <QObject>
+#include <QArgument>
+#include <QMetaEnum>
+#include <QMetaType>
+#include <QVariant>
+#include <QVector>
+#include <QUrl>
+#include <QDebug>
 #include <QWidget>
 
 #include "slotproxy.h"

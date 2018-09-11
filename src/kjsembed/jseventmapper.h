@@ -23,8 +23,8 @@
 #ifndef JSEVENTMAPPER_H
 #define JSEVENTMAPPER_H
 
-#include <QtCore/QHash>
-#include <QtCore/QEvent>
+#include <QHash>
+#include <QEvent>
 
 #include <kjs/identifier.h>
 

@@ -23,8 +23,8 @@
 #ifndef BINDING_SUPPORT_H
 #define BINDING_SUPPORT_H
 
-#include <QtCore/QDate>
-#include <QtCore/QStringList>
+#include <QDate>
+#include <QStringList>
 
 #include <kjsembed/kjseglobal.h>
 #include <kjsembed/pointer.h>
@@ -286,7 +286,7 @@ T *extractBindingImp(KJS::JSObject *obj)
 /**
 * Method callback signature.
 * @param exec The execution state.
-* @param object The current object that the method is working on (equivelent of "this")
+* @param object The current object that the method is working on (equivalent of "this")
 * @param args A KJS::List of KJS::JSValue objects that represents the arguments that where
 * passed in from the javascript function signature.
 */

@@ -23,7 +23,7 @@
 #ifndef KJSEMBED_JSEVENTUTILS_H
 #define KJSEMBED_JSEVENTUTILS_H
 
-#include <QtCore/QEvent>
+#include <QEvent>
 #include <QKeyEvent>
 
 #include <kjs/object.h>

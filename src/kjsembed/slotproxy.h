@@ -23,9 +23,9 @@
 #ifndef SLOTPROXY_H
 #define SLOTPROXY_H
 
-#include <QtCore/QObject>
-#include <QtCore/QByteRef>
-#include <QtCore/QVariant>
+#include <QObject>
+#include <QByteRef>
+#include <QVariant>
 #include <kjs/object.h>
 #include "kjsembed.h"
 

@@ -21,8 +21,8 @@
 */
 #include "dom.h"
 
-#include <QtXml/QDomAttr>
-#include <QtCore/QDebug>
+#include <QDomAttr>
+#include <QDebug>
 
 using namespace KJSEmbed;
 

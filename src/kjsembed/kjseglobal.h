@@ -37,7 +37,7 @@ KJSEMBED_EXPORT void RedirectIOToConsole();
 
 #endif
 
-#include <QtCore/QTextStream>
+#include <QTextStream>
 namespace KJSEmbed
 {
 KJSEMBED_EXPORT QTextStream *conin();

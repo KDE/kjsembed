@@ -23,7 +23,7 @@
 #ifndef QACTION_BINDING_H
 #define QACTION_BINDING_H
 
-#include <QtCore/QObject>
+#include <QObject>
 #include <QAction>
 //#include <QActionGroup>
 

@@ -28,10 +28,10 @@
 #include <kjs/PropertyNameArray.h>
 #include <kjs/array_instance.h>
 
-#include <QtCore/QBitRef>
-#include <QtCore/QByteRef>
-#include <QtCore/QDebug>
-#include <QtCore/QObject>
+#include <QBitRef>
+#include <QByteRef>
+#include <QDebug>
+#include <QObject>
 #include <QWidget>
 
 #include "kjseglobal.h"

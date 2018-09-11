@@ -1,5 +1,5 @@
 #include "QByteArray_bind.h"
-#include <QtCore/QByteArray>
+#include <QByteArray>
 #include <variant_binding.h>
 #include <value_binding.h>
 

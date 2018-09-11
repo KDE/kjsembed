@@ -22,8 +22,8 @@
 
 #include "object_binding.h"
 
-#include <QtCore/QArgument>
-#include <QtCore/QDebug>
+#include <QArgument>
+#include <QDebug>
 
 #include "static_binding.h"
 #include "variant_binding.h"

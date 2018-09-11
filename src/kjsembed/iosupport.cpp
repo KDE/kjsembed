@@ -24,10 +24,10 @@
 #include "kjseglobal.h"
 
 #include <kjs/object.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 
-#include <QtCore/QStringList>
-#include <QtCore/QProcess>
+#include <QStringList>
+#include <QProcess>
 
 using namespace KJSEmbed;
 

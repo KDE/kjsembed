@@ -21,7 +21,7 @@
 */
 #include "pixmap.h"
 
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QPixmap>
 #include <QBitmap>
 #include <QWidget>

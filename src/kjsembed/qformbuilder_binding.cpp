@@ -23,8 +23,8 @@
 
 #include <QWidget>
 #include <QtDesigner/QFormBuilder>
-#include <QtCore/QFile>
-#include <QtCore/QDebug>
+#include <QFile>
+#include <QDebug>
 
 #include <kjs/object.h>
 

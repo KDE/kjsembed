@@ -22,9 +22,9 @@
 
 #ifndef EVENTPROXY_H
 #define EVENTPROXY_H
-#include <QtCore/QObject>
-#include <QtCore/QBitRef>
-#include <QtCore/QEvent>
+#include <QObject>
+#include <QBitRef>
+#include <QEvent>
 
 #include <kjs/object.h>
 

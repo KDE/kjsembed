@@ -24,7 +24,7 @@
 #include "kjseglobal.h"
 
 #include <kjs/object.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <QAction>
 #include <QtUiTools/QUiLoader>

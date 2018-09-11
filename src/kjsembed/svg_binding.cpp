@@ -22,7 +22,7 @@
 #include "svg_binding.h"
 
 #include <QtSvg/QSvgWidget>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <kjs/object.h>
 

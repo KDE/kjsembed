@@ -22,13 +22,13 @@
 
 #include "builtins.h"
 
-#include <QtCore/QCoreApplication>
-#include <QtCore/QFile>
-#include <QtCore/QStandardPaths>
+#include <QCoreApplication>
+#include <QFile>
+#include <QStandardPaths>
 #include <QMessageBox>
-#include <QtCore/QTextStream>
-#include <QtCore/QDebug>
-#include <QtCore/QMetaType>
+#include <QTextStream>
+#include <QDebug>
+#include <QMetaType>
 
 #include "variant_binding.h"
 #include "object_binding.h"

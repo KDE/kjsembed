@@ -25,14 +25,14 @@
 #include "kjseglobal.h"
 
 #include <kjs/object.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <QWidget>
 #include <QAction>
 #include <QLayout>
 #include <QtUiTools/QUiLoader>
 
-#include <QtCore/QFile>
+#include <QFile>
 
 namespace KJSEmbed
 {

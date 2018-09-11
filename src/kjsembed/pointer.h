@@ -25,7 +25,7 @@
 
 #include <algorithm>
 #include <typeinfo>
-#include <QtCore/QVariant>
+#include <QVariant>
 
 namespace KJSEmbed
 {

@@ -57,11 +57,11 @@
 #include <kjs/interpreter.h>
 #include <kjs/completion.h>
 
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
-#include <QtCore/QObject>
+#include <QFile>
+#include <QTextStream>
+#include <QObject>
 
-#include <QtCore/QDebug>
+#include <QDebug>
 
 /**
 * Implement QString-KJS::UString conversion methods. These methods are declared

@@ -24,7 +24,7 @@
 #ifndef VARIANT_BINDING_H
 #define VARIANT_BINDING_H
 
-#include <QtCore/QVariant>
+#include <QVariant>
 
 #include <kjs/object.h>
 #include <kjs/interpreter.h>

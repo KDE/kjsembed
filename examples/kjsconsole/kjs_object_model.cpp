@@ -22,7 +22,7 @@
 #include "kjs_object_model.h"
 
 #include <QPixmap>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <kjs/object.h>
 #include <kjs/interpreter.h>

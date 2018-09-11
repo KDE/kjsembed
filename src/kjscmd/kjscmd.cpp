@@ -21,8 +21,8 @@
 */
 
 #include <QApplication>
-#include <QtCore/QDebug>
-#include <QtCore/QStringList>
+#include <QDebug>
+#include <QStringList>
 
 #include <kjs/interpreter.h>
 #include <kjs/ustring.h>
@@ -30,7 +30,7 @@
 #include <kjsembed/kjseglobal.h>
 #include <kjsembed/kjsembed.h>
 
-#include <QtCore/QDate>
+#include <QDate>
 
 using namespace KJSEmbed;
 

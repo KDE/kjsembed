@@ -20,7 +20,7 @@
     Boston, MA 02110-1301, USA.
 */
 #include "settings.h"
-#include <QtCore/QSettings>
+#include <QSettings>
 #include "kjseglobal.h"
 
 using namespace KJSEmbed;

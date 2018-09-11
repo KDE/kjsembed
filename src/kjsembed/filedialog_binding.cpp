@@ -21,10 +21,10 @@
 */
 #include "filedialog_binding.h"
 
-#include <QtCore/QStringList>
-#include <QtCore/QProcess>
+#include <QStringList>
+#include <QProcess>
 #include <QFileDialog>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <kjs/object.h>
 

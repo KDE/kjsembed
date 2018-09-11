@@ -22,7 +22,7 @@
 
 #ifndef STATIC_BINDING_H
 #define STATIC_BINDING_H
-#include <QtCore/QHash>
+#include <QHash>
 
 #include <kjs/function.h>
 
@@ -114,7 +114,7 @@ public:
     * args.append("test");
     * KJS::Value myType = KJSEmbed::construct(exec, "MyType", args);
     * @endcode
-    * is equivelent to the following javascript
+    * is equivalent to the following javascript
     * @code
     * var myType = new MyType("test");
     * @endcode

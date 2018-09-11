@@ -30,7 +30,7 @@
 #include <QPainter>
 #include <QTextObjectInterface>
 #include <QToolTip>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 NumberBar::NumberBar(QWidget *parent)
     : QWidget(parent), edit(nullptr), m_stopLine(-1), m_currentLine(-1), m_bugLine(-1)

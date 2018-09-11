@@ -21,7 +21,7 @@
 */
 #include "brush.h"
 
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QBrush>
 #include <QPixmap>
 #include <QColor>

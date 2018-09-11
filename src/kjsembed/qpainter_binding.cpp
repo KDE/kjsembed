@@ -25,7 +25,7 @@
 #include "kjseglobal.h"
 
 #include <kjs/object.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <QWidget>
 #include <QPainter>
@@ -33,9 +33,9 @@
 #include <QPixmap>
 #include <QPen>
 #include <QBrush>
-#include <QtCore/QLine>
+#include <QLine>
 #include <QPolygon>
-#include <QtCore/QPoint>
+#include <QPoint>
 
 #include <QFrame>
 

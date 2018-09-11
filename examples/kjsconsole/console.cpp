@@ -24,9 +24,9 @@
 
 #include <math.h>
 
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QFileDialog>
-#include <QtCore/QFile>
+#include <QFile>
 
 #include <kjsembed/kjseglobal.h>
 #include <kjs/interpreter.h>

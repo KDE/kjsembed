@@ -21,7 +21,7 @@
 */
 #include "pen.h"
 
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QPen>
 #include <QBrush>
 #include <QColor>

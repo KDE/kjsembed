@@ -22,8 +22,8 @@
 #ifndef KJS_OBJECT_MODEL
 #define KJS_OBJECT_MODEL
 
-#include <QtCore/QModelIndex>
-#include <QtCore/QVariant>
+#include <QModelIndex>
+#include <QVariant>
 
 namespace KJS
 {

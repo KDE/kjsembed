@@ -21,9 +21,9 @@
 */
 #include "application.h"
 
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QApplication>
-#include <QtCore/QStringList>
+#include <QStringList>
 using namespace KJSEmbed;
 
 namespace CoreApplicationNS

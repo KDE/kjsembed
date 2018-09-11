@@ -21,9 +21,9 @@
 */
 #include "slotproxy.h"
 
-#include <QtCore/QMetaEnum>
-#include <QtCore/QMetaType>
-#include <QtCore/QDebug>
+#include <QMetaEnum>
+#include <QMetaType>
+#include <QDebug>
 #include <QWidget>
 
 #include <kjs/interpreter.h>

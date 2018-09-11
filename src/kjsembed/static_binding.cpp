@@ -22,7 +22,7 @@
 #include "static_binding.h"
 #include <kjs/interpreter.h>
 #include <kjs/function_object.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 
 namespace KJSEmbed
 {
