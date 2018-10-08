@@ -1,0 +1,252 @@
+# translation of kdelibs4.po to
+# Malayalam translation of kdelibs4.
+# Copyright (C) 2007-2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Anoop | അനൂപ് Panavalappil | പനവളപ്പില്‍ <gnuanu@gmail.com>, 2008.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Maxin B. John <maxinbjohn@gmail.com>, 2007.
+# Manu S Madhav | മനു എസ് മാധവ് <manusmad@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2007, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"PO-Revision-Date: 2010-12-29 15:32+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Poedit-Country: INDIA\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "include '%1' നടത്തിക്കൊണ്ടിരിയ്ക്കുമ്പോള്‍ വരി %2 ല്‍ തെറ്റു് സംഭവിച്ചു: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include 1 ആര്‍ഗ്യുമെന്റേ എടുക്കുകയുള്ളൂ, %1 അല്ല."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "%1 ഫയല്‍ ലഭ്യമായില്ല."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "ലൈബ്രറി 1 ആര്‍ഗ്യുമെന്റ് മാത്രമെടുക്കുന്നു, %1 അല്ല."
+
+#: kjsembed/builtins.cpp:137
+#, kde-format
+msgid "Alert"
+msgstr "മുന്നറിയിപ്പു്"
+
+#: kjsembed/builtins.cpp:147
+#, kde-format
+msgid "Confirm"
+msgstr "ഉറപ്പാക്കുക"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "ചീത്ത ഇവന്റ് ഹാന്‍ഡ്ലര്‍: ഒബ്ജക്റ്റ് %1 ഐഡന്റിഫെയര്‍ %2 രീതി %3 കയ്യൊപ്പു് : %4."
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "%2 വില്‍ നിന്നും '%1' ഫങ്ഷന്‍ വിളിയ്ക്കുന്നതില്‍ എക്സെപ്ഷന്‍:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "'%1' ഫയല്‍ ഉണ്ടാക്കുവാനായില്ല"
+
+#: kjsembed/fileio.cpp:106
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "താല്‍ക്കാലിക ഫയല്‍ ഉണ്ടാക്കുവാന്‍ സാധ്യമായില്ല."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 ഒരു ഫംഗ്ഷനല്ല, അതിനാല്‍ വിളിക്കുവാന്‍ സാധ്യമല്ല."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 ഒബ്ജക്ട് തരമല്ല"
+
+#: kjsembed/qaction_binding.cpp:57
+#, kde-format
+msgid "Action takes 2 args."
+msgstr "പ്രവര്‍ത്തി 2 ആര്‍ഗ്യുമെന്റുകളെടുക്കുന്നു."
+
+#: kjsembed/qaction_binding.cpp:79
+#, kde-format
+msgid "ActionGroup takes 2 args."
+msgstr "ActionGroup 2 ആര്‍ഗ്യുമെന്റുകളെടുക്കുന്നു."
+
+#: kjsembed/qaction_binding.cpp:84
+#, kde-format
+msgid "Must supply a valid parent."
+msgstr "സാധുവായ പാരന്റ് നല്‍കിയിരിയ്ക്കണം."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "'%1' ഫയല്‍ ലഭ്യമാക്കുന്നതില്‍ പിശകു്"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "'%1' ഫയല്‍ ലഭ്യമായില്ല"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, kde-format
+msgid "Must supply a filename."
+msgstr "ഒരു ഫയല്‍നാമം നിര്‍ബന്ധമായും നല്‍കണം."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' തെറ്റായ QLayout ആണു്."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, kde-format
+msgid "Must supply a layout name."
+msgstr "മാതൃകയ്ക്കു ഒരു നാമം നല്‍കണം."
+
+#: kjsembed/qobject_binding.cpp:141
+#, kde-format
+msgid "Wrong object type."
+msgstr "തെറ്റായ ഒബ്ജക്ട് തരം."
+
+#: kjsembed/qobject_binding.cpp:148
+#, kde-format
+msgid "First argument must be a QObject."
+msgstr "ആദ്യത്തെ ആര്‍ഗ്യുമെന്റ് ഒരു QObject ആയിരിക്കണം."
+
+#: kjsembed/qobject_binding.cpp:182
+#, kde-format
+msgid "Incorrect number of arguments."
+msgstr "ആര്‍ഗ്യുമെന്റുകളുടെ എണ്ണം തെറ്റാണു്."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "%1 മാത്രമേ ലഭ്യമുള്ളൂ"
+msgstr[1] "%1 മാത്രമേ ലഭ്യമുള്ളൂ"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr ""
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "'%1' പോലൊരു മാര്‍ഗ്ഗമില്ല."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"'%1' എന്ന രീതിയിലേയ്ക്കുള്ള വിളി പരാജയപ്പെട്ടു, %2 ആര്‍ഗ്യുമെന്റ് കിട്ടാന്‍ സാധിച്ചില്ല: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "'%1'-ലേക്കുള്ള വിളി പരാജയപ്പെട്ടു."
+
+#: kjsembed/qobject_binding.cpp:793
+#, kde-format
+msgid "Could not construct value"
+msgstr "മൂല്യം ഉണ്ടാക്കാന്‍ സാധിച്ചില്ല"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, kde-format
+msgid "Not enough arguments."
+msgstr "മതിയായ ആര്‍ഗ്യുമെന്റുകള്‍ ലഭ്യമല്ല."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, kde-format
+msgid "Failed to create Action."
+msgstr "നടപടി സൃഷ്ടിക്കുന്നതില്‍ പരാജയം."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, kde-format
+msgid "Failed to create ActionGroup."
+msgstr "നടപടിക്കൂട്ടം സൃഷ്ടിക്കുന്നതില്‍ പരാജയം."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, kde-format
+msgid "No classname specified"
+msgstr "ക്ലാസ്സ് നാമം വ്യക്തമാക്കിയിട്ടില്ല"
+
+#: kjsembed/quiloader_binding.cpp:98
+#, kde-format
+msgid "Failed to create Layout."
+msgstr "മാതൃകയുണ്ടാക്കുന്നതില്‍ പരാജയം."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, kde-format
+msgid "No classname specified."
+msgstr "ക്ലാസ്സ് നാമം വ്യക്തമാക്കിയിട്ടില്ല."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, kde-format
+msgid "Failed to create Widget."
+msgstr "വിഡ്ജെറ്റ് ഉണ്ടാക്കുവാനായില്ല."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "'%1' ഫയല്‍ തുറക്കുവാനായില്ല: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "'%1' ഫയല്‍ ലഭ്യമാക്കുവാനായില്ല"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' സാധുതയുള്ള QWidget അല്ല."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, kde-format
+msgid "Must supply a widget name."
+msgstr "ഒരു വിഡ്ജറ്റ് നാമം നല്‍കേണ്ടതാണു്."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "ചീത്ത സ്ലോട്ട് ഹാന്‍ഡ്ലര്‍: ഒബ്ജക്റ്റ് %1 ഐഡന്റിഫെയര്‍ %2 രീതി %3 കയ്യൊപ്പു് : %4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "%2 വില്‍ നിന്നും '%1' സ്ലോട്ട് വിളിയ്ക്കുന്നതില്‍ എക്സെപ്ഷന്‍:%3:%4"
