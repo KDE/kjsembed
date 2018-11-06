@@ -21,7 +21,7 @@
 */
 #include "eventproxy.h"
 
-#include  <QtCore/QCoreApplication>
+#include  <QCoreApplication>
 
 #include "qobject_binding.h"
 #include <kjs/interpreter.h>
