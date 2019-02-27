@@ -177,7 +177,7 @@ NumberedTextView::NumberedTextView(QWidget *parent)
 
     box = new QHBoxLayout(this);
     box->setSpacing(0);
-    box->setMargin(0);
+    box->setContentsMargins(0, 0, 0, 0);
     box->addWidget(numbers);
     box->addWidget(view);
 }
