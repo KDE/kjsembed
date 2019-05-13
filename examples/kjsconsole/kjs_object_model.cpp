@@ -164,7 +164,7 @@ QVariant KJSObjectModel::data(const QModelIndex &index, int role) const
             return QPixmap(":/images/property.png");
         }
     }
-    if (role == Qt::TextColorRole) {
+    if (role == Qt::ForegroundRole) {
         if (instance->implementsConstruct()) {
             return QColor("blue");
         } else if (instance->implementsCall()) {

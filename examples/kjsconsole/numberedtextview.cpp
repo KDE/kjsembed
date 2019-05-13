@@ -247,7 +247,7 @@ void NumberedTextView::textChanged(int pos, int removed, int added)
 
         if (lineCount == numbers->currentLine()) {
             fmt = block.blockFormat();
-            QColor bg = view->palette().color(QPalette::Highlight).light(175);
+            QColor bg = view->palette().color(QPalette::Highlight).lighter(175);
             fmt.setBackground(bg);
 
             highlight = QTextCursor(block);

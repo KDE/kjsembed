@@ -52,7 +52,7 @@
 * End a variant method started by START_VARIANT_METHOD
 */
 #define END_VARIANT_METHOD \
-    imp->setValue(qVariantFromValue(value)); \
+    imp->setValue(QVariant::fromValue(value)); \
     } \
     else \
     {\
@@ -191,7 +191,7 @@ KJS::JSValue *createVariant(KJS::ExecState *exec, const KJS::UString &className,
         // If it is a value type setValue
         KJSEmbed::VariantBinding *imp = extractBindingImp<KJSEmbed::VariantBinding>(exec, returnValue);
         if (imp) {
-            imp->setValue(qVariantFromValue(value));
+            imp->setValue(QVariant::fromValue(value));
         } else {
             throwError(exec, KJS::TypeError, toUString(QString("Created failed to cast to %1 failed").arg(toQString(className))));
             return KJS::jsNull();

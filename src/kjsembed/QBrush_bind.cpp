@@ -47,7 +47,7 @@ KJS::JSValue *style(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &
     if (args.size() == 0) {
         Qt::BrushStyle tmp = value.style();
         result = KJS::jsNumber(tmp);
-        imp->setValue(qVariantFromValue(value));
+        imp->setValue(QVariant::fromValue(value));
         return result;
     }
 
@@ -71,7 +71,7 @@ KJS::JSValue *setStyle(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Lis
         if (object0 && object0->isNumber()) {
             Qt::BrushStyle arg0 = KJSEmbed::extractInteger<Qt::BrushStyle>(exec, args, 0);
             value.setStyle(arg0);
-            imp->setValue(qVariantFromValue(value));
+            imp->setValue(QVariant::fromValue(value));
             return result;
         }
     }
@@ -93,7 +93,7 @@ KJS::JSValue *texture(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List
     if (args.size() == 0) {
         QPixmap tmp = value.texture();
         result = KJSEmbed::createVariant(exec, "QPixmap", tmp);
-        imp->setValue(qVariantFromValue(value));
+        imp->setValue(QVariant::fromValue(value));
         return result;
     }
 
@@ -117,7 +117,7 @@ KJS::JSValue *setTexture(KJS::ExecState *exec, KJS::JSObject *self, const KJS::L
         if (object0 && object0->inherits(&QPixmapBinding::info)) {
             QPixmap pixmap = KJSEmbed::extractVariant<QPixmap>(exec, args, 0);
             value.setTexture(pixmap);
-            imp->setValue(qVariantFromValue(value));
+            imp->setValue(QVariant::fromValue(value));
             return result;
         }
     }
@@ -139,7 +139,7 @@ KJS::JSValue *color(KJS::ExecState *exec, KJS::JSObject *self, const KJS::List &
     if (args.size() == 0) {
         const QColor &tmp = value.color();
         result = KJSEmbed::createVariant(exec, "QColor", tmp);
-        imp->setValue(qVariantFromValue(value));
+        imp->setValue(QVariant::fromValue(value));
         return result;
     }
 
@@ -163,13 +163,13 @@ KJS::JSValue *setColor(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Lis
         if (object0 && object0->inherits(&QColorBinding::info)) {
             QColor color = KJSEmbed::extractVariant<QColor>(exec, args, 0);
             value.setColor(color);
-            imp->setValue(qVariantFromValue(value));
+            imp->setValue(QVariant::fromValue(value));
             return result;
         }
         if (object0 && object0->isNumber()) {
             Qt::GlobalColor color = KJSEmbed::extractInteger<Qt::GlobalColor>(exec, args, 0);
             value.setColor(color);
-            imp->setValue(qVariantFromValue(value));
+            imp->setValue(QVariant::fromValue(value));
             return result;
         }
     }
@@ -191,7 +191,7 @@ KJS::JSValue *gradient(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Lis
     if (args.size() == 0) {
         const QGradient *tmp = value.gradient();
         result = KJSEmbed::createValue(exec, "const QGradient *", tmp);
-        imp->setValue(qVariantFromValue(value));
+        imp->setValue(QVariant::fromValue(value));
         return result;
     }
 
@@ -212,7 +212,7 @@ KJS::JSValue *isOpaque(KJS::ExecState *exec, KJS::JSObject *self, const KJS::Lis
     if (args.size() == 0) {
         bool tmp = value.isOpaque();
         result = KJSEmbed::createVariant(exec, "bool", tmp);
-        imp->setValue(qVariantFromValue(value));
+        imp->setValue(QVariant::fromValue(value));
         return result;
     }
 
