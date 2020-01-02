@@ -113,12 +113,12 @@ result = KJSEmbed::createInt(exec, value.saturation());
 END_VARIANT_METHOD
 
 START_VARIANT_METHOD(callDark, QColor)
-QColor darkColor = value.dark(KJSEmbed::extractInt(exec, args, 0, 200));
+QColor darkColor = value.darker(KJSEmbed::extractInt(exec, args, 0, 200));
 result = KJSEmbed::createVariant(exec, "QColor", darkColor);
 END_VARIANT_METHOD
 
 START_VARIANT_METHOD(callLight, QColor)
-QColor darkColor = value.light(KJSEmbed::extractInt(exec, args, 0, 200));
+QColor darkColor = value.lighter(KJSEmbed::extractInt(exec, args, 0, 200));
 result = KJSEmbed::createVariant(exec, "QColor", darkColor);
 END_VARIANT_METHOD
 
