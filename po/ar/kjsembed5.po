@@ -1,0 +1,269 @@
+# translation of kdelibs4.po to Arabic
+# translation of kdelibs4.po to
+# Copyright (C) 2001-2003, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2001,2003.
+# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
+# Hicham Amaoui <amaoui@wanadoo.fr>, 2002.
+# Youcef Rabah Rahal <rahal@arabeyes.org>, 2003.
+# Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2004.
+# Usamah Ali Al-Maqdad <msareehi@kacst.edu.sa>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# Mohamed SAAD <metehyi@free.fr>, 2006.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2009.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009.
+# hanny <hannysabbagh@hotmail.com>, 2012.
+# Abderrahim Kitouni <a.kitouni@gmail.com>, 2012.
+# Safa Alfulaij <safaalfulaij@hotmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 02:57+0200\n"
+"PO-Revision-Date: 2012-01-21 14:59+0100\n"
+"Last-Translator: Abderrahim Kitouni <a.kitouni@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "حصل خطأ عند معالجة ضم  '%1' في السطر %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "يستقبل هذا الضم حجة واحدة فقط، ليس %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "الملف %1 غير موجود"
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "تستقبل هذه المكتبة حجة واحدة فقط، ليس %1."
+
+#: kjsembed/builtins.cpp:137
+#, kde-format
+msgid "Alert"
+msgstr "نبه"
+
+#: kjsembed/builtins.cpp:147
+#, kde-format
+msgid "Confirm"
+msgstr "أكد"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr "مدبر أحداث سيئ: الكائن %1 المعرف %2 الدالة %3 النوع: %4"
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "اعتراض عند مناداة الدالة '%1' من %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "'لا يمكن فتح %1'"
+
+#: kjsembed/fileio.cpp:106
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "لا يمكن إنشاء الملفات."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "ليس %1 بدالة ولا يمكن مناداته."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 ليس بكائن"
+
+#: kjsembed/qaction_binding.cpp:57
+#, kde-format
+msgid "Action takes 2 args."
+msgstr "يأخذ Action حجتين."
+
+#: kjsembed/qaction_binding.cpp:79
+#, kde-format
+msgid "ActionGroup takes 2 args."
+msgstr "يأخذ ActionGroup حجتين."
+
+#: kjsembed/qaction_binding.cpp:84
+#, kde-format
+msgid "Must supply a valid parent."
+msgstr "يجب تقديم مجلد أصلي صحيح."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "حدث خطأ أثناء قراءة '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "لا يمكن قراءة الملفات '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, kde-format
+msgid "Must supply a filename."
+msgstr "يجب توفير اسم ملف."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "ليس بـ QLayout '%1' صالح."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, kde-format
+msgid "Must supply a layout name."
+msgstr "يجب توفير اسم صيغة."
+
+#: kjsembed/qobject_binding.cpp:141
+#, kde-format
+msgid "Wrong object type."
+msgstr "نوع كائن خاطئ."
+
+#: kjsembed/qobject_binding.cpp:148
+#, kde-format
+msgid "First argument must be a QObject."
+msgstr "يجب أن تكون الحجة الأولى QObject."
+
+#: kjsembed/qobject_binding.cpp:182
+#, kde-format
+msgid "Incorrect number of arguments."
+msgstr "عدد خاطئ من الحجج."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] " %1 "
+msgstr[1] "الشق يطلب معامل واحد"
+msgstr[2] "الشق يطلب معاملين"
+msgstr[3] "الشق يطلب %1  معاملات"
+msgstr[4] "الشق يطلب %1  معاملا"
+msgstr[5] "الشق يطلب %1  معامل"
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "لكن لا يوجد أي معامل"
+msgstr[1] "لكن لا يوجد إلا واحد متوفر"
+msgstr[2] "لكن لا يوجد إلا إثنين"
+msgstr[3] "ولكن لا يوجد إلا %1 معاملات"
+msgstr[4] "ولكن لا يوجد إلا %1 معاملا"
+msgstr[5] "ولكن لا يوجد إلا %1 معامل"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1 ، %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "فشل الطرح إلى القيمة %1 من النوع %2 (%3)"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "لا دالة بهذا النوع '%1'."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr "فشلت مناداة الدالة  '%1'، لا يمكن الحصول على الحجة %2: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "فشلت مناداة '%1'."
+
+#: kjsembed/qobject_binding.cpp:793
+#, kde-format
+msgid "Could not construct value"
+msgstr "لا يمكن بناء القيمة"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, kde-format
+msgid "Not enough arguments."
+msgstr "حجج غير كافية."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, kde-format
+msgid "Failed to create Action."
+msgstr "لا يمكن إنشاء الفعل."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, kde-format
+msgid "Failed to create ActionGroup."
+msgstr "لا يمكن إنشاء مجموعة الأفعال ActionGroup."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, kde-format
+msgid "No classname specified"
+msgstr "لم يحدد أي اسم صنف"
+
+#: kjsembed/quiloader_binding.cpp:98
+#, kde-format
+msgid "Failed to create Layout."
+msgstr "لا يمكن إنشاء النسق."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, kde-format
+msgid "No classname specified."
+msgstr "لم يحدد أي اسم صنف."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, kde-format
+msgid "Failed to create Widget."
+msgstr "لا يمكن إنشاء الودج."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "لا يمكن فتح الملف '%1': %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "'فشل تحميل الملف %1'"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' ليس بودج QWidget صالح."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, kde-format
+msgid "Must supply a widget name."
+msgstr "يجب تسمية الودج."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr "مدبر فتحات سيئ:الكائن %1 المعرف %2 الدالة %3 التوقيع: %4"
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "اعتراض عند مناداة '%1' من %2:%3:%4"
