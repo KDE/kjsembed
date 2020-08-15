@@ -32,7 +32,7 @@ find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF5_DEP_VERSION})
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054700)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054900)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 
