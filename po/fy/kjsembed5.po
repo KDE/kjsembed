@@ -1,0 +1,258 @@
+# translation of kdelibs4.po to Nederlands
+# translation of kdelibs4.po to
+# KTranslator Generated File
+# Fryske oersetting fan kdelibs.
+# Copyright (C) 2000,2001,2002,2003 KDE e.v..
+# let op! het bestand bevat ter hoogte van string 2470
+# een gesplitste zinnen die mbv. %1 of %2 weer worden samengevoegd!!
+# Bauke Nicolai <mildaam@hotmail.com>, 2002.
+# KDE-oersetgroep Frysk <frysk@kde.nl>, 2000, 2001, 2002,2003.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007.
+# Berend ytsma <berendy@bigfoot.com>, 2004.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006, 2008.
+# Berend Ytsma <berendy@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 02:57+0200\n"
+"PO-Revision-Date: 2010-07-22 09:48+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KAider 0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
+#, kde-format
+msgid "Error encountered while processing include '%1' line %2: %3"
+msgstr "Flater ûntdutsen by it ferwurkjen fan include '%1' rigel %2: %3"
+
+#: kjsembed/builtins.cpp:87
+#, kde-format
+msgid "include only takes 1 argument, not %1."
+msgstr "include nimt mar 1 argumint, net %1."
+
+#: kjsembed/builtins.cpp:120
+#, kde-format
+msgid "File %1 not found."
+msgstr "Triem %1 waard net fûn."
+
+#: kjsembed/builtins.cpp:125
+#, kde-format
+msgid "library only takes 1 argument, not %1."
+msgstr "biblioteek nimt mar 1 argumint, net %1."
+
+#: kjsembed/builtins.cpp:137
+#, kde-format
+msgid "Alert"
+msgstr "Warskôging"
+
+#: kjsembed/builtins.cpp:147
+#, kde-format
+msgid "Confirm"
+msgstr "Befêstigje"
+
+#: kjsembed/eventproxy.cpp:110
+#, kde-format
+msgid "Bad event handler: Object %1 Identifier %2 Method %3 Type: %4."
+msgstr ""
+"Ferwurker foar barren is net goed: Objekt %1 Namme %2 Metoade %3 Type: %4"
+
+#: kjsembed/eventproxy.cpp:133
+#, kde-format
+msgid "Exception calling '%1' function from %2:%3:%4"
+msgstr "Utsûndering by oanroppe fan funksje '%1' fan %2:%3:%4"
+
+#: kjsembed/fileio.cpp:69
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr "Koe triem '%1' net iepenje"
+
+#: kjsembed/fileio.cpp:106
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "Koe gjin tiidlike triem oanmeitsje."
+
+#: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
+#, kde-format
+msgid "%1 is not a function and cannot be called."
+msgstr "%1 is gjin funksje en kin net oanroppen wurde."
+
+#: kjsembed/object_binding.h:214 kjsembed/qobject_binding.cpp:789
+#, kde-format
+msgid "%1 is not an Object type"
+msgstr "%1 is net in objekttype"
+
+#: kjsembed/qaction_binding.cpp:57
+#, kde-format
+msgid "Action takes 2 args."
+msgstr "Aksje nimt twa arguminten."
+
+#: kjsembed/qaction_binding.cpp:79
+#, kde-format
+msgid "ActionGroup takes 2 args."
+msgstr "Aksjegroep nimt 2 arguminten."
+
+#: kjsembed/qaction_binding.cpp:84
+#, kde-format
+msgid "Must supply a valid parent."
+msgstr "Jo moate in jildige âlder oanleverje."
+
+#: kjsembed/qformbuilder_binding.cpp:56
+#, kde-format
+msgid "There was an error reading the file '%1'"
+msgstr "Der wie in flater by it laden fan triem '%1'"
+
+#: kjsembed/qformbuilder_binding.cpp:64
+#, kde-format
+msgid "Could not read file '%1'"
+msgstr "Koe triem '%1' net lêze."
+
+#: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:124
+#, kde-format
+msgid "Must supply a filename."
+msgstr "Jo moatte in triemnamme oanleverje."
+
+#: kjsembed/qlayout_binding.cpp:87
+#, kde-format
+msgid "'%1' is not a valid QLayout."
+msgstr "'%1' is net in jildich QLayout."
+
+#: kjsembed/qlayout_binding.cpp:93
+#, kde-format
+msgid "Must supply a layout name."
+msgstr "Jo moate in opmaak namme oanleverje."
+
+#: kjsembed/qobject_binding.cpp:141
+#, kde-format
+msgid "Wrong object type."
+msgstr "Ferkearde objekttype."
+
+#: kjsembed/qobject_binding.cpp:148
+#, kde-format
+msgid "First argument must be a QObject."
+msgstr "It earste argumint moat in QObject wêze."
+
+#: kjsembed/qobject_binding.cpp:182
+#, kde-format
+msgid "Incorrect number of arguments."
+msgstr "Unjust oantal fan arguminten."
+
+#: kjsembed/qobject_binding.cpp:410
+#, kde-format
+msgid "The slot asked for %1 argument"
+msgid_plural "The slot asked for %1 arguments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kjsembed/qobject_binding.cpp:411
+#, kde-format
+msgid "but there is only %1 available"
+msgid_plural "but there are only %1 available"
+msgstr[0] "mar der is allinne %1 beskikber"
+msgstr[1] "mar der binne allinne %1 beskikber"
+
+#: kjsembed/qobject_binding.cpp:412
+#, kde-format
+msgctxt ""
+"%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
+"available'"
+msgid "%1, %2."
+msgstr "%1, %2."
+
+#: kjsembed/qobject_binding.cpp:629
+#, kde-format
+msgid "Failure to cast to %1 value from Type %2 (%3)"
+msgstr "Casten nei wearde %1 fan type %2 (%3) is mislearre"
+
+#: kjsembed/qobject_binding.cpp:661
+#, kde-format
+msgid "No such method '%1'."
+msgstr "Der is net in '%1' metoade."
+
+#: kjsembed/qobject_binding.cpp:690
+#, kde-format
+msgid "Call to method '%1' failed, unable to get argument %2: %3"
+msgstr ""
+"Oanroppe fan metoade '%1' is mislearre, kin argumint %2 net ûntfange: %3"
+
+#: kjsembed/qobject_binding.cpp:727
+#, kde-format
+msgid "Call to '%1' failed."
+msgstr "Oanrop nei '%1' mislearre."
+
+#: kjsembed/qobject_binding.cpp:793
+#, kde-format
+msgid "Could not construct value"
+msgstr "Koe de wearde net opbouwe"
+
+#: kjsembed/quiloader_binding.cpp:49
+#, kde-format
+msgid "Not enough arguments."
+msgstr "Net genôch arguminten."
+
+#: kjsembed/quiloader_binding.cpp:68
+#, kde-format
+msgid "Failed to create Action."
+msgstr "Koe de aksje net meitsje."
+
+#: kjsembed/quiloader_binding.cpp:82
+#, kde-format
+msgid "Failed to create ActionGroup."
+msgstr "Koe de aksjegroep net meitsje."
+
+#: kjsembed/quiloader_binding.cpp:90
+#, kde-format
+msgid "No classname specified"
+msgstr "Gjin classname oantsjutte."
+
+#: kjsembed/quiloader_binding.cpp:98
+#, kde-format
+msgid "Failed to create Layout."
+msgstr "Koe de opmaak net meitsje."
+
+#: kjsembed/quiloader_binding.cpp:107
+#, kde-format
+msgid "No classname specified."
+msgstr "Gjin classname oantsjutte."
+
+#: kjsembed/quiloader_binding.cpp:115
+#, kde-format
+msgid "Failed to create Widget."
+msgstr "Koe de Widget net meitsje."
+
+#: kjsembed/quiloader_binding.cpp:129
+#, kde-format
+msgid "Could not open file '%1': %2"
+msgstr "Koe triem '%1' net iepenje: %2"
+
+#: kjsembed/quiloader_binding.cpp:137
+#, kde-format
+msgid "Failed to load file '%1'"
+msgstr "It mislearre om triem '%1' te laden"
+
+#: kjsembed/qwidget_binding.cpp:161
+#, kde-format
+msgid "'%1' is not a valid QWidget."
+msgstr "'%1' is net in jildich QWidget."
+
+#: kjsembed/qwidget_binding.cpp:170
+#, kde-format
+msgid "Must supply a widget name."
+msgstr "Jo moate in widgetnamme oanleverje."
+
+#: kjsembed/slotproxy.cpp:117
+#, kde-format
+msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
+msgstr ""
+"Ferwurker fan slot is net goed: objekt %1 namme %2 metoade %3 hântekening: "
+"%4."
+
+#: kjsembed/slotproxy.cpp:140
+#, kde-format
+msgid "Exception calling '%1' slot from %2:%3:%4"
+msgstr "Utsûndering by oanroppen fan slot '%1' fan %2:%3:%4"
