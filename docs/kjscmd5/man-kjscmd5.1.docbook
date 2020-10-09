@@ -31,7 +31,7 @@
 
 <refnamediv>
 <refname><command>kjscmd5</command></refname>
-<refpurpose>Frameworks KJSEmbed interpreter</refpurpose>
+<refpurpose>&frameworks; KJSEmbed interpreter</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -71,7 +71,7 @@ It does not accept - (stdin) as a <parameter>file</parameter>.
 <term><option>-e</option>,<option>--exec</option></term>
 <listitem>
 <para>
-execute script in <parameter>file</parameter> without gui support.
+execute script in <parameter>file</parameter> without &GUI; support.
 </para>
 </listitem>
 </varlistentry>
@@ -107,7 +107,7 @@ script that measures the start speed of <command>kjscmd5</command>.
 
 <refsect1>
 <title>Bugs</title>
-<para>Please use <ulink url="http://bugs.kde.org">KDE's bugtracker</ulink> to report bugs.</para>
+<para>Please use <ulink url="https://bugs.kde.org">&kde;'s bugtracker</ulink> to report bugs.</para>
 </refsect1>
 
 </refentry>
