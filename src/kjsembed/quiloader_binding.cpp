@@ -26,7 +26,6 @@
 #include <QDebug>
 
 #include "qwidget_binding.h"
-#include "qobject_binding.h"
 #include "qaction_binding.h"
 #include "qlayout_binding.h"
 #include "static_binding.h"

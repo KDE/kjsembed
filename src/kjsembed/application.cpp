@@ -22,7 +22,6 @@
 #include "application.h"
 
 #include <QDebug>
-#include <QApplication>
 #include <QStringList>
 using namespace KJSEmbed;
 

@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 #include "value_binding.h"
-#include "static_binding.h"
 
 using namespace KJSEmbed;
 

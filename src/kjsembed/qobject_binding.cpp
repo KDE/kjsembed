@@ -29,7 +29,6 @@
 #include <QVariant>
 #include <QVector>
 #include <QUrl>
-#include <QDebug>
 #include <QWidget>
 
 #include "slotproxy.h"

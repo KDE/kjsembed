@@ -25,8 +25,6 @@
 #include <QArgument>
 #include <QDebug>
 
-#include "static_binding.h"
-#include "variant_binding.h"
 
 using namespace KJSEmbed;
 

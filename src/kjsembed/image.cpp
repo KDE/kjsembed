@@ -20,7 +20,6 @@
     Boston, MA 02110-1301, USA.
 */
 #include "image.h"
-#include "variant_binding.h"
 #include "object_binding.h"
 
 #include <QDebug>

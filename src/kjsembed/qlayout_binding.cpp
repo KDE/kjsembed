@@ -28,7 +28,6 @@
 
 #include <QWidget>
 #include <QAction>
-#include <QLayout>
 #include <QtUiTools/QUiLoader>
 
 namespace KJSEmbed

@@ -35,7 +35,6 @@
 #include <QWidget>
 
 #include "kjseglobal.h"
-#include "static_binding.h"
 #include "qobject_binding.h"
 
 //#define KJSEMBED_VARIANT_DEBUG

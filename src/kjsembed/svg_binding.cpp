@@ -21,12 +21,10 @@
 */
 #include "svg_binding.h"
 
-#include <QtSvg/QSvgWidget>
 #include <QDebug>
 
 #include <kjs/object.h>
 
-#include "qwidget_binding.h"
 #include "static_binding.h"
 #include "kjseglobal.h"
 
