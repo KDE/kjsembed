@@ -131,7 +131,7 @@
                                      {
 
 #define END_METHOD_LUT \
-    ,{0, 0, 0, 0 }\
+    ,{nullptr, 0, 0, nullptr }\
     };
 
 #define START_ENUM_LUT( TYPE) \
@@ -139,22 +139,22 @@
                                       {
 
 #define END_ENUM_LUT \
-    ,{0, 0 }\
+    ,{nullptr, 0 }\
     };
 
 #define NO_ENUMS( TYPE ) \
-    const Enumerator TYPE::p_enums[] = {{0, 0 }};
+    const Enumerator TYPE::p_enums[] = {{nullptr, 0 }};
 
 #define NO_METHODS( TYPE )\
-    const Method TYPE::p_methods[] = { {0, 0, 0, 0 } };
+    const Method TYPE::p_methods[] = { {nullptr, 0, 0, nullptr } };
 
 #define NO_STATICS( TYPE )\
-    const Method TYPE::p_statics[] = { {0, 0, 0, 0 } };
+    const Method TYPE::p_statics[] = { {nullptr, 0, 0, nullptr } };
 
 #define START_CTOR( TYPE, JSNAME, ARGS )\
     const Constructor TYPE::p_constructor = \
                                             { \
-                                              #JSNAME, ARGS, KJS::DontDelete|KJS::ReadOnly, 0, &TYPE::ctorMethod, p_statics, p_enums, p_methods };\
+                                              #JSNAME, ARGS, KJS::DontDelete|KJS::ReadOnly, nullptr, &TYPE::ctorMethod, p_statics, p_enums, p_methods };\
     KJS::JSObject *TYPE::ctorMethod( KJS::ExecState *exec, const KJS::List &args )\
     {\
         Q_UNUSED(exec);\
@@ -190,10 +190,10 @@
         Q_UNUSED(exec);\
         QObject* qobj = pointer_cast<QObject>(&ptrObj); \
         if (! qobj ) \
-            return 0; \
+            return nullptr; \
         TYPE* object = qobject_cast<TYPE*>(qobj); \
         if (! object ) \
-            return 0; \
+            return nullptr; \
          
 #define KJSO_QOBJECT_END_BIND \
     }
@@ -204,10 +204,10 @@
         Q_UNUSED(exec);\
         QObject* qobj = pointer_cast<QObject>(&ptrObj); \
         if (! qobj ) \
-            return 0; \
+            return nullptr; \
         TYPE* object = qobject_cast<TYPE*>(qobj); \
         if (! object ) \
-            return 0; \
+            return nullptr; \
         return new NAME(exec, object); \
     }
 
@@ -217,7 +217,7 @@
         Q_UNUSED(exec);\
         TYPE* object = pointer_cast<TYPE>(&ptrObj); \
         if (! object ) \
-            return 0; \
+            return nullptr; \
          
 #define KJSO_VALUE_END_BIND \
     }
@@ -228,7 +228,7 @@
         Q_UNUSED(exec);\
         TYPE* object = pointer_cast<TYPE>(&ptrObj); \
         if (! object ) \
-            return 0; \
+            return nullptr; \
         return new NAME(exec, *object); \
     }
 
