@@ -39,13 +39,13 @@ KJS::JSValue *callPrint(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJ
 
 KJS::JSValue *callPrintLn(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
-    (*KJSEmbed::conout()) << toQString(args[0]->toString(exec)) << endl;
+    (*KJSEmbed::conout()) << toQString(args[0]->toString(exec)) << Qt::endl;
     return KJS::jsNull();
 }
 
 KJS::JSValue *callDebug(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
-    //(*KJSEmbed::conerr())  << "Debug: " << toQString(args[0]->toString(exec)) << endl;
+    //(*KJSEmbed::conerr())  << "Debug: " << toQString(args[0]->toString(exec)) << Qt::endl;
     qDebug()  << "Debug: " << toQString(args[0]->toString(exec));
     return KJS::jsNull();
 }

@@ -130,7 +130,7 @@ bool EventProxy::callHandler(QEvent *e)
             QString sourceURL = toQString(exceptObj->get(exec, "sourceURL")->toString(exec));
             int sourceId = exceptObj->get(exec, "sourceId")->toUInt32(exec);
             int line = exceptObj->get(exec, "line")->toUInt32(exec);
-            (*KJSEmbed::conerr()) << i18n("Exception calling '%1' function from %2:%3:%4", id.ascii(), !sourceURL.isEmpty() ? sourceURL : QString::number(sourceId), line, message) << endl;
+            (*KJSEmbed::conerr()) << i18n("Exception calling '%1' function from %2:%3:%4", id.ascii(), !sourceURL.isEmpty() ? sourceURL : QString::number(sourceId), line, message) << Qt::endl;
         }
 
         // clear it so it doesn't stop other things

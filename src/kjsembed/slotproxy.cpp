@@ -137,7 +137,7 @@ KJS::JSValue *SlotProxy::callMethod(const QByteArray &methodName, void **_a)
             int sourceId = exceptObj->get(exec, "sourceId")->toUInt32(exec);
             // would include the line number, but it's always last line of file
             int line = exceptObj->get(exec, "line")->toUInt32(exec);
-            (*KJSEmbed::conerr()) << i18n("Exception calling '%1' slot from %2:%3:%4", QString(methodName), !sourceURL.isEmpty() ? sourceURL : QString::number(sourceId), line, message) << endl;
+            (*KJSEmbed::conerr()) << i18n("Exception calling '%1' slot from %2:%3:%4", QString(methodName), !sourceURL.isEmpty() ? sourceURL : QString::number(sourceId), line, message) << Qt::endl;
         }
 
         // clear it so it doesn't stop other things

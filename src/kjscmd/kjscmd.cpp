@@ -36,11 +36,11 @@ using namespace KJSEmbed;
 
 void printUsage(QString appName)
 {
-    (*KJSEmbed::conerr()) << "Usage: " << appName << " [options] [file]" << endl
-                          << "Options:" << endl
-                          << "    -e, --exec            execute script without gui support." << endl
-                          << "    -i, --interactive     start interactive kjs interpreter." << endl
-                          << endl;
+    (*KJSEmbed::conerr()) << "Usage: " << appName << " [options] [file]" << Qt::endl
+                          << "Options:" << Qt::endl
+                          << "    -e, --exec            execute script without gui support." << Qt::endl
+                          << "    -i, --interactive     start interactive kjs interpreter." << Qt::endl
+                          << Qt::endl;
 }
 
 int main(int argc, char **argv)
@@ -132,7 +132,7 @@ int main(int argc, char **argv)
 
     if (result != Engine::Success) {
         KJS::Completion jsres = kernel.completion();
-        (*KJSEmbed::conerr()) << toQString(jsres.value()->toString(exec)) << endl;
+        (*KJSEmbed::conerr()) << toQString(jsres.value()->toString(exec)) << Qt::endl;
     }
     return (int)result;
 }
