@@ -32,7 +32,7 @@ find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF_DEP_VERSION})
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054B00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 # remove definitions set by KDEFrameworkCompilerSettings which we fail to meet
 remove_definitions(-DQT_NO_KEYWORDS)
 remove_definitions(-DQT_NO_FOREACH)
