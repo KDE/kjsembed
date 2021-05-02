@@ -53,7 +53,7 @@ target_link_libraries(KF5JsEmbed
 )
 add_library(KF5::JsEmbed ALIAS KF5JsEmbed)
 
-set_target_properties(KF5JsEmbed PROPERTIES VERSION   "${KJSEMBED_VERSION_STRING}"
+set_target_properties(KF5JsEmbed PROPERTIES VERSION   "${KJSEMBED_VERSION}"
                                             SOVERSION "${KJSEMBED_SOVERSION}"
                                             EXPORT_NAME JsEmbed
 )
