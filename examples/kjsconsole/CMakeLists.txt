@@ -6,7 +6,7 @@ set(console_SRCS
 )
 
 ki18n_wrap_ui(console_SRCS jsconsole.ui)
-qt5_add_resources(console_SRCS console.qrc )
+qt_add_resources(console_SRCS console.qrc )
 add_executable(kjsconsole ${console_SRCS})
 target_link_libraries(kjsconsole KF5::JsEmbed Qt5::Widgets)
 
