@@ -32,7 +32,7 @@
 #include "static_binding.h"
 
 /**
-* A simple variant syle method.
+* A simple variant style method.
 * This will extract the QVariant, cast it to the native type and place it in "value".
 * Any data that should be returned from this method should be placed into "result";
 *
@@ -220,7 +220,7 @@ QMap<QString, QVariant> KJSEMBED_EXPORT convertArrayToMap(KJS::ExecState *exec, 
 QList<QVariant> KJSEMBED_EXPORT convertArrayToList(KJS::ExecState *exec, KJS::JSValue *value);
 
 /**
-* Convert a KJS::JSValue inot a QStringList. @see convertArrayToList.
+* Convert a KJS::JSValue into a QStringList. @see convertArrayToList.
 */
 QStringList KJSEMBED_EXPORT convertArrayToStringList(KJS::ExecState *exec, KJS::JSValue *value);
 

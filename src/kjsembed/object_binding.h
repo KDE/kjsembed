@@ -29,7 +29,7 @@
 #include "kjseglobal.h"
 
 /**
-* A simple pointer syle method.
+* A simple pointer style method.
 * This will extract the pointer, cast it to the native type and place it in "value".
 * Any data that should be returned from this method should be placed into "result";
 *

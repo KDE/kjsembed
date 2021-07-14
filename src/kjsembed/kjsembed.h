@@ -125,7 +125,7 @@ public:
     KJS::JSObject *construct(const KJS::UString &className, const KJS::List &args = KJS::List()) const;
 
     /**
-    * Execute a method at the global scope of the javascript interperter.
+    * Execute a method at the global scope of the javascript interpreter.
     */
     KJS::JSValue *callMethod(const KJS::UString &methodName, const KJS::List &args = KJS::List());
 

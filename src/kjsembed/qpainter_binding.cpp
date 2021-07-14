@@ -51,9 +51,9 @@ QPaintDevice *extractPaintDevice(KJS::ExecState *exec, KJS::JSValue *arg)
 #warning There be dragons here...
 #endif
         /**
-         * Because of something odd with multiple inheritence and qobject cast
+         * Because of something odd with multiple inheritance and qobject cast
          * we need to first cast it to a QObject, then cast it to a QWidget.
-         * All other paint devices in Qt that are objects are single inheritence
+         * All other paint devices in Qt that are objects are single inheritance
          * so dynamic_cast will work properly.
          */
         QObject *qobject = imp->object<QObject>();

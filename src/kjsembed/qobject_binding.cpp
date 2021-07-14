@@ -550,7 +550,7 @@ PointerBase *getArg(KJS::ExecState *exec, const QList<QByteArray> &types, const 
                     return new Value<void *>(valImp->variant().data());
                 } else if ((var.type() != QVariant::UserType) &&
                            var.canConvert(varianttype)) {
-                    // is convertable type, so convert it, and return if successful
+                    // is convertible type, so convert it, and return if successful
                     if (var.convert(varianttype)) {
                         return new Value<void *>(valImp->variant().data());
                     }

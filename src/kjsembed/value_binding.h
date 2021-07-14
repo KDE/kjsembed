@@ -30,7 +30,7 @@
 #include "pointer.h"
 
 /**
-* A simple variant syle method.
+* A simple variant style method.
 * This will extract the value, cast it to the native type and place it in "value".
 * Any data that should be returned from this method should be placed into "result";
 *
