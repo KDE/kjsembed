@@ -246,7 +246,7 @@ class KJSEMBED_EXPORT ProxyBinding : public KJS::JSObject
 {
 public:
     ProxyBinding(KJS::ExecState *exec);
-    virtual ~ProxyBinding() {}
+    ~ProxyBinding() override {}
 
     bool implementsCall() const override
     {

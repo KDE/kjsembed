@@ -90,7 +90,7 @@ public:
     * Create a new binding implementation with a QVariant to wrap
     */
     VariantBinding(KJS::ExecState *exec, const QVariant &value);
-    virtual ~VariantBinding() {}
+    ~VariantBinding() override {}
 
     void *pointer();
 

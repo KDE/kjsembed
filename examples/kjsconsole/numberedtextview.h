@@ -39,7 +39,7 @@ class NumberBar : public QWidget
 
 public:
     NumberBar(QWidget *parent);
-    ~NumberBar();
+    ~NumberBar() override;
 
     void setCurrentLine(int lineno);
     void setStopLine(int lineno);
@@ -80,7 +80,7 @@ class NumberedTextView : public QFrame
     Q_PROPERTY(int bugLine READ bugLine WRITE setBugLine)
 public:
     NumberedTextView(QWidget *parent = nullptr);
-    ~NumberedTextView();
+    ~NumberedTextView() override;
 
     /** Returns the QTextEdit of the main view. */
     QTextEdit *textEdit() const

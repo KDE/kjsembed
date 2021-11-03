@@ -110,7 +110,7 @@ public:
         StaticBinding::publish(exec, this, ValueFactory::methods());
     }
     ValueBinding(KJS::ExecState *exec, const char *typeName);
-    virtual ~ValueBinding();
+    ~ValueBinding() override;
 
     KJS::UString toString(KJS::ExecState *exec) const override;
     KJS::UString className() const override

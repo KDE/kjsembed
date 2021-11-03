@@ -33,7 +33,7 @@ class Console : public QMainWindow
     Q_OBJECT
 public:
     Console(QWidget *parent = nullptr);
-    ~Console();
+    ~Console() override;
 
 public Q_SLOTS:
     void on_mExecute_clicked();

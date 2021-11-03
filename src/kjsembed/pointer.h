@@ -48,7 +48,7 @@ public:
     {
 //         qDebug("new pointer %s %0x", typeid(ValueType).name(), value);
     }
-    ~Pointer()
+    ~Pointer() override
     {
 
     }
@@ -78,7 +78,7 @@ public:
     {
         //qDebug("new value %s", typeid(ValueType).name());
     }
-    ~Value()
+    ~Value() override
     {
         //qDebug("delete value");
     }
@@ -106,7 +106,7 @@ struct NullPtr : public PointerBase {
     {
         ;
     }
-    ~NullPtr()
+    ~NullPtr() override
     {
         ;
     }

@@ -37,7 +37,7 @@ class KJSObjectModel : public QAbstractItemModel
     Q_OBJECT
 public:
     explicit KJSObjectModel(KJS::Interpreter *js, QObject *parent = nullptr);
-    ~KJSObjectModel();
+    ~KJSObjectModel() override;
 
     QVariant data(const QModelIndex &index, int role) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;

@@ -43,7 +43,7 @@ class KJSEMBED_EXPORT SlotProxy : public QObject
 {
 public:
     SlotProxy(KJS::JSObject *obj, KJS::Interpreter *interpreter, QObject *parent, const QByteArray &signature);
-    ~SlotProxy();
+    ~SlotProxy() override;
     //Meta object stuff
     QMetaObject staticMetaObject;
     const QMetaObject *metaObject() const override;

@@ -108,7 +108,7 @@ public:
         m_value = new Pointer<T>(ptr);
     }
 
-    virtual ~ObjectBinding();
+    ~ObjectBinding() override;
 
     const char *typeName() const;
 

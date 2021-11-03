@@ -44,7 +44,7 @@ class EventProxy : public QObject
 {
 public:
     EventProxy(QObjectBinding *watch, KJS::Interpreter *interpreter);
-    ~EventProxy();
+    ~EventProxy() override;
 
     /** Returns true iff we forward the event type to JS. */
     bool isFiltered(QEvent::Type t) const;

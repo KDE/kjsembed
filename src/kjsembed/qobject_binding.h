@@ -78,7 +78,7 @@ class KJSEMBED_EXPORT QObjectBinding : public ObjectBinding
 public:
 
     QObjectBinding(KJS::ExecState *exec, QObject *object);
-    virtual ~QObjectBinding();
+    ~QObjectBinding() override;
 
     static void publishQObject(KJS::ExecState *exec, KJS::JSObject *target, QObject *object);
 
