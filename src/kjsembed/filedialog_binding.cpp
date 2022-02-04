@@ -22,7 +22,6 @@
 #include "filedialog_binding.h"
 
 #include <QStringList>
-#include <QProcess>
 #include <QFileDialog>
 #include <QDebug>
 

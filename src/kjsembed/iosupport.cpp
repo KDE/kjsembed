@@ -25,6 +25,7 @@
 
 #include <kjs/object.h>
 #include <QDebug>
+#include <QStandardPaths>
 
 #include <QStringList>
 #include <QProcess>
@@ -60,12 +61,17 @@ KJS::JSValue *callReadLine(KJS::ExecState *exec, KJS::JSObject * /*self*/, const
 
 KJS::JSValue *callSystem(KJS::ExecState *exec, KJS::JSObject * /*self*/, const KJS::List &args)
 {
-    QProcess systemProcess;
     QStringList processArgs = toQString(args[0]->toString(exec)).split(' ');
     QString app = processArgs[0];
     processArgs.pop_front();
 
-    systemProcess.start(app, processArgs);
+    const QString executable = QStandardPaths::findExecutable(app);
+    if (executable.isEmpty()) {
+        return KJS::throwError(exec, KJS::GeneralError, "Could not find appliction.");
+    }
+
+    QProcess systemProcess;
+    systemProcess.start(executable, processArgs);
     if (!systemProcess.waitForStarted()) {
         return KJS::throwError(exec, KJS::GeneralError, "Application could not start.");
     }
