@@ -20,6 +20,7 @@ include(ECMGenerateHeaders)
 include(ECMDeprecationSettings)
 include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
+include(ECMMarkNonGuiExecutable)
 
 set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt5 "${REQUIRED_QT_VERSION}" CONFIG REQUIRED UiTools Widgets Xml Svg)
