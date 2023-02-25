@@ -49,7 +49,7 @@
 >kjscmd5</command
 ></refname>
 <refpurpose
->Interpretador Frameworks KJSEmbed</refpurpose>
+>Interpretador &frameworks; KJSEmbed</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -108,7 +108,7 @@
 <para
 >executar o programa no <parameter
 >arquivo</parameter
-> sem o suporte gráfico. </para>
+> sem o suporte de &GUI;. </para>
 </listitem>
 </varlistentry>
 
@@ -166,7 +166,7 @@
 >Problemas</title>
 <para
 >Use o <ulink url="http://bugs.kde.org"
->sistema de gerenciamento de erros do KDE</ulink
+>rastreador de erros do &kde;</ulink
 > para relatar erros.</para>
 </refsect1>
 
