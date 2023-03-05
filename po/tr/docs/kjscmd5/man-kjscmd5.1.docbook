@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY % French "INCLUDE"
+  <!ENTITY % Turkish "INCLUDE"
 ><!-- change language only here -->
 ]>
 
@@ -8,7 +8,7 @@
 
 <refentryinfo>
 <title
->Manuel utilisateur de « kjscmd5 »</title>
+>kjscmd5 Kullanıcı Kılavuzu</title>
 
 <!-- with help from http://linuxcommand.org/man_pages/kjscmd1.html -->
 
@@ -26,11 +26,11 @@
 </author>
 
 <date
->31-07-2015</date>
+>2015-07-31</date>
 <releaseinfo
->Environnement de développement 5.13</releaseinfo>
+>Frameworks 5.13</releaseinfo>
 <productname
->Environnement de développement pour KDE</productname>
+>KDE Frameworks</productname>
 
 </refentryinfo>
 
@@ -49,12 +49,12 @@
 >kjscmd5</command
 ></refname>
 <refpurpose
->Interpréteur « KJSEmbed » de l'environnement de développement &frameworks;</refpurpose>
+>&frameworks; KJSEmbed yorumlayıcı</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
 <title
->Synopsis</title>
+>Özet</title>
 
 <cmdsynopsis
 ><command
@@ -80,21 +80,21 @@
 
 <refsect1>
 <title
->Description</title>
+>Açıklama</title>
 
 <para
 ><command
 >kjscmd5</command
-> est un outil permettant de lancer des scripts « KJSEmbed » depuis la ligne de commandes. Il exécutera les scripts contenus dans le <parameter
->fichier</parameter
-> nommé en utilisant « KJSEmbed ». Il n'accepte pas - (stdin) comme <parameter
->fichier</parameter
->. </para>
+>, komut satırından KJSEmbed betikleri başlatmak için kullanılan bir araçtır. KJSEmbed kullanarak adı verilen<parameter
+>dosya</parameter
+> içindeki betikleri çalıştırır. Bir <parameter
+>dosya</parameter
+> olarak - (stdin) kabul etmez. </para>
 </refsect1>
 
 <refsect1>
 <title
->Options de l'Application</title>
+>Uygulama Seçenekleri</title>
 <variablelist>
 
 <varlistentry>
@@ -106,9 +106,9 @@
 ></term>
 <listitem>
 <para
->exécuter le script contenu dans le <parameter
->fichier</parameter
-> sans prise en charge d'interface graphique. </para>
+><parameter
+>dosya</parameter
+> içindeki betiği grafik arabirim desteği olmadan yürüt. </para>
 </listitem>
 </varlistentry>
 
@@ -121,9 +121,9 @@
 ></term>
 <listitem>
 <para
->lance l'interpréteur interactif <command
+>etkileşimli <command
 >kjs</command
->.</para>
+> yorumlayıcısını başlat.</para>
 </listitem>
 </varlistentry>
 
@@ -133,28 +133,28 @@
 
 <refsect1>
 <title
->Utilisation</title>
+>Kullanım</title>
 <para
->La façon la plus fréquente de lancer <command
->kjscmd5</command
-> est simplement de lancer <literallayout
-><parameter
-> le fichier</parameter
-><userinput
 ><command
 >kjscmd5</command
-> </userinput>
-</literallayout
-> Si aucun paramètre <parameter
->fichier</parameter
-> n'est saisi, il exécute le script de test prédéfini permettant de mesurer la vitesse de démarrage de<command
+>'i kullanmanın en kısa yolu:<literallayout>
+<userinput
+><command
 >kjscmd5</command
->. </para>
+> <parameter
+>dosya</parameter>
+</userinput>
+</literallayout
+> Parametre olmadan <parameter
+>file</parameter
+> kullanılırsa <command
+>kjscmd5</command
+>'ın başlangıç hızını ölçen önceden tanımlanmış bir sınama betiğini yürütür. </para>
 </refsect1>
 
 <refsect1>
 <title
->Voir Aussi</title>
+>Ayrıca</title>
 <para
 ><replaceable
 >kjs5</replaceable
@@ -163,11 +163,11 @@
 
 <refsect1>
 <title
->Bogues</title>
+>Hatalar</title>
 <para
->Veuillez utiliser le <ulink url="https://bugs.kde.org"
->traqueur de bogues</ulink
-> pour les signaler.</para>
+>Hataları bildirmek için lütfen <ulink url="https://bugs.kde.org"
+>&kde;'nin hata izleyicisini</ulink
+> kullanın.</para>
 </refsect1>
 
 </refentry>
