@@ -12,10 +12,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kdelibs4\n"
+"Project-Id-Version: kjsembed\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-10-24 02:12+0200\n"
-"PO-Revision-Date: 2023-01-05 10:00+0100\n"
+"PO-Revision-Date: 2023-06-09 20:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -144,8 +144,8 @@ msgstr "Malĝusta nombro de argumentoj."
 #, kde-format
 msgid "The slot asked for %1 argument"
 msgid_plural "The slot asked for %1 arguments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "La fendo postulis %1 argumenton"
+msgstr[1] "La fendo postulis %1 argumentojn"
 
 #: kjsembed/qobject_binding.cpp:410
 #, kde-format
@@ -246,7 +246,7 @@ msgstr "Devas doni nomon por la fenestraĵo."
 #, kde-format
 msgid "Bad slot handler: Object %1 Identifier %2 Method %3 Signature: %4."
 msgstr ""
-"Malbona fakotraktilo: Objekto %1 Identigilo %2 Metodo %3 Subskribo: %4."
+"Malbona fendotraktilo: Objekto %1 Identigilo %2 Metodo %3 Subskribo: %4."
 
 #: kjsembed/slotproxy.cpp:140
 #, kde-format
