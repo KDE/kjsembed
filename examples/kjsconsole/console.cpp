@@ -143,3 +143,4 @@ void Console::on_actionStop_activated()
 {
 }
 
+#include "moc_console.cpp"
