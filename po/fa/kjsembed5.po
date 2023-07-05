@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: kjsembed/builtins.cpp:83 kjsembed/builtins.cpp:117
 #, kde-format
@@ -142,12 +142,14 @@ msgstr "تعداد نادرست نشاوندها."
 msgid "The slot asked for %1 argument"
 msgid_plural "The slot asked for %1 arguments"
 msgstr[0] ""
+msgstr[1] ""
 
 #: kjsembed/qobject_binding.cpp:410
-#, kde-format
+#, fuzzy, kde-format
 msgid "but there is only %1 available"
 msgid_plural "but there are only %1 available"
 msgstr[0] "اما فقط %1 در دسترس است"
+msgstr[1] ""
 
 # %1 %2
 #: kjsembed/qobject_binding.cpp:411
