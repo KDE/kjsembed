@@ -9,7 +9,7 @@ platforms:
     - name: macOS
 portingAid: true
 deprecated: true
-release: true
+release: false
 framework-dependencies:
   - KDocTools
 libraries:
