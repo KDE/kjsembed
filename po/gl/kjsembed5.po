@@ -69,12 +69,12 @@ msgstr "Houbo unha excepción ao chamar a función «%1» desde %2:%3:%4"
 #: kjsembed/fileio.cpp:69
 #, kde-format
 msgid "Could not open file '%1'"
-msgstr "Non se puido abrir o ficheiro «%1»"
+msgstr "Non foi posíbel abrir o ficheiro «%1»"
 
 #: kjsembed/fileio.cpp:106
 #, kde-format
 msgid "Could not create temporary file."
-msgstr "Non se puido crear o ficheiro temporal."
+msgstr "Non foi posíbel crear o ficheiro temporal."
 
 #: kjsembed/kjsembed.cpp:275 kjsembed/kjsembed.cpp:298
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Produciuse un erro ao ler o ficheiro «%1»"
 #: kjsembed/qformbuilder_binding.cpp:64
 #, kde-format
 msgid "Could not read file '%1'"
-msgstr "Non se puido ler o ficheiro «%1»"
+msgstr "Non foi posíbel ler o ficheiro «%1»"
 
 #: kjsembed/qformbuilder_binding.cpp:67 kjsembed/quiloader_binding.cpp:123
 #, kde-format
@@ -196,12 +196,12 @@ msgstr "Non hai argumentos de abondo."
 #: kjsembed/quiloader_binding.cpp:67
 #, kde-format
 msgid "Failed to create Action."
-msgstr "Non se puido crear a Acción."
+msgstr "Non foi posíbel crear a Acción."
 
 #: kjsembed/quiloader_binding.cpp:81
 #, kde-format
 msgid "Failed to create ActionGroup."
-msgstr "Non se puido crear o Grupo de accións."
+msgstr "Non foi posíbel crear o Grupo de accións."
 
 #: kjsembed/quiloader_binding.cpp:89
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Non se indicou o nome da clase"
 #: kjsembed/quiloader_binding.cpp:97
 #, kde-format
 msgid "Failed to create Layout."
-msgstr "Non se puido crear a Disposición."
+msgstr "Non foi posíbel crear a Disposición."
 
 #: kjsembed/quiloader_binding.cpp:106
 #, kde-format
@@ -221,17 +221,17 @@ msgstr "Non se indicou o nome da clase."
 #: kjsembed/quiloader_binding.cpp:114
 #, kde-format
 msgid "Failed to create Widget."
-msgstr "Non se puido crear o Trebello."
+msgstr "Non foi posíbel crear o Trebello."
 
 #: kjsembed/quiloader_binding.cpp:128
 #, kde-format
 msgid "Could not open file '%1': %2"
-msgstr "Non se puido abrir o ficheiro «%1»: %2"
+msgstr "Non foi posíbel abrir o ficheiro «%1»: %2"
 
 #: kjsembed/quiloader_binding.cpp:136
 #, kde-format
 msgid "Failed to load file '%1'"
-msgstr "Non se puido cargar o ficheiro «%1»"
+msgstr "Non foi posíbel cargar o ficheiro «%1»"
 
 #: kjsembed/qwidget_binding.cpp:161
 #, kde-format
