@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Slovenian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>kjscmd5 Uporabniški priročnik</title>
+
+<!-- with help from http://linuxcommand.org/man_pages/kjscmd1.html -->
+
+<author
+><firstname
+>Harri</firstname
+> <surname
+>Porten</surname
+> <affiliation
+> <address
+><email
+>porten@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<date
+>31.07.2015</date>
+<releaseinfo
+>Frameworks 5.13</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>kjscmd5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>kjscmd5</command
+></refname>
+<refpurpose
+>&frameworks; Tolmač KJSEmbed</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>Sinopsis</title>
+
+<cmdsynopsis
+><command
+>kjscmd5</command
+> <arg choice="opt"
+>--help</arg
+> <group
+> <arg choice="opt"
+>-e</arg
+> <arg choice="opt"
+>-- exec</arg
+> </group
+> <group
+> <arg choice="opt"
+>-i</arg
+> <arg choice="opt"
+>-interactive</arg
+> </group
+> <arg choice="opt "
+>datoteka</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Opis</title>
+
+<para
+><command
+>kjscmd5</command
+> je orodje za zagon skriptov KJSEmbed iz ukazne vrstice. Zagnal bo skripte v imenovani <parameter
+>datoteki</parameter
+> z uporabo KJSEmbed. Ne sprejema - (stdin) kot <parameter
+>datoteke</parameter
+>. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Možnosti aplikacije</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>-e</option
+>,<option
+>--exec</option
+></term>
+<listitem>
+<para
+>izvede skript v <parameter
+>datoteki</parameter
+> brez &GUI; podpore. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-i</option
+>,<option
+>--interactive</option
+></term>
+<listitem>
+<para
+>zaženi interaktivni tolmač <command
+>kjs</command
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Uporaba</title>
+<para
+>Najpogostejši način za zagon <command
+>kjscmd5</command
+> je preprosto kot <literallayout>
+<userinput
+><command
+>kjscmd5</command
+> <parameter
+>file</parameter>
+</userinput>
+</literallayout
+> Če parametra ni <parameter
+>datoteka</parameter
+> se uporablja, izvede vnaprej določen preskusni skript, ki meri začetno hitrost <command
+>kjscmd5</command
+>. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Poglejte tudi</title>
+<para
+><replaceable
+>kjs5</replaceable
+>(1)</para>
+</refsect1>
+
+<refsect1>
+<title
+>Napake</title>
+<para
+>Za poročanje o napakah uporabite <ulink url="https://bugs.kde.org"
+>&kde;jev sledilnik napak</ulink
+>.</para>
+</refsect1>
+
+</refentry>
+
+
+
