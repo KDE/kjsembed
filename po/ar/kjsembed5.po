@@ -175,7 +175,7 @@ msgctxt ""
 "%1 is 'the slot asked for foo arguments', %2 is 'but there are only bar "
 "available'"
 msgid "%1, %2."
-msgstr "%1 ، %2."
+msgstr "%1، %2."
 
 #: kjsembed/qobject_binding.cpp:628
 #, kde-format
