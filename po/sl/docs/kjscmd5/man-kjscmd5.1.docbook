@@ -65,7 +65,7 @@
 > <arg choice="opt"
 >-e</arg
 > <arg choice="opt"
->-- exec</arg
+>--exec</arg
 > </group
 > <group
 > <arg choice="opt"
@@ -73,7 +73,7 @@
 > <arg choice="opt"
 >-interactive</arg
 > </group
-> <arg choice="opt "
+> <arg choice="opt"
 >datoteka</arg
 > </cmdsynopsis>
 </refsynopsisdiv>
